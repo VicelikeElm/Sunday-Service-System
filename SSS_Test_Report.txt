@@ -1,0 +1,27 @@
+SUNDAY SERVICE SYSTEM v22 — SAFE TEST MODE
+========================================================================
+
+This test does NOT start recording, streaming, upload a video,
+or change WorshipTools Planning.
+
+Passed: 19/19
+
+PASS — Sunday configuration — sunday_config.json loaded
+PASS — Sermon plan — Christ’s Warning of Reform & Relation! | Matthew 12:43-50
+PASS — Writable folder: D:\2026 — writable
+PASS — Writable folder: D:\2026\SRT files — writable
+PASS — Writable folder: D:\2026\shorts\ai shorts\Ready — writable
+PASS — Writable folder: D:\2026\shorts\ai shorts\Sermon Data — writable
+PASS — ffmpeg — C:\Users\Vicel\AppData\Local\Microsoft\WinGet\Links\ffmpeg.EXE
+PASS — ffprobe — C:\Users\Vicel\AppData\Local\Microsoft\WinGet\Links\ffprobe.EXE
+PASS — nvidia-smi — C:\Windows\system32\nvidia-smi.EXE
+PASS — OBS WebSocket — localhost:4455 reachable
+PASS — WorshipTools Planning profile — C:\Church\SermonAI\WorshipTools_Planning_Profile
+PASS — YouTube Studio profile — C:\Church\SermonAI\YouTube_Studio_Profile
+PASS — Syntax: sunday_mode.py — OK
+PASS — Syntax: chapter_bridge.py — OK
+PASS — Syntax: gmail_sermon_importer.py — OK
+PASS — Syntax: planning_update_sermon.py — OK
+PASS — Syntax: youtube_studio_upload_worker.py — OK
+PASS — Syntax: post_service_supervisor.py — OK
+PASS — Syntax: audio_sanity_monitor.py — OK

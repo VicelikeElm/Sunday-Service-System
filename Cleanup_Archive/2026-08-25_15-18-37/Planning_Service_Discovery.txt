@@ -1,0 +1,243 @@
+WORSHIPTOOLS PLANNING SERVICE DISCOVERY V3.1
+==========================================================================================
+Generated: 2026-08-25T15:06:18
+Target Sunday: 2026-08-30
+
+Browser channel: chrome
+URL: https://planning.worshiptools.com/app/account/9ac65c41-8f43-01af-5702-f2f77a485b91/service/8040c66c-c36b-4670-b479-6444cfa3c30b
+Page title: Aug 30 - Todd Campbell - Planning by WorshipTools
+
+VISIBLE PAGE TEXT
+------------------------------------------------------------------------------------------
+Corey Golde
+Perry Baptist church
+Dashboard
+Services
+Services
+Service Types
+Service Matrix
+Calendar
+Messages
+Songs
+People
+Back to Services
+Service
+Print
+Clone
+Service General Information
+Aug 30
+Todd Campbell
+Services
+Sunday, August 30, 2026 - 9:00am
+ 2
+Accepted
+ 11
+Not yet responded
+Edit
+Your Role(s)
+Tech Director
+ Accepted
+Busy Loading ...
+Attachments
+No attachments available
+Add Attachment
+Order
+People
+Rehearse
+Charts 
+Order Of Service
+Add Header
+Add
+Item
+Display Options
+Sorting Controls	Length of Time	Description	Controls
+	
+Total Time:
+3:36	
+
+Grip handle for sorting
+	
+ morning slides 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	
+ morning worship 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	3:36	
+He's Done so Much for Me C
+ Hymn 166 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Before The Throne Of God Above D
+ Hymn 121 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Whate'er My God Ordains Is Right
+ Hymn 90 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Prayer -Offfering- E
+ hymn 149- God of Every Grace 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Our God Will Go Before Us C
+ hymn 326 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	
+ Sermon 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Matthew 9:1-4 (ESV)
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Doxology Hymn #808 Db
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Communion
+	
+Edit
+
+	3:36	
+Last edited by Corey 24 minutes prior
+Delete
+Busy Loading ...
+Planning by WorshipTools
+© 2026. All rights reserved.
+Apple and Apple Music are trademarks of Apple Inc., registered in the U.S. and other countries
+Build
+Media Player
+
+SERVICE-LIKE LINKS
+------------------------------------------------------------------------------------------
+Count: 3
+[000] text='Service Types'
+       href='/app/account/9ac65c41-8f43-01af-5702-f2f77a485b91/service/types'
+       html=<a data-v-234235af="" href="/app/account/9ac65c41-8f43-01af-5702-f2f77a485b91/service/types" class="link"><span data-v-f94b2e5a="" data-msgid="Service Types" data-current-language="en">Service Types</span></a>
+[001] text='Service Matrix'
+       href='/app/account/9ac65c41-8f43-01af-5702-f2f77a485b91/service/matrix'
+       html=<a data-v-234235af="" href="/app/account/9ac65c41-8f43-01af-5702-f2f77a485b91/service/matrix" class="link"><span data-v-f94b2e5a="" data-msgid="Service Matrix" data-current-language="en">Service Matrix</span></a>
+[002] text='Calendar'
+       href='/app/account/9ac65c41-8f43-01af-5702-f2f77a485b91/service/calendar'
+       html=<a data-v-234235af="" href="/app/account/9ac65c41-8f43-01af-5702-f2f77a485b91/service/calendar" class="link"><span data-v-f94b2e5a="" data-msgid="Calendar" data-current-language="en">Calendar</span></a>
+
+UPCOMING-SUNDAY TEXT MATCHES
+------------------------------------------------------------------------------------------
+'Aug 30': 3 match(es)
+--- match 1 ---
+<div data-v-1ff6913c="" data-v-3359e5e7="" class="font-weight-bold large-text larger-text" data-v-38a704d3=""> Aug 30 </div>
+--- nearest row/card ancestor ---
+<div data-v-38a704d3="" class="card-body"><section data-v-3359e5e7="" data-v-38a704d3=""><h2 data-v-3359e5e7="" data-v-38a704d3="" class="sr-only" data-msgid=" Service General Information " data-current-language="en"> Service General Information </h2><div data-v-3359e5e7="" data-v-38a704d3="" class="d-md-flex justify-content-between"><div data-v-3359e5e7="" data-v-38a704d3=""><div data-v-1ff6913c="" data-v-3359e5e7="" class="font-weight-bold large-text larger-text" data-v-38a704d3=""> Aug 30 </div><!----><div data-v-3359e5e7="" data-v-38a704d3=""> Todd Campbell </div><div data-v-3359e5e7="" data-v-38a704d3="" class="d-flex align-items-start mt-2"><div data-v-2cac3d4d="" data-v-3359e5e7="" data-v-38a704d3=""><div data-v-2cac3d4d=""><div data-v-2cac3d4d=""><small data-v-2cac3d4d="" class="text-secondary" data-msgid="Services" data-current-language="en">Services</small><!----><!----></div><h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2></div><div data-v-2cac3d4d=""><!----></div><div data-v-2cac3d4d=""><!----></div></div></div><div data-v-45e869bc="" data-v-3359e5e7="" class="invite-summary text-dark mt-2" data-v-38a704d3=""><span data-v-45e869bc=""><svg data-v-66155c86="" data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-success svg-inline--fa fa-check-circle fa-w-16"><path data-v-66155c86="" fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> 2 <span data-v-45e869bc="" class="sr-only" data-msgid="Accepted" data-current-language="en">Accepted</span></span><!----><span data-v-45e869bc="" class="ml-2"><svg data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary svg-inline--fa fa-question-circle fa-w-16"><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z" class=""></path></svg> 11<span data-v-45e869bc="" class="sr-only" data-msgid="Not yet responded" data-current-language="en">Not yet responded</span></span></div><div data-v-3359e5e7="" data-v-38a704d3="" class="line-break mt-2"><span data-v-3359e5e7="" data-v-38a704d3=""><span data-v-3359e5e7="" data-v-38a704d3="">  </span></span></div></div><div data-v-3359e5e7="" data-v-38a704d3="" class="text-md-right mt-2 mt-md-0"><div data-v-3359e5e7="" data-v-38a704d3=""><button data-v-733bdf9c="" data-v-3359e5e7="" type="button" class="btn border btn-sm btn-light" data-v-38a704d3=""><svg data-v-3359e5e7="" data-v-733bdf9c="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary mr-1 svg-inline--fa fa-pencil fa-w-16"><path data-v-3359e5e7="" data-v-733bdf9c="" fill="currentColor" d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z" class=""></path></svg><span data-v-3359e5e7="" data-v-733bdf9c="" data-msgid="Edit" data-current-language="en">Edit</span></button></div></div><!----></div></section></div>
+--- match 2 ---
+<label class="custom-control-label" for="__BVID__196"> Sun, Aug 30, 2026, 9:00am </label>
+--- nearest row/card ancestor ---
+<li data-v-3dc57186="" role="presentation"><a role="menuitem" href="#" target="_self" class="dropdown-item"><div data-v-3dc57186="" class="text-nowrap d-block custom-control custom-checkbox"><input type="checkbox" name="showServiceTimes" class="custom-control-input" value="0" id="__BVID__196"><label class="custom-control-label" for="__BVID__196"> Sun, Aug 30, 2026, 9:00am </label></div></a></li>
+--- match 3 ---
+<div data-v-1ff6913c="" data-v-3359e5e7="" class="font-weight-bold large-text larger-text" data-v-38a704d3=""> Aug 30 </div>
+--- nearest row/card ancestor ---
+<div data-v-38a704d3="" class="card-body"><section data-v-3359e5e7="" data-v-38a704d3=""><h2 data-v-3359e5e7="" data-v-38a704d3="" class="sr-only" data-msgid=" Service General Information " data-current-language="en"> Service General Information </h2><div data-v-3359e5e7="" data-v-38a704d3="" class="d-md-flex justify-content-between"><div data-v-3359e5e7="" data-v-38a704d3=""><div data-v-1ff6913c="" data-v-3359e5e7="" class="font-weight-bold large-text larger-text" data-v-38a704d3=""> Aug 30 </div><!----><div data-v-3359e5e7="" data-v-38a704d3=""> Todd Campbell </div><div data-v-3359e5e7="" data-v-38a704d3="" class="d-flex align-items-start mt-2"><div data-v-2cac3d4d="" data-v-3359e5e7="" data-v-38a704d3=""><div data-v-2cac3d4d=""><div data-v-2cac3d4d=""><small data-v-2cac3d4d="" class="text-secondary" data-msgid="Services" data-current-language="en">Services</small><!----><!----></div><h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2></div><div data-v-2cac3d4d=""><!----></div><div data-v-2cac3d4d=""><!----></div></div></div><div data-v-45e869bc="" data-v-3359e5e7="" class="invite-summary text-dark mt-2" data-v-38a704d3=""><span data-v-45e869bc=""><svg data-v-66155c86="" data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-success svg-inline--fa fa-check-circle fa-w-16"><path data-v-66155c86="" fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> 2 <span data-v-45e869bc="" class="sr-only" data-msgid="Accepted" data-current-language="en">Accepted</span></span><!----><span data-v-45e869bc="" class="ml-2"><svg data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary svg-inline--fa fa-question-circle fa-w-16"><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z" class=""></path></svg> 11<span data-v-45e869bc="" class="sr-only" data-msgid="Not yet responded" data-current-language="en">Not yet responded</span></span></div><div data-v-3359e5e7="" data-v-38a704d3="" class="line-break mt-2"><span data-v-3359e5e7="" data-v-38a704d3=""><span data-v-3359e5e7="" data-v-38a704d3="">  </span></span></div></div><div data-v-3359e5e7="" data-v-38a704d3="" class="text-md-right mt-2 mt-md-0"><div data-v-3359e5e7="" data-v-38a704d3=""><!----></div></div><!----></div></section></div>
+'August 30': 2 match(es)
+--- match 1 ---
+<h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2>
+--- nearest row/card ancestor ---
+<div data-v-38a704d3="" class="card-body"><section data-v-3359e5e7="" data-v-38a704d3=""><h2 data-v-3359e5e7="" data-v-38a704d3="" class="sr-only" data-msgid=" Service General Information " data-current-language="en"> Service General Information </h2><div data-v-3359e5e7="" data-v-38a704d3="" class="d-md-flex justify-content-between"><div data-v-3359e5e7="" data-v-38a704d3=""><div data-v-1ff6913c="" data-v-3359e5e7="" class="font-weight-bold large-text larger-text" data-v-38a704d3=""> Aug 30 </div><!----><div data-v-3359e5e7="" data-v-38a704d3=""> Todd Campbell </div><div data-v-3359e5e7="" data-v-38a704d3="" class="d-flex align-items-start mt-2"><div data-v-2cac3d4d="" data-v-3359e5e7="" data-v-38a704d3=""><div data-v-2cac3d4d=""><div data-v-2cac3d4d=""><small data-v-2cac3d4d="" class="text-secondary" data-msgid="Services" data-current-language="en">Services</small><!----><!----></div><h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2></div><div data-v-2cac3d4d=""><!----></div><div data-v-2cac3d4d=""><!----></div></div></div><div data-v-45e869bc="" data-v-3359e5e7="" class="invite-summary text-dark mt-2" data-v-38a704d3=""><span data-v-45e869bc=""><svg data-v-66155c86="" data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-success svg-inline--fa fa-check-circle fa-w-16"><path data-v-66155c86="" fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> 2 <span data-v-45e869bc="" class="sr-only" data-msgid="Accepted" data-current-language="en">Accepted</span></span><!----><span data-v-45e869bc="" class="ml-2"><svg data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary svg-inline--fa fa-question-circle fa-w-16"><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z" class=""></path></svg> 11<span data-v-45e869bc="" class="sr-only" data-msgid="Not yet responded" data-current-language="en">Not yet responded</span></span></div><div data-v-3359e5e7="" data-v-38a704d3="" class="line-break mt-2"><span data-v-3359e5e7="" data-v-38a704d3=""><span data-v-3359e5e7="" data-v-38a704d3="">  </span></span></div></div><div data-v-3359e5e7="" data-v-38a704d3="" class="text-md-right mt-2 mt-md-0"><div data-v-3359e5e7="" data-v-38a704d3=""><button data-v-733bdf9c="" data-v-3359e5e7="" type="button" class="btn border btn-sm btn-light" data-v-38a704d3=""><svg data-v-3359e5e7="" data-v-733bdf9c="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary mr-1 svg-inline--fa fa-pencil fa-w-16"><path data-v-3359e5e7="" data-v-733bdf9c="" fill="currentColor" d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z" class=""></path></svg><span data-v-3359e5e7="" data-v-733bdf9c="" data-msgid="Edit" data-current-language="en">Edit</span></button></div></div><!----></div></section></div>
+--- match 2 ---
+<h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2>
+--- nearest row/card ancestor ---
+<div data-v-38a704d3="" class="card-body"><section data-v-3359e5e7="" data-v-38a704d3=""><h2 data-v-3359e5e7="" data-v-38a704d3="" class="sr-only" data-msgid=" Service General Information " data-current-language="en"> Service General Information </h2><div data-v-3359e5e7="" data-v-38a704d3="" class="d-md-flex justify-content-between"><div data-v-3359e5e7="" data-v-38a704d3=""><div data-v-1ff6913c="" data-v-3359e5e7="" class="font-weight-bold large-text larger-text" data-v-38a704d3=""> Aug 30 </div><!----><div data-v-3359e5e7="" data-v-38a704d3=""> Todd Campbell </div><div data-v-3359e5e7="" data-v-38a704d3="" class="d-flex align-items-start mt-2"><div data-v-2cac3d4d="" data-v-3359e5e7="" data-v-38a704d3=""><div data-v-2cac3d4d=""><div data-v-2cac3d4d=""><small data-v-2cac3d4d="" class="text-secondary" data-msgid="Services" data-current-language="en">Services</small><!----><!----></div><h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2></div><div data-v-2cac3d4d=""><!----></div><div data-v-2cac3d4d=""><!----></div></div></div><div data-v-45e869bc="" data-v-3359e5e7="" class="invite-summary text-dark mt-2" data-v-38a704d3=""><span data-v-45e869bc=""><svg data-v-66155c86="" data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-success svg-inline--fa fa-check-circle fa-w-16"><path data-v-66155c86="" fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> 2 <span data-v-45e869bc="" class="sr-only" data-msgid="Accepted" data-current-language="en">Accepted</span></span><!----><span data-v-45e869bc="" class="ml-2"><svg data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary svg-inline--fa fa-question-circle fa-w-16"><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z" class=""></path></svg> 11<span data-v-45e869bc="" class="sr-only" data-msgid="Not yet responded" data-current-language="en">Not yet responded</span></span></div><div data-v-3359e5e7="" data-v-38a704d3="" class="line-break mt-2"><span data-v-3359e5e7="" data-v-38a704d3=""><span data-v-3359e5e7="" data-v-38a704d3="">  </span></span></div></div><div data-v-3359e5e7="" data-v-38a704d3="" class="text-md-right mt-2 mt-md-0"><div data-v-3359e5e7="" data-v-38a704d3=""><!----></div></div><!----></div></section></div>
+'8/30/2026': 0 match(es)
+'8/30': 0 match(es)
+'Sun, Aug 30, 2026': 1 match(es)
+--- match 1 ---
+<label class="custom-control-label" for="__BVID__196"> Sun, Aug 30, 2026, 9:00am </label>
+--- nearest row/card ancestor ---
+<li data-v-3dc57186="" role="presentation"><a role="menuitem" href="#" target="_self" class="dropdown-item"><div data-v-3dc57186="" class="text-nowrap d-block custom-control custom-checkbox"><input type="checkbox" name="showServiceTimes" class="custom-control-input" value="0" id="__BVID__196"><label class="custom-control-label" for="__BVID__196"> Sun, Aug 30, 2026, 9:00am </label></div></a></li>
+'Sunday, August 30, 2026': 2 match(es)
+--- match 1 ---
+<h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2>
+--- nearest row/card ancestor ---
+<div data-v-38a704d3="" class="card-body"><section data-v-3359e5e7="" data-v-38a704d3=""><h2 data-v-3359e5e7="" data-v-38a704d3="" class="sr-only" data-msgid=" Service General Information " data-current-language="en"> Service General Information </h2><div data-v-3359e5e7="" data-v-38a704d3="" class="d-md-flex justify-content-between"><div data-v-3359e5e7="" data-v-38a704d3=""><div data-v-1ff6913c="" data-v-3359e5e7="" class="font-weight-bold large-text larger-text" data-v-38a704d3=""> Aug 30 </div><!----><div data-v-3359e5e7="" data-v-38a704d3=""> Todd Campbell </div><div data-v-3359e5e7="" data-v-38a704d3="" class="d-flex align-items-start mt-2"><div data-v-2cac3d4d="" data-v-3359e5e7="" data-v-38a704d3=""><div data-v-2cac3d4d=""><div data-v-2cac3d4d=""><small data-v-2cac3d4d="" class="text-secondary" data-msgid="Services" data-current-language="en">Services</small><!----><!----></div><h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2></div><div data-v-2cac3d4d=""><!----></div><div data-v-2cac3d4d=""><!----></div></div></div><div data-v-45e869bc="" data-v-3359e5e7="" class="invite-summary text-dark mt-2" data-v-38a704d3=""><span data-v-45e869bc=""><svg data-v-66155c86="" data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-success svg-inline--fa fa-check-circle fa-w-16"><path data-v-66155c86="" fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> 2 <span data-v-45e869bc="" class="sr-only" data-msgid="Accepted" data-current-language="en">Accepted</span></span><!----><span data-v-45e869bc="" class="ml-2"><svg data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary svg-inline--fa fa-question-circle fa-w-16"><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z" class=""></path></svg> 11<span data-v-45e869bc="" class="sr-only" data-msgid="Not yet responded" data-current-language="en">Not yet responded</span></span></div><div data-v-3359e5e7="" data-v-38a704d3="" class="line-break mt-2"><span data-v-3359e5e7="" data-v-38a704d3=""><span data-v-3359e5e7="" data-v-38a704d3="">  </span></span></div></div><div data-v-3359e5e7="" data-v-38a704d3="" class="text-md-right mt-2 mt-md-0"><div data-v-3359e5e7="" data-v-38a704d3=""><button data-v-733bdf9c="" data-v-3359e5e7="" type="button" class="btn border btn-sm btn-light" data-v-38a704d3=""><svg data-v-3359e5e7="" data-v-733bdf9c="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pencil" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary mr-1 svg-inline--fa fa-pencil fa-w-16"><path data-v-3359e5e7="" data-v-733bdf9c="" fill="currentColor" d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z" class=""></path></svg><span data-v-3359e5e7="" data-v-733bdf9c="" data-msgid="Edit" data-current-language="en">Edit</span></button></div></div><!----></div></section></div>
+--- match 2 ---
+<h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2>
+--- nearest row/card ancestor ---
+<div data-v-38a704d3="" class="card-body"><section data-v-3359e5e7="" data-v-38a704d3=""><h2 data-v-3359e5e7="" data-v-38a704d3="" class="sr-only" data-msgid=" Service General Information " data-current-language="en"> Service General Information </h2><div data-v-3359e5e7="" data-v-38a704d3="" class="d-md-flex justify-content-between"><div data-v-3359e5e7="" data-v-38a704d3=""><div data-v-1ff6913c="" data-v-3359e5e7="" class="font-weight-bold large-text larger-text" data-v-38a704d3=""> Aug 30 </div><!----><div data-v-3359e5e7="" data-v-38a704d3=""> Todd Campbell </div><div data-v-3359e5e7="" data-v-38a704d3="" class="d-flex align-items-start mt-2"><div data-v-2cac3d4d="" data-v-3359e5e7="" data-v-38a704d3=""><div data-v-2cac3d4d=""><div data-v-2cac3d4d=""><small data-v-2cac3d4d="" class="text-secondary" data-msgid="Services" data-current-language="en">Services</small><!----><!----></div><h2 data-v-2cac3d4d="" class="typed-service-time"> Sunday, August 30, 2026 - 9:00am </h2></div><div data-v-2cac3d4d=""><!----></div><div data-v-2cac3d4d=""><!----></div></div></div><div data-v-45e869bc="" data-v-3359e5e7="" class="invite-summary text-dark mt-2" data-v-38a704d3=""><span data-v-45e869bc=""><svg data-v-66155c86="" data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-success svg-inline--fa fa-check-circle fa-w-16"><path data-v-66155c86="" fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" class=""></path></svg> 2 <span data-v-45e869bc="" class="sr-only" data-msgid="Accepted" data-current-language="en">Accepted</span></span><!----><span data-v-45e869bc="" class="ml-2"><svg data-v-45e869bc="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="text-secondary svg-inline--fa fa-question-circle fa-w-16"><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z" class=""></path></svg> 11<span data-v-45e869bc="" class="sr-only" data-msgid="Not yet responded" data-current-language="en">Not yet responded</span></span></div><div data-v-3359e5e7="" data-v-38a704d3="" class="line-break mt-2"><span data-v-3359e5e7="" data-v-38a704d3=""><span data-v-3359e5e7="" data-v-38a704d3="">  </span></span></div></div><div data-v-3359e5e7="" data-v-38a704d3="" class="text-md-right mt-2 mt-md-0"><div data-v-3359e5e7="" data-v-38a704d3=""><!----></div></div><!----></div></section></div>

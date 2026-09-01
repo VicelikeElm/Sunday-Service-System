@@ -1,0 +1,50 @@
+﻿PRESENTER UI DIAGNOSTIC
+Generated: 2026-08-27 16:57:29
+==========================================================================================
+
+PROCESS INFORMATION
+------------------------------------------------------------------------------------------
+Name: Presenter.exe
+PID: 24172
+Executable: C:\Program Files\Presenter\Presenter.exe
+CommandLine: "C:\Program Files\Presenter\Presenter.exe" 
+
+Name: Presenter.exe
+PID: 28628
+Executable: C:\Program Files\Presenter\Presenter.exe
+CommandLine: "C:\Program Files\Presenter\Presenter.exe" --type=gpu-process --field-trial-handle=1548,17412100355032192271,14336711988601400932,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand --user-data-dir="C:\Users\Vicel\AppData\Roaming\Worship Extreme" --gpu-preferences=UAAAAAAAAADgAAAYAAAAAAAAAAAAAAAAAABgAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAASAAAAAAAAAAYAAAAAgAAABAAAAAAAAAAGAAAAAAAAAAQAAAAAAAAAAAAAAANAAAAEAAAAAAAAAABAAAADQAAAAgAAAAAAAAACAAAAAAAAAA= --mojo-platform-channel-handle=1560 /prefetch:2
+
+Name: Presenter.exe
+PID: 21768
+Executable: C:\Program Files\Presenter\Presenter.exe
+CommandLine: "C:\Program Files\Presenter\Presenter.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --field-trial-handle=1548,17412100355032192271,14336711988601400932,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand --lang=en-US --service-sandbox-type=none --disable-http2 --user-data-dir="C:\Users\Vicel\AppData\Roaming\Worship Extreme" --mojo-platform-channel-handle=1972 /prefetch:8
+
+Name: Presenter.exe
+PID: 1636
+Executable: C:\Program Files\Presenter\Presenter.exe
+CommandLine: "C:\Program Files\Presenter\Presenter.exe" --type=renderer --user-data-dir="C:\Users\Vicel\AppData\Roaming\Worship Extreme" --app-path="C:\Program Files\Presenter\resources\app.asar" --no-sandbox --no-zygote --autoplay-policy=no-user-gesture-required --field-trial-handle=1548,17412100355032192271,14336711988601400932,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --mojo-platform-channel-handle=3320 /prefetch:1
+
+Name: Presenter.exe
+PID: 6684
+Executable: C:\Program Files\Presenter\Presenter.exe
+CommandLine: "C:\Program Files\Presenter\Presenter.exe" --type=renderer --user-data-dir="C:\Users\Vicel\AppData\Roaming\Worship Extreme" --app-path="C:\Program Files\Presenter\resources\app.asar" --no-sandbox --no-zygote --autoplay-policy=no-user-gesture-required --field-trial-handle=1548,17412100355032192271,14336711988601400932,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=6 --mojo-platform-channel-handle=3436 /prefetch:1
+
+Name: Presenter.exe
+PID: 15372
+Executable: C:\Program Files\Presenter\Presenter.exe
+CommandLine: "C:\Program Files\Presenter\Presenter.exe" --type=renderer --user-data-dir="C:\Users\Vicel\AppData\Roaming\Worship Extreme" --app-path="C:\Program Files\Presenter\resources\app.asar" --no-sandbox --no-zygote --enable-blink-features --disable-blink-features --autoplay-policy=no-user-gesture-required --field-trial-handle=1548,17412100355032192271,14336711988601400932,131072 --disable-features=PlzServiceWorker,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand --lang=en-US --device-scale-factor=1 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=8 --mojo-platform-channel-handle=1704 /prefetch:1
+
+
+TOP-LEVEL WINDOWS
+------------------------------------------------------------------------------------------
+
+UI AUTOMATION DESCENDANTS
+------------------------------------------------------------------------------------------
+No Presenter top-level UI Automation window found.
+
+==========================================================================================
+SEARCH CHECK
+------------------------------------------------------------------------------------------
+NO visible Scripture text was exposed through Windows UI Automation.
+
+END OF DIAGNOSTIC

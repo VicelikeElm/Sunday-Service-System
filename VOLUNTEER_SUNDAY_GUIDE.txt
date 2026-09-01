@@ -1,0 +1,126 @@
+SUNDAY SERVICE SYSTEM v22 — VOLUNTEER QUICK GUIDE
+===================================================
+
+NORMAL SUNDAY
+-------------
+
+1. Double-click:
+     START SUNDAY MODE
+
+2. Wait for SSS to open.
+   OBS and Presenter should open automatically.
+
+3. Check the main screen.
+   Green = ready.
+   Yellow = waiting / review.
+   Red = needs attention.
+
+4. When it is time to record:
+     START RECORDING
+
+5. When the service/sermon recording is finished:
+     STOP RECORDING
+
+6. If streaming is being used, START STREAM / STOP STREAM are still
+   separate human-controlled buttons.
+
+7. Leave SSS open after recording stops.
+
+   SSS will finish:
+     transcript / Sermon AI
+     chapter verification
+     YouTube upload
+     Planning status
+     thumbnail handoff
+
+8. Wait for:
+     EVERYTHING FINISHED
+     Safe to shut down.
+
+
+IMPORTANT
+---------
+
+SSS NEVER automatically starts recording or streaming.
+
+If the internet goes out:
+  DO NOT stop the local recording because of that.
+  Local recording continues.
+  YouTube will retry later.
+
+If SSS says the recording file is NOT GROWING:
+  Get the tech/admin person immediately.
+  Check D:\2026.
+
+If SSS gives an audio silence/clipping alarm:
+  Check the OBS "main" source and mixer.
+
+EMERGENCY MUTE:
+  Mutes the configured main program audio sources.
+
+ADD MANUAL CHAPTER:
+  Adds a chapter marker while OBS is recording.
+
+ADMIN / TROUBLESHOOTING:
+  Volunteers normally do not need this.
+  It contains Planning sync, YouTube retry, logs, test mode, and recovery.
+
+Do not close SSS immediately after STOP RECORDING unless there is an
+emergency. Let the post-service completion screen finish first.
+
+
+PTZ CAMERA
+----------
+
+When SSS opens, it automatically recalls the Pastor/startup camera shot:
+  Preset 2
+
+Main-screen buttons:
+  WORSHIP CAMERA
+  PASTOR CAMERA
+
+Pastor defaults to preset 2.
+Worship defaults to preset 1 unless changed in Setup-PTZ-Camera.bat.
+
+These buttons only move the PTZ camera. They do NOT start recording,
+streaming, or change OBS scenes.
+
+The Stream Deck can use the same camera commands:
+  StreamDeck_PTZ_WORSHIP.bat
+  StreamDeck_PTZ_PASTOR.bat
+
+ROTATING SERMON CHAPTER BUTTON
+------------------------------
+
+During the sermon, the chapter button shows ONLY what comes next.
+
+Example:
+
+  Prayer
+  Reference
+  The King’s Kingdom of Saving-Gracefilled Relationship!
+  Ending Prayer
+  Benediction
+  CHAPTERS COMPLETE
+
+For Reference and sermon points, one press also fires the matching
+lower third automatically.
+
+The sequence is:
+
+  Prayer
+  Reference
+  Pastor's Gmail sermon points
+  Ending Prayer
+  Benediction
+
+Press the button when the pastor reaches that section, just like the
+existing Stream Deck multi-actions.
+
+If you press it while OBS is not recording, nothing advances.
+
+If the sequence needs to restart:
+  ADMIN / TROUBLESHOOTING
+    -> RESET SERMON CHAPTER ROTATION
+
+The old manual chapter tool remains available in Admin.

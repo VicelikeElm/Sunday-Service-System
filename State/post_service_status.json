@@ -1,0 +1,45 @@
+{
+  "updated": "2026-08-30T18:52:44-04:00",
+  "plan_id": "aa4d26a05db99974",
+  "service_date": "2026-08-30",
+  "title": "The Purpose in Parables!",
+  "state": "ATTENTION",
+  "message": "Post-service supervisor reached its time limit. Local files were preserved; review unfinished items.",
+  "stages": {
+    "recording": {
+      "state": "COMPLETE",
+      "detail": "2026-08-30 11-13-13.mp4 — 7.08 GB / 49.2 min",
+      "blocking": true
+    },
+    "transcript": {
+      "state": "COMPLETE",
+      "detail": "2026-08-30 11-13-13.srt",
+      "blocking": true
+    },
+    "sermon_ai": {
+      "state": "COMPLETE",
+      "detail": "Transcript/shorts processing is idle and complete.",
+      "blocking": true
+    },
+    "chapters": {
+      "state": "COMPLETE",
+      "detail": "9 embedded chapter marker(s) found.",
+      "blocking": true
+    },
+    "planning": {
+      "state": "ATTENTION",
+      "detail": "A Planning service opened, but its date does not match 2026-08-30. Nothing was changed.",
+      "blocking": false
+    },
+    "youtube": {
+      "state": "RUNNING",
+      "detail": "Started/restarted YouTube Studio upload worker.",
+      "blocking": true
+    },
+    "thumbnail": {
+      "state": "COMPLETE",
+      "detail": "Thumbnail handoff files prepared.",
+      "blocking": false
+    }
+  }
+}

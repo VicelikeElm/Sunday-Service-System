@@ -1,0 +1,27 @@
+﻿StreamUP Record Chapter Manager backup
+Created: 08/24/2026 14:24:41
+
+The following OBS plugin item(s) were moved out of their original
+locations so OBS will no longer load them:
+
+C:\Program Files\obs-studio\data\obs-plugins\streamup-record-chapter-manager
+C:\Program Files\obs-studio\obs-plugins\64bit\streamup-record-chapter-manager.dll
+C:\Program Files\obs-studio\obs-plugins\64bit\streamup-record-chapter-manager.pdb
+
+This script did NOT modify:
+- OBS scenes
+- OBS profiles
+- recording settings
+- obs-websocket
+- Sermon AI
+- Sunday Mode
+- the new Chapter Bridge
+
+RESTORE MAPPING
+---------------
+Each line below is:
+BACKUP LOCATION <TAB> ORIGINAL LOCATION
+
+C:\Church\SermonAI\Plugin_Backups\StreamUP_Record_Chapter_Manager_2026-08-24_14-24-39\__streamup-record-chapter-manager	C:\Program Files\obs-studio\data\obs-plugins\streamup-record-chapter-manager
+C:\Church\SermonAI\Plugin_Backups\StreamUP_Record_Chapter_Manager_2026-08-24_14-24-39\C__Program_Files_obs-studio_obs-plugins_64bit__streamup-record-chapter-manager.dll	C:\Program Files\obs-studio\obs-plugins\64bit\streamup-record-chapter-manager.dll
+C:\Church\SermonAI\Plugin_Backups\StreamUP_Record_Chapter_Manager_2026-08-24_14-24-39\C__Program_Files_obs-studio_obs-plugins_64bit__streamup-record-chapter-manager.pdb	C:\Program Files\obs-studio\obs-plugins\64bit\streamup-record-chapter-manager.pdb

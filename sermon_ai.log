@@ -1,0 +1,270 @@
+
+======================================================================
+SERMON AI CONTROLLER
+======================================================================
+Started: 2026-08-28 10:55:07.696034
+
+The controller will stay idle until OBS activity begins.
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+OBS closed.
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+OBS closed.
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+OBS closed.
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+OBS closed.
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+OBS closed.
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+OBS closed.
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+OBS closed.
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+
+OBS activity detected.
+  Recording: ON
+
+======================================================================
+LIVE SERMON AI STARTING
+======================================================================
+Starting Replay Buffer for Sermon AI...
+
+Loading live Whisper model: small
+Live Whisper loaded.
+
+Listening to device 44: Headphones (High Definition Audio Device) [Loopback]
+[10:52:25] I'm safe and sound
+Stopping Sermon AI's Replay Buffer...
+
+All OBS output activity has stopped.
+
+Live Whisper unloaded.
+
+Waiting 90 seconds before quality processing...
+Post-service delay complete.
+
+======================================================================
+POST-SERVICE PROCESSING STARTING
+======================================================================
+
+======================================================================
+MEDIUM WHISPER VERIFICATION
+======================================================================
+
+======================================================================
+SERMON AI - SHORTS PROCESSOR
+======================================================================
+
+Loading quality-control Whisper model...
+Model: medium
+Quality model loaded.
+
+No new AI sermon clips to process.
+
+Processing complete.
+
+MEDIUM WHISPER VERIFICATION finished successfully.
+
+======================================================================
+VERTICAL SHORT RENDERING
+======================================================================
+
+======================================================================
+SERMON AI - SHORT RENDERER
+======================================================================
+
+No new VERIFIED clips need rendering.
+
+VERTICAL SHORT RENDERING finished successfully.
+
+======================================================================
+SERMON THUMBNAIL PREPARATION
+======================================================================
+
+==============================================================================
+SERMON AI - THUMBNAIL PREPARATION
+==============================================================================
+
+Newest recording:
+D:\2026\2026-08-30 10-52-00.mp4
+
+Found 0 total chapter marker(s).
+Found 0 useful sermon chapter(s).
+
+Matching full-sermon SRT:
+D:\2026\SRT files\2026-08-30 10-52-00.srt
+Parsed 1 SRT caption entrie(s).
+
+No useful sermon chapter markers.
+Checking Animated Lower Thirds fallback...
+Read 12 populated lower-third row(s), including ACTIVE values.
+Selected 0 lower-third candidate(s) for this sermon.
+Recovered sermon title:
+Not automatically detected
+
+Thumbnail preparation file created:
+D:\2026\shorts\ai shorts\Sermon Data\2026-08-30_Thumbnail_Prep.txt
+
+Opening in Notepad...
+
+SERMON THUMBNAIL PREPARATION finished successfully.
+
+======================================================================
+POST-SERVICE PROCESSING COMPLETE
+======================================================================
+
+======================================================================
+SERMON AI RETURNING TO IDLE
+======================================================================
+
+Waiting for OBS...
+OBS is ready.
+OBS WebSocket connected.
+
+Waiting for OBS recording, streaming, or Replay Buffer...
+
+OBS activity detected.
+  Recording: ON
+
+======================================================================
+LIVE SERMON AI STARTING
+======================================================================
+Starting Replay Buffer for Sermon AI...
+
+Loading live Whisper model: small
+Live Whisper loaded.
+
+Listening to device 44: Headphones (High Definition Audio Device) [Loopback]
+[11:13:42] All right, if you have your Bibles open up to Matthew chapter 13 we're
+[11:13:49] today. Let me pray for us as we
+[11:13:56] Go to read God's word. Lord, we come before you.
+[11:14:02] Thank you.
+
+----------------------------------------------------------------------
+COMPLETED THOUGHT
+Duration: 31.6s
+Score: 23
+
+All right, if you have your Bibles open up to Matthew chapter 13 we're today. Let me pray for us as we Go to read God's word. Lord, we come before you. Thank you.
+
+Reasons: excellent clip duration, complete ending, 1 strong sermon phrase(s), Scripture connection, too little context
+Status: ignore
+[11:14:21] in the glories that are in the gospel that Christ is...
+[11:14:27] help us not to be blind or unhearing.
+[11:14:34] ears to hear and eyes to see who you are.
+[11:14:41] and help us to submit and come under and receive your word in such a way.
+[11:14:47] It would produce much fruit in our lives, in the lives around us, and bring our...
+[11:14:54] Friends and family to come to know Christ as a result of us freely
+[11:15:01] Give the seeds of that word to others to hear the good news of the Christ.
+
+----------------------------------------------------------------------
+COMPLETED THOUGHT
+Duration: 46.2s
+Score: 57
+
+in the glories that are in the gospel that Christ is... help us not to be blind or unhearing. ears to hear and eyes to see who you are. and help us to submit and come under and receive your word in such a way. It would produce much fruit in our lives, in the lives around us, and bring our... Friends and family to come to know Christ as a result of us freely Give the seeds of that word to others to hear the good news of the Christ.
+
+Reasons: excellent clip duration, good amount of speech, complete ending, 1 strong sermon phrase(s), 1 application phrase(s)
+Status: POSSIBLE CLIP
+[11:15:08] It's only by the blood of the land we enter in. And we love you and we praise you. And Jesus, mighty and.
+[11:15:15] If you have your Bibles open to Matthew chapter 13, I'm going to read.
+[11:15:21] Matthew chapter 13 1 through 17 if you can stand
+[11:15:28] If you want to get the word, please stand.
+[11:15:35] the verse one. That same day, Jesus went out of the house and sat.
+[11:15:42] and great crowds gathered about to him, about him, so that...
+
+----------------------------------------------------------------------
+COMPLETED THOUGHT
+Duration: 39.6s
+Score: 59
+
+It's only by the blood of the land we enter in. And we love you and we praise you. And Jesus, mighty and. If you have your Bibles open to Matthew chapter 13, I'm going to read. Matthew chapter 13 1 through 17 if you can stand If you want to get the word, please stand. the verse one. That same day, Jesus went out of the house and sat. and great crowds gathered about to him, about him, so that...
+
+Reasons: excellent clip duration, good amount of speech, complete ending, Scripture connection
+Status: POSSIBLE CLIP
+[11:15:48] into a boat, he sat down, and the whole crowd stood on the beach, and he
+[11:15:55] many things in parables, saying a sewer went out to sew.
+[11:16:02] As he sowed, some seeds fell along the path and the birds came and
+[11:16:08] other seeds fell on the rocky ground where they did not have much soil and immediately
+[11:16:15] since they had no depth of soil, but when the sun rose they were
+[11:16:22] And since they had no root, they withered away. Other sea...
+
+----------------------------------------------------------------------
+COMPLETED THOUGHT
+Duration: 39.5s
+Score: 43
+
+into a boat, he sat down, and the whole crowd stood on the beach, and he many things in parables, saying a sewer went out to sew. As he sowed, some seeds fell along the path and the birds came and other seeds fell on the rocky ground where they did not have much soil and immediately since they had no depth of soil, but when the sun rose they were And since they had no root, they withered away. Other sea...
+
+Reasons: excellent clip duration, good amount of speech, complete ending
+Status: ignore
+[11:16:29] the thorns. And the thorns grew up and choked them out. And other seeds fell on the goods.
+[11:16:35] produced grain. Some of it a hundred fold.
+[11:16:42] see some 30. He who has ears let him hear. Then to decide
+[11:16:49] him and said, why do you speak in parables? And he answered to them, to you, it has been
+[11:16:56] know the secrets of the kingdom of heaven. But to them, it has not been given.
+[11:17:02] To the one who has more will be given into the one and he will have an
+[11:17:09] But from the one who has not, even what he has will be taken away.
+
+----------------------------------------------------------------------
+COMPLETED THOUGHT
+Duration: 46.6s
+Score: 48
+
+the thorns. And the thorns grew up and choked them out. And other seeds fell on the goods. produced grain. Some of it a hundred fold. see some 30. He who has ears let him hear. Then to decide him and said, why do you speak in parables? And he answered to them, to you, it has been know the secrets of the kingdom of heaven. But to them, it has not been given. To the one who has more will be given into the one and he will have an But from the one who has not, even what he has will be taken away.
+
+Reasons: excellent clip duration, good amount of speech, complete ending, rhetorical question
+Status: ignore
+[11:17:16] I speak to them in parables because seeing, they do not see.
+[11:17:23] Hearing they do not hear nor do they understand indeed in their case
+[11:17:29] Isaiah is fulfilled that says, you will indeed hear but never
+[11:17:36] You will indeed see, but never perceive, for this people's heart has grown dull.
+[11:17:43] in their ears, they can barely hear in their
+[11:17:50] They have closed, lest they should see with their eyes and hear with their ears and
+[11:17:56] In turn, and I would heal them, but blessed are your
+[11:18:03] for they see, in your ears, for they hear, for truly.
+
+----------------------------------------------------------------------
+COMPLETED THOUGHT
+Duration: 53.3s
+Score: 55
+
+I speak to them in parables because seeing, they do not see. Hearing they do not hear nor do they understand indeed in their case Isaiah is fulfilled that says, you will indeed hear but never You will indeed see, but never perceive, for this people's heart has grown dull. in their ears, they can barely hear in their They have closed, lest they should see with their eyes and hear with their ears and In turn, and I would heal them, but blessed are your for they see, in your ears, for they hear, for truly.
+
+Reasons: excellent clip duration, good amount of speech, complete ending, Scripture connection
+Status: POSSIBLE CLIP
+[11:18:10] to you, many prophets and righteous people long to see what
+[11:18:17] And did not see it and to hear what you hear and did not hear it
+[11:18:23] of his word as you find your seats again, the grass withers, and the flower f-

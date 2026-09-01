@@ -1,0 +1,981 @@
+[2026-08-25 16:35:14] Sunday Mode v22 ready.
+[2026-08-25 16:35:14] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 16:35:16] Pastor sermon-notes email imported.
+[2026-08-25 16:35:16] This week's sermon embedded into lower thirds.
+[2026-08-25 16:35:18] OBS startup popup cleaner active.
+[2026-08-25 16:35:18] Live audio sanity monitor started.
+[2026-08-25 16:35:19] Weekly rollback snapshot ready: current
+[2026-08-25 16:35:19] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 16:35:21] Preflight complete: system is ready.
+[2026-08-25 16:38:21] Sunday Mode v22 ready.
+[2026-08-25 16:38:21] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 16:38:22] Pastor sermon-notes email imported.
+[2026-08-25 16:38:23] This week's sermon embedded into lower thirds.
+[2026-08-25 16:38:24] OBS startup popup cleaner active.
+[2026-08-25 16:38:25] Weekly rollback snapshot ready: current
+[2026-08-25 16:38:26] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 16:38:28] Preflight complete: system is ready.
+[2026-08-25 16:38:45] Recording START requested. Sunday Freeze enabled.
+[2026-08-25 16:38:47] Post-service completion supervisor started.
+[2026-08-25 16:38:47] YouTube Studio worker started. It will verify the Baptist Church of Perry channel, choose the largest valid full sermon, and upload it.
+[2026-08-25 16:38:51] Detected recording started directly in OBS; SSS watchdog protections are now active.
+[2026-08-25 16:39:06] Recording STOP requested. Post-service automation will take over.
+[2026-08-25 16:39:07] YouTube Studio upload worker is already waiting/running.
+[2026-08-25 16:39:12] YouTube Studio upload worker is already waiting/running.
+[2026-08-25 16:39:19] Program audio MUTED.
+[2026-08-25 16:39:19] Program audio RESTORED.
+[2026-08-25 16:39:32] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 16:39:53] Weekly rollback snapshot ready: current
+[2026-08-25 16:42:50] Sunday Mode v22 ready.
+[2026-08-25 16:42:50] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 16:42:52] Pastor sermon-notes email imported.
+[2026-08-25 16:42:52] This week's sermon embedded into lower thirds.
+[2026-08-25 16:42:53] OBS startup popup cleaner active.
+[2026-08-25 16:42:54] Weekly rollback snapshot ready: current
+[2026-08-25 16:42:55] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 16:42:57] Preflight complete: system is ready.
+[2026-08-25 16:46:03] Preflight needs attention: OBS, COLLECTION, INPUTS
+[2026-08-25 16:46:11] Preflight needs attention: COLLECTION, INPUTS
+[2026-08-25 16:46:18] Preflight needs attention: OBS, COLLECTION, INPUTS
+[2026-08-25 16:46:27] Preflight needs attention: COLLECTION, INPUTS
+[2026-08-25 16:46:31] Preflight complete: system is ready.
+[2026-08-25 16:48:10] Sunday Mode v22 ready.
+[2026-08-25 16:48:10] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 16:48:12] Pastor sermon-notes email imported.
+[2026-08-25 16:48:12] This week's sermon embedded into lower thirds.
+[2026-08-25 16:48:14] Started Chapter Bridge.
+[2026-08-25 16:48:14] OBS startup popup cleaner active.
+[2026-08-25 16:48:15] Live audio sanity monitor started.
+[2026-08-25 16:48:17] OBS is not open. Starting OBS...
+[2026-08-25 16:48:17] OBS launch command sent.
+[2026-08-25 16:48:27] Opened Presenter automatically.
+[2026-08-25 16:48:27] Weekly rollback snapshot ready: current
+[2026-08-25 16:48:29] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 16:48:33] Incomplete Sunday work detected; resuming post-service jobs.
+[2026-08-25 16:48:34] Post-service completion supervisor started.
+[2026-08-25 16:48:36] Preflight needs attention: OBS, COLLECTION, INPUTS
+[2026-08-25 16:48:39] OBS is ready.
+[2026-08-25 16:48:41] Preflight needs attention: COLLECTION, INPUTS
+[2026-08-25 16:48:46] Preflight complete: system is ready.
+[2026-08-25 17:12:10] Sunday Mode v22 ready.
+[2026-08-25 17:12:10] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 17:12:13] Pastor sermon-notes email imported.
+[2026-08-25 17:12:13] This week's sermon embedded into lower thirds.
+[2026-08-25 17:12:16] OBS startup popup cleaner active.
+[2026-08-25 17:12:17] Weekly rollback snapshot ready: current
+[2026-08-25 17:12:18] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 17:12:22] Preflight complete: system is ready.
+[2026-08-25 17:13:56] Sunday Mode v22 ready.
+[2026-08-25 17:13:56] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 17:13:57] Pastor sermon-notes email imported.
+[2026-08-25 17:13:57] This week's sermon embedded into lower thirds.
+[2026-08-25 17:13:59] OBS startup popup cleaner active.
+[2026-08-25 17:14:00] Weekly rollback snapshot ready: current
+[2026-08-25 17:14:01] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 17:14:02] Preflight complete: system is ready.
+[2026-08-25 17:34:36] Admin manually removed Sunday Freeze marker.
+[2026-08-25 17:43:43] Sunday Mode v22 ready.
+[2026-08-25 17:43:43] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 17:43:45] Pastor sermon-notes email imported.
+[2026-08-25 17:43:45] This week's sermon embedded into lower thirds.
+[2026-08-25 17:43:46] OBS startup popup cleaner active.
+[2026-08-25 17:43:49] OBS is not open. Starting OBS...
+[2026-08-25 17:43:49] OBS launch command sent.
+[2026-08-25 17:43:50] Opened Presenter automatically.
+[2026-08-25 17:43:50] Weekly rollback snapshot ready: current
+[2026-08-25 17:43:51] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 17:43:55] Preflight needs attention: OBS, COLLECTION, INPUTS
+[2026-08-25 17:44:02] OBS is ready.
+[2026-08-25 17:44:03] Preflight needs attention: COLLECTION, INPUTS
+[2026-08-25 17:44:07] Preflight complete: system is ready.
+[2026-08-25 17:49:37] Sunday Mode v22 ready.
+[2026-08-25 17:49:37] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 17:49:38] Pastor sermon-notes email imported.
+[2026-08-25 17:49:38] This week's sermon embedded into lower thirds.
+[2026-08-25 17:49:39] Started Sermon AI.
+[2026-08-25 17:49:40] Started Chapter Bridge.
+[2026-08-25 17:49:40] OBS startup popup cleaner active.
+[2026-08-25 17:49:41] Live audio sanity monitor started.
+[2026-08-25 17:49:42] Opened Presenter automatically.
+[2026-08-25 17:49:42] Weekly rollback snapshot ready: current
+[2026-08-25 17:49:43] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 17:49:46] Preflight complete: system is ready.
+[2026-08-25 17:49:48] Incomplete Sunday work detected; resuming post-service jobs.
+[2026-08-25 17:49:49] Post-service completion supervisor started.
+[2026-08-25 17:50:28] Sunday Mode v22 ready.
+[2026-08-25 17:50:28] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 17:50:30] Pastor sermon-notes email imported.
+[2026-08-25 17:50:30] This week's sermon embedded into lower thirds.
+[2026-08-25 17:50:32] Weekly rollback snapshot ready: current
+[2026-08-25 17:50:33] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 17:50:34] PTZ camera → Pastor / startup (preset 2).
+[2026-08-25 17:50:35] Preflight complete: system is ready.
+[2026-08-25 17:50:38] PTZ camera → Worship (preset 1).
+[2026-08-25 17:50:40] PTZ camera → Pastor (preset 2).
+[2026-08-25 17:50:44] PTZ camera → Worship (preset 1).
+[2026-08-25 17:50:47] PTZ camera → Pastor (preset 2).
+[2026-08-25 17:51:03] PTZ camera → Pastor (preset 2).
+[2026-08-25 17:51:04] PTZ camera → Worship (preset 1).
+[2026-08-25 17:51:05] PTZ camera → Pastor (preset 2).
+[2026-08-25 17:51:17] PTZ camera → Worship (preset 1).
+[2026-08-25 17:51:20] PTZ camera → Pastor (preset 2).
+[2026-08-25 18:07:01] Sunday Mode v22 ready.
+[2026-08-25 18:07:01] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-25 18:07:02] Pastor sermon-notes email imported.
+[2026-08-25 18:07:02] This week's sermon embedded into lower thirds.
+[2026-08-25 18:07:03] OBS startup popup cleaner active.
+[2026-08-25 18:07:06] OBS is not open. Starting OBS...
+[2026-08-25 18:07:06] OBS launch command sent.
+[2026-08-25 18:07:07] Opened Presenter automatically.
+[2026-08-25 18:07:07] Weekly rollback snapshot ready: current
+[2026-08-25 18:07:08] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-25 18:07:09] OBS is ready.
+[2026-08-25 18:07:09] PTZ camera → Pastor / startup (preset 2).
+[2026-08-25 18:07:11] Preflight needs attention: COLLECTION, INPUTS
+[2026-08-25 18:07:16] Preflight complete: system is ready.
+[2026-08-26 11:37:24] Watchdog restarted Sermon AI.
+[2026-08-26 11:37:27] Preflight needs attention: AUDIO
+[2026-08-26 11:37:34] Preflight complete: system is ready.
+[2026-08-26 12:04:51] Sunday Mode v22 ready.
+[2026-08-26 12:04:51] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 12:04:54] Pastor sermon-notes email imported.
+[2026-08-26 12:04:55] This week's sermon embedded into lower thirds.
+[2026-08-26 12:04:55] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 12:04:57] OBS startup popup cleaner active.
+[2026-08-26 12:04:57] Weekly rollback snapshot ready: current
+[2026-08-26 12:04:58] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 12:05:00] Preflight complete: system is ready.
+[2026-08-26 12:05:03] Incomplete Sunday work detected; resuming post-service jobs.
+[2026-08-26 12:05:04] Post-service completion supervisor started.
+[2026-08-26 12:05:48] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 12:05:52] YouTube Studio worker started. It will verify the Baptist Church of Perry channel, choose the largest valid full sermon, and upload it.
+[2026-08-26 12:06:02] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 12:06:04] Sermon chapter: Prayer [direct]
+[2026-08-26 12:06:06] Sermon chapter: Reference [direct] + lower third
+[2026-08-26 12:06:08] Sermon chapter: The Demonic Danger of Self-Centered Reformation! [direct] + lower third
+[2026-08-26 12:06:09] Sermon chapter: The King’s Kingdom of Saving-Gracefilled Relationship! [direct] + lower third
+[2026-08-26 12:06:10] Sermon chapter: Benediction [direct]
+[2026-08-26 12:06:16] Recording STOP requested. Post-service automation will take over.
+[2026-08-26 12:06:17] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 12:06:21] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 12:09:01] Sunday Mode v22 ready.
+[2026-08-26 12:09:01] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 12:09:03] Pastor sermon-notes email imported.
+[2026-08-26 12:09:03] This week's sermon embedded into lower thirds.
+[2026-08-26 12:09:03] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 12:09:05] OBS startup popup cleaner active.
+[2026-08-26 12:09:06] Weekly rollback snapshot ready: current
+[2026-08-26 12:09:07] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 12:09:09] Preflight complete: system is ready.
+[2026-08-26 12:09:57] Sunday Mode v22 ready.
+[2026-08-26 12:09:57] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 12:09:58] Pastor sermon-notes email imported.
+[2026-08-26 12:09:58] This week's sermon embedded into lower thirds.
+[2026-08-26 12:09:59] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 12:10:01] Weekly rollback snapshot ready: current
+[2026-08-26 12:10:02] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 12:10:03] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 12:10:04] Preflight complete: system is ready.
+[2026-08-26 12:10:23] PTZ camera → Worship (preset 1).
+[2026-08-26 12:10:25] PTZ camera → Pastor (preset 2).
+[2026-08-26 12:11:31] Sunday Mode v22 ready.
+[2026-08-26 12:11:31] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 12:11:32] Pastor sermon-notes email imported.
+[2026-08-26 12:11:32] This week's sermon embedded into lower thirds.
+[2026-08-26 12:11:33] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 12:11:35] OBS startup popup cleaner active.
+[2026-08-26 12:11:35] Weekly rollback snapshot ready: current
+[2026-08-26 12:11:36] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 12:11:37] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 12:11:38] Preflight complete: system is ready.
+[2026-08-26 12:11:39] PTZ camera → Worship (preset 5).
+[2026-08-26 12:11:46] PTZ camera → Pastor (preset 2).
+[2026-08-26 12:21:47] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 12:21:48] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 12:21:49] Sermon chapter: Prayer [direct]
+[2026-08-26 12:21:52] Detected recording started directly in OBS; SSS watchdog protections are now active.
+[2026-08-26 12:21:57] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 12:21:59] Sermon chapter: Prayer [direct]
+[2026-08-26 12:22:01] Sermon chapter: Reference [direct] + lower third
+[2026-08-26 12:22:03] Sermon chapter: The Demonic Danger of Self-Centered Reformation! [direct] + lower third
+[2026-08-26 12:22:04] Sermon chapter: The King’s Kingdom of Saving-Gracefilled Relationship! [direct] + lower third
+[2026-08-26 12:22:06] Sermon chapter: Benediction [direct]
+[2026-08-26 12:22:09] Stream STOP requested.
+[2026-08-26 12:22:13] Stream STOP requested.
+[2026-08-26 12:22:15] Recording STOP requested. Post-service automation will take over.
+[2026-08-26 12:22:16] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 12:22:19] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 12:34:58] Sunday Mode v22 ready.
+[2026-08-26 12:34:58] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 12:35:00] Pastor sermon-notes email imported.
+[2026-08-26 12:35:00] This week's sermon embedded into lower thirds.
+[2026-08-26 12:35:00] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 12:35:02] OBS startup popup cleaner active.
+[2026-08-26 12:35:03] Weekly rollback snapshot ready: current
+[2026-08-26 12:35:03] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 12:35:05] Preflight complete: system is ready.
+[2026-08-26 12:35:24] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 12:35:25] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 12:35:26] Sermon chapter: Prayer [direct]
+[2026-08-26 12:35:27] Sermon chapter: Reference [direct] + lower third
+[2026-08-26 12:35:28] Sermon chapter: The Demonic Danger of Self-Centered Reformation! [direct] + lower third
+[2026-08-26 12:35:29] Detected recording started directly in OBS; SSS watchdog protections are now active.
+[2026-08-26 12:35:29] Sermon chapter: Prayer [direct]
+[2026-08-26 12:35:30] Sermon chapter: Reference [direct] + lower third
+[2026-08-26 12:35:31] Sermon chapter: The Demonic Danger of Self-Centered Reformation! [direct] + lower third
+[2026-08-26 12:35:31] Sermon chapter: The King’s Kingdom of Saving-Gracefilled Relationship! [direct] + lower third
+[2026-08-26 12:35:32] Sermon chapter: Ending Prayer [direct]
+[2026-08-26 12:35:34] Sermon chapter: Benediction [direct]
+[2026-08-26 12:35:38] Recording STOP requested. Post-service automation will take over.
+[2026-08-26 12:35:39] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 12:35:40] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 12:38:42] Pastor sermon-notes email imported.
+[2026-08-26 12:38:42] This week's sermon embedded into lower thirds.
+[2026-08-26 12:38:42] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 12:38:43] OBS startup popup cleaner active.
+[2026-08-26 12:38:44] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 12:50:41] Sunday Mode v22 ready.
+[2026-08-26 12:50:41] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 12:50:42] Pastor sermon-notes email imported.
+[2026-08-26 12:50:42] This week's sermon embedded into lower thirds.
+[2026-08-26 12:50:43] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 12:50:45] OBS startup popup cleaner active.
+[2026-08-26 12:50:45] Weekly rollback snapshot ready: current
+[2026-08-26 12:50:46] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 12:50:47] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 12:50:48] Preflight complete: system is ready.
+[2026-08-26 12:50:55] PTZ settings saved permanently: 192.168.68.50 | Worship 5 | Pastor 2
+[2026-08-26 12:50:56] PTZ camera → Pastor / test (preset 2).
+[2026-08-26 12:51:04] PTZ settings saved permanently: 192.168.68.50 | Worship 5 | Pastor 2
+[2026-08-26 12:51:04] PTZ camera → Pastor / test (preset 2).
+[2026-08-26 12:51:11] PTZ settings saved permanently: 192.168.68.49 | Worship 5 | Pastor 2
+[2026-08-26 12:51:15] PTZ Pastor / test failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:24] PTZ Worship failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:26] PTZ Pastor failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:33] PTZ settings saved permanently: 192.168.68.50 | Worship 5 | Pastor 2
+[2026-08-26 12:51:33] PTZ camera → Pastor / test (preset 2).
+[2026-08-26 12:51:33] PTZ Worship failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:35] PTZ Pastor failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:35] PTZ camera → Worship (preset 5).
+[2026-08-26 12:51:42] PTZ settings saved permanently: 192.168.68.49 | Worship 5 | Pastor 2
+[2026-08-26 12:51:43] PTZ settings saved permanently: 192.168.68.49 | Worship 5 | Pastor 2
+[2026-08-26 12:51:43] PTZ settings saved permanently: 192.168.68.49 | Worship 5 | Pastor 2
+[2026-08-26 12:51:43] PTZ settings saved permanently: 192.168.68.49 | Worship 5 | Pastor 2
+[2026-08-26 12:51:43] PTZ settings saved permanently: 192.168.68.49 | Worship 5 | Pastor 2
+[2026-08-26 12:51:43] PTZ settings saved permanently: 192.168.68.49 | Worship 5 | Pastor 2
+[2026-08-26 12:51:46] PTZ Pastor / test failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:46] PTZ settings saved permanently: 192.168.68.50 | Worship 5 | Pastor 2
+[2026-08-26 12:51:47] PTZ camera → Pastor / test (preset 2).
+[2026-08-26 12:51:47] PTZ Pastor / test failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:47] PTZ settings saved permanently: 192.168.68.50 | Worship 5 | Pastor 2
+[2026-08-26 12:51:47] PTZ Pastor / test failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:47] PTZ Pastor / test failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:47] PTZ camera → Pastor / test (preset 2).
+[2026-08-26 12:51:47] PTZ Pastor / test failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 12:51:47] PTZ Pastor / test failed: PTZ camera error: Could not reach PTZ camera: timed out
+[2026-08-26 13:37:44] Sunday Mode v22 ready.
+[2026-08-26 13:37:44] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 13:37:45] Pastor sermon-notes email imported.
+[2026-08-26 13:37:45] This week's sermon embedded into lower thirds.
+[2026-08-26 13:37:46] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 13:37:48] OBS startup popup cleaner active.
+[2026-08-26 13:37:49] Weekly rollback snapshot ready: current
+[2026-08-26 13:37:50] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 13:37:51] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 13:37:52] Preflight complete: system is ready.
+[2026-08-26 13:41:00] Sunday Mode v22 ready.
+[2026-08-26 13:41:00] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 13:41:02] Pastor sermon-notes email imported.
+[2026-08-26 13:41:02] This week's sermon embedded into lower thirds.
+[2026-08-26 13:41:02] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 13:41:04] OBS startup popup cleaner active.
+[2026-08-26 13:41:05] Weekly rollback snapshot ready: current
+[2026-08-26 13:41:06] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 13:41:07] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 13:41:08] Preflight complete: system is ready.
+[2026-08-26 13:46:44] Sunday Mode v22 ready.
+[2026-08-26 13:46:44] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 13:46:45] Pastor sermon-notes email imported.
+[2026-08-26 13:46:45] This week's sermon embedded into lower thirds.
+[2026-08-26 13:46:46] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 13:46:48] OBS startup popup cleaner active.
+[2026-08-26 13:46:48] Weekly rollback snapshot ready: current
+[2026-08-26 13:46:49] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 13:46:51] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 13:46:51] Preflight complete: system is ready.
+[2026-08-26 13:51:30] Sunday Mode v22 ready.
+[2026-08-26 13:51:30] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 13:51:32] Pastor sermon-notes email imported.
+[2026-08-26 13:51:32] This week's sermon embedded into lower thirds.
+[2026-08-26 13:51:32] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 13:51:34] OBS startup popup cleaner active.
+[2026-08-26 13:51:35] Weekly rollback snapshot ready: current
+[2026-08-26 13:51:35] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 13:51:37] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 13:51:37] Preflight complete: system is ready.
+[2026-08-26 13:57:45] Sunday Mode v22 ready.
+[2026-08-26 13:57:45] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 13:57:46] Pastor sermon-notes email imported.
+[2026-08-26 13:57:46] This week's sermon embedded into lower thirds.
+[2026-08-26 13:57:47] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 13:57:48] OBS startup popup cleaner active.
+[2026-08-26 13:57:49] Weekly rollback snapshot ready: current
+[2026-08-26 13:57:50] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 13:57:51] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 13:57:52] Preflight complete: system is ready.
+[2026-08-26 14:16:53] Watchdog restarted Sermon AI.
+[2026-08-26 14:16:56] Preflight needs attention: AUDIO
+[2026-08-26 14:16:59] Preflight complete: system is ready.
+[2026-08-26 14:26:48] Sunday Mode v22 ready.
+[2026-08-26 14:26:48] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 14:26:50] Pastor sermon-notes email imported.
+[2026-08-26 14:26:50] This week's sermon embedded into lower thirds.
+[2026-08-26 14:26:50] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 14:26:52] OBS startup popup cleaner active.
+[2026-08-26 14:26:53] Weekly rollback snapshot ready: current
+[2026-08-26 14:26:54] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 14:26:55] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 14:26:56] Preflight complete: system is ready.
+[2026-08-26 16:29:39] PTZ camera → Worship (preset 5).
+[2026-08-26 16:29:41] PTZ camera → Pastor (preset 2).
+[2026-08-26 16:29:52] Sunday Mode v22 ready.
+[2026-08-26 16:29:53] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 16:29:55] Pastor sermon-notes email imported.
+[2026-08-26 16:29:55] This week's sermon embedded into lower thirds.
+[2026-08-26 16:29:56] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 16:29:58] OBS startup popup cleaner active.
+[2026-08-26 16:29:58] Weekly rollback snapshot ready: current
+[2026-08-26 16:29:59] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 16:30:01] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 16:30:01] Preflight complete: system is ready.
+[2026-08-26 16:30:05] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 16:30:08] Sermon chapter: Prayer [direct]
+[2026-08-26 16:30:09] Sermon chapter: Reference [direct] + lower third
+[2026-08-26 16:30:10] Sermon chapter: The Demonic Danger of Self-Centered Reformation! [direct] + lower third
+[2026-08-26 16:30:11] Sermon chapter: The King’s Kingdom of Saving-Gracefilled Relationship! [direct] + lower third
+[2026-08-26 16:30:11] Sermon chapter: Ending Prayer [direct]
+[2026-08-26 16:30:12] Sermon chapter: Benediction [direct]
+[2026-08-26 16:30:16] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 16:30:22] Recording STOP requested. Post-service automation will take over.
+[2026-08-26 16:30:23] YouTube Studio worker started. It will verify the Baptist Church of Perry channel, choose the largest valid full sermon, and upload it.
+[2026-08-26 16:30:27] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 16:36:35] Sunday Mode v22 ready.
+[2026-08-26 16:36:35] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 16:36:37] Pastor sermon-notes email imported.
+[2026-08-26 16:36:37] This week's sermon embedded into lower thirds.
+[2026-08-26 16:36:38] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 16:36:39] OBS startup popup cleaner active.
+[2026-08-26 16:36:40] Weekly rollback snapshot ready: current
+[2026-08-26 16:36:41] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 16:36:42] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 16:36:43] Preflight complete: system is ready.
+[2026-08-26 16:37:23] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 16:37:25] Sermon chapter: Prayer [direct]
+[2026-08-26 16:37:27] Sermon chapter: Matthew 12:43-50 [direct] + lower third
+[2026-08-26 16:37:29] Sermon chapter: The Demonic Danger of Self-Centered Reformation! [direct] + lower third
+[2026-08-26 16:37:36] Sermon chapter: The King’s Kingdom of Saving-Gracefilled Relationship! [direct] + lower third
+[2026-08-26 16:37:38] Sermon chapter: Ending Prayer [direct]
+[2026-08-26 16:37:39] Sermon chapter: Benediction [direct]
+[2026-08-26 16:37:42] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 16:37:44] Recording STOP requested. Post-service automation will take over.
+[2026-08-26 16:37:45] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 16:37:49] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 16:49:53] Sunday Mode v22 ready.
+[2026-08-26 16:49:53] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 16:49:55] Pastor sermon-notes email imported.
+[2026-08-26 16:49:55] This week's sermon embedded into lower thirds.
+[2026-08-26 16:49:55] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 16:49:57] OBS startup popup cleaner active.
+[2026-08-26 16:49:58] Weekly rollback snapshot ready: current
+[2026-08-26 16:49:59] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 16:50:00] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 16:50:01] Preflight complete: system is ready.
+[2026-08-26 16:55:14] Sunday Mode v22 ready.
+[2026-08-26 16:55:14] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 16:55:16] Pastor sermon-notes email imported.
+[2026-08-26 16:55:16] This week's sermon embedded into lower thirds.
+[2026-08-26 16:55:16] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 16:55:18] OBS startup popup cleaner active.
+[2026-08-26 16:55:19] Weekly rollback snapshot ready: current
+[2026-08-26 16:55:19] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 16:55:21] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 16:55:22] Preflight complete: system is ready.
+[2026-08-26 17:01:44] Sunday Mode v22 ready.
+[2026-08-26 17:01:44] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 17:01:45] Pastor sermon-notes email imported.
+[2026-08-26 17:01:45] This week's sermon embedded into lower thirds.
+[2026-08-26 17:01:46] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 17:01:47] OBS startup popup cleaner active.
+[2026-08-26 17:01:48] Weekly rollback snapshot ready: current
+[2026-08-26 17:01:49] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 17:01:50] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 17:01:51] Preflight complete: system is ready.
+[2026-08-26 17:01:56] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-26 17:01:58] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-26 17:01:59] TEST ONLY — Matthew 12:43-50 [chapter marker simulated / not written] + lower-third slot
+[2026-08-26 17:02:12] TEST ONLY — The Demonic Danger of Self-Centered Reformation! [chapter marker simulated / not written] + LT1 lower third (11 sec)
+[2026-08-26 17:02:28] TEST ONLY — The King’s Kingdom of Saving-Gracefilled Relationship! [chapter marker simulated / not written] + LT1 lower third (11 sec)
+[2026-08-26 17:02:34] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-26 17:02:41] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-26 17:02:42] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-26 17:02:43] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-26 17:02:43] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-26 17:02:44] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-26 17:02:44] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-26 17:02:52] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-26 17:02:56] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-26 17:02:57] PTZ settings saved permanently: 192.168.68.50 | Worship 5 | Pastor 2
+[2026-08-26 17:02:58] PTZ camera → Pastor / test (preset 2).
+[2026-08-26 17:05:23] Sunday Mode v22 ready.
+[2026-08-26 17:05:23] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 17:05:24] Pastor sermon-notes email imported.
+[2026-08-26 17:05:25] This week's sermon embedded into lower thirds.
+[2026-08-26 17:05:25] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 17:05:27] OBS startup popup cleaner active.
+[2026-08-26 17:05:27] Weekly rollback snapshot ready: current
+[2026-08-26 17:05:28] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 17:05:30] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 17:05:30] Preflight complete: system is ready.
+[2026-08-26 17:05:46] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 17:05:49] Recording START requested. Sunday Freeze enabled.
+[2026-08-26 17:05:50] Stream STOP requested.
+[2026-08-26 17:05:54] Recording STOP requested. Post-service automation will take over.
+[2026-08-26 17:05:55] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 17:05:56] YouTube Studio upload worker is already waiting/running.
+[2026-08-26 17:06:02] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-26 17:06:03] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-26 17:06:54] Sunday Mode v22 ready.
+[2026-08-26 17:06:54] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 17:06:55] Pastor sermon-notes email imported.
+[2026-08-26 17:06:55] This week's sermon embedded into lower thirds.
+[2026-08-26 17:06:55] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 17:06:57] OBS startup popup cleaner active.
+[2026-08-26 17:06:59] OBS is already open; waiting for WebSocket...
+[2026-08-26 17:07:00] Opened Presenter automatically.
+[2026-08-26 17:07:00] Weekly rollback snapshot ready: current
+[2026-08-26 17:07:01] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 17:07:04] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 17:07:05] Preflight needs attention: OBS, COLLECTION, INPUTS
+[2026-08-26 17:07:27] Sunday Mode v22 ready.
+[2026-08-26 17:07:27] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 17:07:28] Pastor sermon-notes email imported.
+[2026-08-26 17:07:28] This week's sermon embedded into lower thirds.
+[2026-08-26 17:07:28] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 17:07:33] OBS is already open; waiting for WebSocket...
+[2026-08-26 17:07:33] Weekly rollback snapshot ready: current
+[2026-08-26 17:07:34] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 17:07:35] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 17:07:38] Preflight needs attention: OBS, COLLECTION, INPUTS
+[2026-08-26 17:07:41] Pastor sermon-notes email imported.
+[2026-08-26 17:07:41] This week's sermon embedded into lower thirds.
+[2026-08-26 17:07:41] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 17:07:44] OBS is already open; waiting for WebSocket...
+[2026-08-26 17:07:45] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 17:08:22] Sunday Mode v22 ready.
+[2026-08-26 17:08:22] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-26 17:08:23] Pastor sermon-notes email imported.
+[2026-08-26 17:08:24] This week's sermon embedded into lower thirds.
+[2026-08-26 17:08:24] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-26 17:08:26] OBS startup popup cleaner active.
+[2026-08-26 17:08:28] OBS is not open. Starting OBS...
+[2026-08-26 17:08:28] OBS launch command sent.
+[2026-08-26 17:08:28] Weekly rollback snapshot ready: current
+[2026-08-26 17:08:29] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-26 17:08:31] PTZ camera → Pastor / startup (preset 2).
+[2026-08-26 17:08:31] OBS is ready.
+[2026-08-26 17:08:33] Preflight needs attention: COLLECTION, INPUTS
+[2026-08-26 17:08:37] Preflight complete: system is ready.
+[2026-08-27 12:32:37] Preflight needs attention: OBS, COLLECTION, INPUTS
+[2026-08-27 12:32:46] Preflight needs attention: COLLECTION, INPUTS
+[2026-08-27 12:32:50] Preflight complete: system is ready.
+[2026-08-27 12:33:02] Preflight needs attention: OBS, COLLECTION, INPUTS
+[2026-08-27 12:33:06] Preflight complete: system is ready.
+[2026-08-27 12:56:02] Sunday Mode v22 ready.
+[2026-08-27 12:56:02] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 12:56:04] Pastor sermon-notes email imported.
+[2026-08-27 12:56:05] This week's sermon embedded into lower thirds.
+[2026-08-27 12:56:05] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 12:56:07] OBS startup popup cleaner active.
+[2026-08-27 12:56:07] Weekly rollback snapshot ready: current
+[2026-08-27 12:56:08] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 12:56:10] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 12:56:10] Preflight complete: system is ready.
+[2026-08-27 13:07:23] Sunday Mode v22 ready.
+[2026-08-27 13:07:23] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 13:07:25] Pastor sermon-notes email imported.
+[2026-08-27 13:07:25] This week's sermon embedded into lower thirds.
+[2026-08-27 13:07:25] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 13:07:27] OBS startup popup cleaner active.
+[2026-08-27 13:07:28] Weekly rollback snapshot ready: current
+[2026-08-27 13:07:28] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 13:07:30] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 13:07:31] Preflight complete: system is ready.
+[2026-08-27 13:20:01] Sunday Mode v22 ready.
+[2026-08-27 13:20:01] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 13:20:03] Pastor sermon-notes email imported.
+[2026-08-27 13:20:03] This week's sermon embedded into lower thirds.
+[2026-08-27 13:20:03] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 13:20:05] OBS startup popup cleaner active.
+[2026-08-27 13:20:06] Weekly rollback snapshot ready: current
+[2026-08-27 13:20:06] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 13:20:08] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 13:20:08] Preflight complete: system is ready.
+[2026-08-27 13:22:15] Sunday Mode v22 ready.
+[2026-08-27 13:22:15] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 13:22:17] Pastor sermon-notes email imported.
+[2026-08-27 13:22:17] This week's sermon embedded into lower thirds.
+[2026-08-27 13:22:17] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 13:22:19] OBS startup popup cleaner active.
+[2026-08-27 13:22:20] Weekly rollback snapshot ready: current
+[2026-08-27 13:22:21] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 13:22:22] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 13:22:23] Preflight complete: system is ready.
+[2026-08-27 13:40:56] Sunday Mode v22 ready.
+[2026-08-27 13:40:56] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 13:40:57] Pastor sermon-notes email imported.
+[2026-08-27 13:40:57] This week's sermon embedded into lower thirds.
+[2026-08-27 13:40:58] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 13:40:59] OBS startup popup cleaner active.
+[2026-08-27 13:41:00] Weekly rollback snapshot ready: current
+[2026-08-27 13:41:01] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 13:41:02] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 13:41:03] Preflight complete: system is ready.
+[2026-08-27 13:42:59] Sunday Mode v22 ready.
+[2026-08-27 13:42:59] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 13:43:01] Pastor sermon-notes email imported.
+[2026-08-27 13:43:01] This week's sermon embedded into lower thirds.
+[2026-08-27 13:43:01] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 13:43:03] OBS startup popup cleaner active.
+[2026-08-27 13:43:03] Weekly rollback snapshot ready: current
+[2026-08-27 13:43:04] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 13:43:06] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 13:43:06] Preflight complete: system is ready.
+[2026-08-27 13:46:58] Sunday Mode v22 ready.
+[2026-08-27 13:46:58] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 13:46:59] Pastor sermon-notes email imported.
+[2026-08-27 13:46:59] This week's sermon embedded into lower thirds.
+[2026-08-27 13:47:00] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 13:47:02] OBS startup popup cleaner active.
+[2026-08-27 13:47:02] Weekly rollback snapshot ready: current
+[2026-08-27 13:47:03] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 13:47:05] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 13:47:05] System status: ready.
+[2026-08-27 13:51:38] Sunday Mode v22 ready.
+[2026-08-27 13:51:38] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 13:51:40] Pastor sermon-notes email imported.
+[2026-08-27 13:51:40] This week's sermon embedded into lower thirds.
+[2026-08-27 13:51:40] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 13:51:42] OBS startup popup cleaner active.
+[2026-08-27 13:51:43] Weekly rollback snapshot ready: current
+[2026-08-27 13:51:43] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 13:51:45] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 13:51:45] System status: ready.
+[2026-08-27 13:51:48] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 13:58:34] Sunday Mode v22 ready.
+[2026-08-27 13:58:34] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 13:58:35] Pastor sermon-notes email imported.
+[2026-08-27 13:58:35] This week's sermon embedded into lower thirds.
+[2026-08-27 13:58:36] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 13:58:38] OBS startup popup cleaner active.
+[2026-08-27 13:58:38] Weekly rollback snapshot ready: current
+[2026-08-27 13:58:39] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 13:58:40] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 13:58:41] System status: ready.
+[2026-08-27 13:58:44] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 14:02:01] Sunday Mode v22 ready.
+[2026-08-27 14:02:01] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 14:02:03] Pastor sermon-notes email imported.
+[2026-08-27 14:02:03] This week's sermon embedded into lower thirds.
+[2026-08-27 14:02:03] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 14:02:05] OBS startup popup cleaner active.
+[2026-08-27 14:02:06] Weekly rollback snapshot ready: current
+[2026-08-27 14:02:07] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 14:02:08] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 14:02:09] System status: ready.
+[2026-08-27 14:02:11] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 14:37:36] Sunday Mode v22 ready.
+[2026-08-27 14:37:36] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 14:37:37] Pastor sermon-notes email imported.
+[2026-08-27 14:37:37] This week's sermon embedded into lower thirds.
+[2026-08-27 14:37:38] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 14:37:39] OBS startup popup cleaner active.
+[2026-08-27 14:37:40] Weekly rollback snapshot ready: current
+[2026-08-27 14:37:41] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 14:37:42] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 14:37:43] System status: ready.
+[2026-08-27 14:37:46] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 14:37:55] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 14:37:57] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 16:06:19] Sunday Mode v22 ready.
+[2026-08-27 16:06:19] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:06:20] Pastor sermon-notes email imported.
+[2026-08-27 16:06:20] This week's sermon embedded into lower thirds.
+[2026-08-27 16:06:21] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:06:23] OBS startup popup cleaner active.
+[2026-08-27 16:06:23] Weekly rollback snapshot ready: current
+[2026-08-27 16:06:24] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:06:26] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:06:26] System status: ready.
+[2026-08-27 16:06:29] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:15:43] Sunday Mode v22 ready.
+[2026-08-27 16:15:43] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:15:45] Pastor sermon-notes email imported.
+[2026-08-27 16:15:45] This week's sermon embedded into lower thirds.
+[2026-08-27 16:15:45] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:15:47] OBS startup popup cleaner active.
+[2026-08-27 16:15:48] Weekly rollback snapshot ready: current
+[2026-08-27 16:15:49] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:15:50] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:15:51] System status: ready.
+[2026-08-27 16:15:54] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:16:45] Sunday Mode v22 ready.
+[2026-08-27 16:16:45] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:16:46] Pastor sermon-notes email imported.
+[2026-08-27 16:16:47] This week's sermon embedded into lower thirds.
+[2026-08-27 16:16:47] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:16:49] OBS startup popup cleaner active.
+[2026-08-27 16:16:50] Weekly rollback snapshot ready: current
+[2026-08-27 16:16:50] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:16:52] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:16:52] System status: ready.
+[2026-08-27 16:16:55] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:16:57] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:17:14] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 16:17:15] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:17:16] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 16:17:20] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:17:21] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:17:24] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 16:17:26] Presenter Scripture: Matthew 12:44
+[2026-08-27 16:17:30] Presenter Scripture: Matthew 12:45
+[2026-08-27 16:17:42] Presenter Scripture: Matthew 12:46
+[2026-08-27 16:18:20] Presenter Scripture: Matthew 12:47
+[2026-08-27 16:18:23] Presenter Scripture: Matthew 12:48
+[2026-08-27 16:18:25] Presenter Scripture: Matthew 12:49
+[2026-08-27 16:18:25] Presenter Scripture: Matthew 12:50
+[2026-08-27 16:18:27] Scripture reading ended; OBS transitioned back to webcam.
+[2026-08-27 16:18:33] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 16:18:34] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:18:35] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:18:37] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 16:18:39] Presenter Scripture: Matthew 12:44
+[2026-08-27 16:18:52] Presenter Scripture: Matthew 12:45
+[2026-08-27 16:18:53] Presenter Scripture: Matthew 12:46
+[2026-08-27 16:18:55] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 16:18:55] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:18:56] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:18:58] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 16:19:01] Presenter Scripture: Matthew 12:44
+[2026-08-27 16:19:02] Presenter Scripture: Matthew 12:45
+[2026-08-27 16:26:04] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-27 16:31:53] Sunday Mode v22 ready.
+[2026-08-27 16:31:53] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:31:55] Pastor sermon-notes email imported.
+[2026-08-27 16:31:55] This week's sermon embedded into lower thirds.
+[2026-08-27 16:31:55] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:31:57] OBS startup popup cleaner active.
+[2026-08-27 16:31:58] Weekly rollback snapshot ready: current
+[2026-08-27 16:31:59] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:32:00] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:32:01] System status: ready.
+[2026-08-27 16:32:02] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:32:03] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:32:04] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:32:06] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 16:32:06] Presenter did not advance to the first verse: MIDI output 'loopMIDI Port' was not found.
+[2026-08-27 16:33:59] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-27 16:34:03] Sunday Mode v22 ready.
+[2026-08-27 16:34:03] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:34:05] Pastor sermon-notes email imported.
+[2026-08-27 16:34:05] This week's sermon embedded into lower thirds.
+[2026-08-27 16:34:05] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:34:07] OBS startup popup cleaner active.
+[2026-08-27 16:34:08] Weekly rollback snapshot ready: current
+[2026-08-27 16:34:08] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:34:10] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:34:11] System status: ready.
+[2026-08-27 16:34:11] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:34:12] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:34:13] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:34:17] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 16:34:17] Presenter did not advance to the first verse: MIDI output 'loopMIDI Port' was not found.
+[2026-08-27 16:34:34] Sunday Mode v22 ready.
+[2026-08-27 16:34:34] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:34:35] Pastor sermon-notes email imported.
+[2026-08-27 16:34:35] This week's sermon embedded into lower thirds.
+[2026-08-27 16:34:36] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:34:38] Weekly rollback snapshot ready: current
+[2026-08-27 16:34:39] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:34:41] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:34:41] System status: ready.
+[2026-08-27 16:34:43] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:34:44] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:34:44] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:34:46] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 16:34:46] Presenter did not advance to the first verse: MIDI output 'loopMIDI Port' was not found.
+[2026-08-27 16:37:10] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-27 16:37:23] Sunday Mode v22 ready.
+[2026-08-27 16:37:23] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:37:25] Pastor sermon-notes email imported.
+[2026-08-27 16:37:25] This week's sermon embedded into lower thirds.
+[2026-08-27 16:37:25] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:37:27] OBS startup popup cleaner active.
+[2026-08-27 16:37:28] Weekly rollback snapshot ready: current
+[2026-08-27 16:37:28] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:37:30] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:37:30] System status: ready.
+[2026-08-27 16:37:33] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:37:33] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:37:36] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:37:39] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 16:37:44] Presenter Scripture: Matthew 12:44
+[2026-08-27 16:37:46] Presenter Scripture: Matthew 12:45
+[2026-08-27 16:37:47] Presenter Scripture: Matthew 12:46
+[2026-08-27 16:37:51] Presenter Scripture: Matthew 12:47
+[2026-08-27 16:38:00] Presenter Scripture: Matthew 12:48
+[2026-08-27 16:38:01] Presenter Scripture: Matthew 12:49
+[2026-08-27 16:38:03] Presenter Scripture: Matthew 12:50
+[2026-08-27 16:38:05] Scripture reading ended; OBS transitioned back to webcam.
+[2026-08-27 16:38:11] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 16:38:22] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:38:24] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:38:25] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 16:38:29] Presenter Scripture: Matthew 12:44
+[2026-08-27 16:44:36] Sunday Mode v22 ready.
+[2026-08-27 16:44:36] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:44:37] Pastor sermon-notes email imported.
+[2026-08-27 16:44:37] This week's sermon embedded into lower thirds.
+[2026-08-27 16:44:38] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:44:40] OBS startup popup cleaner active.
+[2026-08-27 16:44:40] Weekly rollback snapshot ready: current
+[2026-08-27 16:44:41] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:44:43] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:44:43] System status: ready.
+[2026-08-27 16:44:46] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:44:49] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:44:51] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:47:28] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-27 16:47:42] Sunday Mode v22 ready.
+[2026-08-27 16:47:43] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:47:44] Pastor sermon-notes email imported.
+[2026-08-27 16:47:44] This week's sermon embedded into lower thirds.
+[2026-08-27 16:47:45] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:47:46] OBS startup popup cleaner active.
+[2026-08-27 16:47:47] Weekly rollback snapshot ready: current
+[2026-08-27 16:47:48] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:47:49] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:47:50] System status: ready.
+[2026-08-27 16:47:51] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:47:52] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:47:53] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:54:44] Sunday Mode v22 ready.
+[2026-08-27 16:54:44] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:54:46] Pastor sermon-notes email imported.
+[2026-08-27 16:54:46] This week's sermon embedded into lower thirds.
+[2026-08-27 16:54:46] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-27 16:54:46] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:54:48] OBS startup popup cleaner active.
+[2026-08-27 16:54:49] Weekly rollback snapshot ready: current
+[2026-08-27 16:54:50] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:54:53] Sunday Mode v22 ready.
+[2026-08-27 16:54:53] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 16:54:54] Pastor sermon-notes email imported.
+[2026-08-27 16:54:55] This week's sermon embedded into lower thirds.
+[2026-08-27 16:54:55] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 16:54:58] Weekly rollback snapshot ready: current
+[2026-08-27 16:54:58] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 16:55:00] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 16:55:00] System status: ready.
+[2026-08-27 16:55:03] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 16:55:03] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 16:55:05] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 16:57:08] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-27 17:05:42] Sunday Mode v22 ready.
+[2026-08-27 17:05:42] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 17:05:44] Pastor sermon-notes email imported.
+[2026-08-27 17:05:44] This week's sermon embedded into lower thirds.
+[2026-08-27 17:05:45] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 17:05:47] OBS startup popup cleaner active.
+[2026-08-27 17:05:48] Weekly rollback snapshot ready: current
+[2026-08-27 17:05:49] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 17:05:50] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 17:05:52] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 17:05:52] System status: ready.
+[2026-08-27 17:05:54] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 17:05:54] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 17:05:57] Presenter Scripture selected: Matthew 12:43-50 [Presenter DOM]
+[2026-08-27 17:05:59] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 17:06:02] Presenter Scripture: Matthew 12:44
+[2026-08-27 17:06:04] Presenter Scripture: Matthew 12:45
+[2026-08-27 17:06:12] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 17:06:13] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 17:06:16] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 17:06:17] Presenter Scripture selected: Matthew 12:43-50 [Presenter DOM]
+[2026-08-27 17:06:19] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 17:06:22] Presenter Scripture: Matthew 12:44
+[2026-08-27 17:06:23] Presenter Scripture: Matthew 12:45
+[2026-08-27 17:06:25] Presenter Scripture: Matthew 12:46
+[2026-08-27 17:10:50] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-27 17:10:54] Sunday Mode v22 ready.
+[2026-08-27 17:10:54] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 17:10:56] Pastor sermon-notes email imported.
+[2026-08-27 17:10:56] This week's sermon embedded into lower thirds.
+[2026-08-27 17:10:56] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 17:10:58] OBS startup popup cleaner active.
+[2026-08-27 17:10:59] Weekly rollback snapshot ready: current
+[2026-08-27 17:10:59] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 17:11:01] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 17:11:02] System status: ready.
+[2026-08-27 17:11:02] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 17:11:03] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 17:11:04] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 17:11:05] Presenter Scripture selected: Matthew 12:43-50 [Presenter native CDP click]
+[2026-08-27 17:11:06] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 17:11:10] Presenter Scripture: Matthew 12:44
+[2026-08-27 17:11:13] Presenter Scripture: Matthew 12:45
+[2026-08-27 17:11:15] Presenter Scripture: Matthew 12:46
+[2026-08-27 17:11:17] Presenter Scripture: Matthew 12:47
+[2026-08-27 17:11:18] Presenter Scripture: Matthew 12:48
+[2026-08-27 17:11:25] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 17:11:25] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 17:11:31] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 17:11:33] Presenter Scripture selected: Matthew 12:43-50 [Presenter native CDP click]
+[2026-08-27 17:11:34] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 17:11:35] Presenter Scripture: Matthew 12:44
+[2026-08-27 17:11:37] Presenter Scripture: Matthew 12:45
+[2026-08-27 17:11:37] Presenter Scripture: Matthew 12:46
+[2026-08-27 17:11:38] Presenter Scripture: Matthew 12:47
+[2026-08-27 17:11:40] Presenter Scripture: Matthew 12:48
+[2026-08-27 17:11:41] Presenter Scripture: Matthew 12:49
+[2026-08-27 17:11:42] Presenter Scripture: Matthew 12:50
+[2026-08-27 17:11:44] Scripture reading ended; OBS transitioned back to webcam.
+[2026-08-27 17:12:29] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 17:12:30] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 17:13:01] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 17:13:06] Presenter Scripture selected: Matthew 12:43-50 [Presenter native CDP click]
+[2026-08-27 17:13:08] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 17:13:10] Presenter Scripture: Matthew 12:44
+[2026-08-27 17:13:12] Presenter Scripture: Matthew 12:45
+[2026-08-27 17:13:14] Presenter Scripture: Matthew 12:46
+[2026-08-27 17:13:16] Presenter Scripture: Matthew 12:47
+[2026-08-27 17:13:17] Presenter Scripture: Matthew 12:48
+[2026-08-27 17:13:18] Presenter Scripture: Matthew 12:49
+[2026-08-27 17:13:19] Presenter Scripture: Matthew 12:50
+[2026-08-27 17:13:20] Scripture reading ended; OBS transitioned back to webcam.
+[2026-08-27 17:13:50] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 17:13:50] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 17:13:55] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 17:13:57] Presenter Scripture selected: Matthew 12:43-50 [Presenter native CDP click]
+[2026-08-27 17:13:58] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 17:14:05] Presenter Scripture: Matthew 12:44
+[2026-08-27 17:14:11] Presenter Scripture: Matthew 12:45
+[2026-08-27 17:14:14] Presenter Scripture: Matthew 12:46
+[2026-08-27 17:14:16] Presenter Scripture: Matthew 12:47
+[2026-08-27 17:14:17] Presenter Scripture: Matthew 12:48
+[2026-08-27 17:14:19] Presenter Scripture: Matthew 12:49
+[2026-08-27 17:14:20] Presenter Scripture: Matthew 12:50
+[2026-08-27 17:14:22] Scripture reading ended; OBS transitioned back to webcam.
+[2026-08-27 17:41:34] TEST ONLY — The Demonic Danger of Self-Centered Reformation! [chapter marker simulated / not written] + LT1 lower third (11 sec)
+[2026-08-27 18:43:17] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 18:43:18] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 18:43:21] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 18:43:26] Presenter Scripture selected: Matthew 12:43-50 [Presenter native CDP click]
+[2026-08-27 18:43:27] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 18:43:41] Scripture reading ended; OBS transitioned back to webcam.
+[2026-08-27 18:43:59] TEST ONLY — The Demonic Danger of Self-Centered Reformation! [chapter marker simulated / not written] + LT1 lower third (11 sec)
+[2026-08-27 18:44:23] TEST ONLY — The King’s Kingdom of Saving-Gracefilled Relationship! [chapter marker simulated / not written] + LT1 lower third (11 sec)
+[2026-08-27 18:44:29] TEST ONLY — Ending Prayer [chapter marker simulated / not written]
+[2026-08-27 18:44:30] TEST ONLY — Benediction [chapter marker simulated / not written]
+[2026-08-27 19:13:16] Sunday Mode v22 ready.
+[2026-08-27 19:13:16] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 19:13:18] Pastor sermon-notes email imported.
+[2026-08-27 19:13:18] This week's sermon embedded into lower thirds.
+[2026-08-27 19:13:19] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 19:13:21] OBS startup popup cleaner active.
+[2026-08-27 19:13:22] Weekly rollback snapshot ready: current
+[2026-08-27 19:13:23] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 19:13:24] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 19:13:26] System status: ready.
+[2026-08-27 19:13:28] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 19:14:29] Sunday Mode v22 ready.
+[2026-08-27 19:14:29] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-27 19:14:31] Pastor sermon-notes email imported.
+[2026-08-27 19:14:31] This week's sermon embedded into lower thirds.
+[2026-08-27 19:14:31] Chapter hotkey labels are waiting for an OBS restart; SSS chapter button will still use the correct names.
+[2026-08-27 19:14:34] OBS startup popup cleaner active.
+[2026-08-27 19:14:35] Weekly rollback snapshot ready: current
+[2026-08-27 19:14:36] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-27 19:14:37] PTZ camera → Pastor / startup (preset 2).
+[2026-08-27 19:14:38] System status: ready.
+[2026-08-27 19:14:40] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-27 19:14:47] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 19:14:55] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 19:15:53] Presenter Scripture verified visually: Matthew 12:43-50 [item 12, webcam TP]
+[2026-08-27 19:15:54] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 19:15:57] Presenter Scripture: Matthew 12:44
+[2026-08-27 19:15:59] Presenter Scripture: Matthew 12:45
+[2026-08-27 19:16:01] Presenter Scripture: Matthew 12:46
+[2026-08-27 19:16:04] Presenter Scripture: Matthew 12:47
+[2026-08-27 19:16:11] Scripture reading ended; OBS transitioned back to webcam.
+[2026-08-27 19:16:16] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 19:16:16] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 19:16:18] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 19:16:30] Presenter Scripture verified visually: Matthew 12:43-50 [item 12, webcam TP]
+[2026-08-27 19:16:31] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 19:16:33] Presenter Scripture: Matthew 12:44
+[2026-08-27 19:16:37] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 19:16:48] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 19:16:50] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-27 19:16:53] Presenter Scripture verified visually: Matthew 12:43-50 [item 12, webcam TP]
+[2026-08-27 19:16:54] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-27 19:16:57] Presenter Scripture: Matthew 12:44
+[2026-08-27 19:17:02] Presenter Scripture: Matthew 12:45
+[2026-08-27 19:17:13] Presenter Scripture: Matthew 12:46
+[2026-08-27 19:17:16] Presenter Scripture: Matthew 12:47
+[2026-08-27 19:17:20] Presenter Scripture: Matthew 12:48
+[2026-08-27 19:18:31] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-27 19:18:31] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-27 19:29:47] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-27 20:23:16] Watchdog restarted Sermon AI.
+[2026-08-27 20:23:17] System status needs attention: AUDIO, SERMON_AI
+[2026-08-27 20:23:24] System status: ready.
+[2026-08-28 00:49:08] System status needs attention: CHAPTERS
+[2026-08-28 00:49:18] System status: ready.
+[2026-08-28 03:16:58] System status needs attention: CHAPTERS
+[2026-08-28 03:17:08] System status: ready.
+[2026-08-28 08:20:17] Sunday Mode v22 ready.
+[2026-08-28 08:20:17] Pre-start rollback snapshot ready: 2026-08-30
+[2026-08-28 08:20:19] Pastor sermon-notes email imported.
+[2026-08-28 08:20:19] This week's sermon embedded into lower thirds.
+[2026-08-28 08:20:19] Gmail sermon points synced to OBS named chapter hotkeys.
+[2026-08-28 08:20:20] Started Chapter Bridge.
+[2026-08-28 08:20:21] OBS startup popup cleaner active.
+[2026-08-28 08:20:21] Live audio sanity monitor started.
+[2026-08-28 08:20:23] OBS is not open. Starting OBS...
+[2026-08-28 08:20:23] OBS launch command sent.
+[2026-08-28 08:20:24] Opened Presenter automatically.
+[2026-08-28 08:20:24] Weekly rollback snapshot ready: current
+[2026-08-28 08:20:25] Pastor email belongs to 2026-08-23, not the upcoming service 2026-08-30. Planning was left unchanged.
+[2026-08-28 08:20:28] PTZ camera → Pastor / startup (preset 2).
+[2026-08-28 08:20:29] System status needs attention: OBS, COLLECTION, INPUTS
+[2026-08-28 08:20:30] After-service items are still waiting/reviewing: Recording, Sermon processing, Chapters, YouTube, Planning. See SYSTEM STATUS if needed.
+[2026-08-28 08:20:38] OBS is ready.
+[2026-08-28 08:20:40] System status needs attention: COLLECTION, INPUTS
+[2026-08-28 08:20:45] System status: ready.
+[2026-08-28 08:20:46] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-28 08:20:50] TEST ONLY — Prayer [chapter marker simulated / not written]
+[2026-08-28 08:20:53] Scripture START: Presenter preset to first verse of Matthew 12:43-50.
+[2026-08-28 08:20:54] Scripture reading started: Matthew 12:43-50 [TEST — marker simulated]
+[2026-08-28 08:20:57] Presenter Scripture: Matthew 12:44
+[2026-08-28 08:20:59] Presenter Scripture: Matthew 12:45
+[2026-08-28 08:21:00] Presenter Scripture: Matthew 12:46
+[2026-08-28 08:21:02] Presenter Scripture: Matthew 12:47
+[2026-08-28 08:21:07] Presenter Scripture: Matthew 12:48
+[2026-08-28 08:21:09] Presenter Scripture: Matthew 12:49
+[2026-08-28 08:21:10] Presenter Scripture: Matthew 12:50
+[2026-08-28 08:21:12] Scripture reading ended; webcam only loaded to Preview (Ctrl+F13) and transitioned to Program (Ctrl+Shift).
+[2026-08-28 08:38:29] ADMIN TEST MODE disabled: restored normal chapter/LT controls at the real sermon position.
+[2026-08-28 08:38:30] ADMIN TEST MODE enabled: chapter/LT test sequence reset to Prayer; real sermon chapter position preserved.
+[2026-08-28 10:18:18] Admin closed: Chapter/LT Test Mode automatically turned OFF; real sermon position restored.
+[2026-08-28 10:18:23] Sunday Mode v22 ready.
+[2026-08-28 10:18:23] Pre-start rollback snapshot ready: 2026-08-30

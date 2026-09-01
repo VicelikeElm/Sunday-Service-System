@@ -1,0 +1,194 @@
+﻿{
+    "CleanupVersion":  "1.0",
+    "Created":  "2026-08-25T15:18:37.8400543-04:00",
+    "BaseFolder":  "C:\\Church\\SermonAI",
+    "ArchiveFolder":  "C:\\Church\\SermonAI\\Cleanup_Archive\\2026-08-25_15-18-37",
+    "Items":  [
+                  {
+                      "RelativePath":  "__pycache__",
+                      "Reason":  "Python cache; recreated automatically",
+                      "Category":  "Cache",
+                      "WasDirectory":  true
+                  },
+                  {
+                      "RelativePath":  "Planning_Diagnostic.png",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "planning_diagnostic.py",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Planning_Diagnostic.txt",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Planning_Edit_Diagnostic.png",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "planning_edit_diagnostic.py",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Planning_Edit_Diagnostic.txt",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Planning_Service_Discovery.png",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "planning_service_discovery.py",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Planning_Service_Discovery.txt",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Planning-Diagnostic.bat",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Planning-Edit-Diagnostic.bat",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Planning-Service-Discovery.bat",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Setup-Planning-Diagnostic.bat",
+                      "Reason":  "Development diagnostic no longer required by production SSS",
+                      "Category":  "Diagnostics",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "control-panel-v12-template.html",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "control-panel-v13-template.html",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "control-panel-v14-template.html",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "install_sermon_plan_loader.py",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Install-Lower-Third-Sermon-Loader.bat",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "README_V11.txt",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "README_V12.txt",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "README_V13.txt",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "README_V14.txt",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "README_V15.txt",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "README_V8_SERMON_EMAIL.txt",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Restore-Pre-v12-Control-Panel.bat",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "Restore-Pre-v12-Control-Panel.ps1",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "sermon_plan_loader.js",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "sermon_plan_server.py",
+                      "Reason":  "Obsolete pre-v17 component or documentation",
+                      "Category":  "Legacy SermonAI",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "LowerThird_Backups\\control-panel_before_v13_2026-08-25_14-18-41.html",
+                      "Reason":  "Older LowerThird backup; newest 5 are retained",
+                      "Category":  "Old backups",
+                      "WasDirectory":  false
+                  },
+                  {
+                      "RelativePath":  "LowerThird_Backups\\control-panel_before_v14_2026-08-25_14-24-30.html",
+                      "Reason":  "Older LowerThird backup; newest 5 are retained",
+                      "Category":  "Old backups",
+                      "WasDirectory":  false
+                  }
+              ]
+}

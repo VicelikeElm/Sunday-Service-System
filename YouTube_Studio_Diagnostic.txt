@@ -1,0 +1,434 @@
+YOUTUBE STUDIO DIAGNOSTIC V1
+============================================================================================
+Generated: 2026-08-25T16:06:43
+Expected handle: @baptistchurchofperry
+Expected channel name: Baptist Church of Perry
+
+Browser channel: chrome
+URL: https://studio.youtube.com/channel/UCXwqRxA_JKNM3g6JDe76DcQ?c=UCXwqRxA_JKNM3g6JDe76DcQ
+Page title: Channel dashboard - YouTube Studio
+
+DASHBOARD VISIBLE TEXT
+--------------------------------------------------------------------------------------------
+Channel dashboard
+Skip navigation
+Ask Studio
+Create
+Baptist Church of Perry
+You're a manager
+Channel
+Baptist Church of Perry
+Dashboard
+Content
+Analytics
+Community
+Languages
+Content detection
+Earn
+Customization
+Audio library
+Settings
+Send feedback
+Channel dashboard
+Latest live stream performance
+Good friday
+0
+0
+0
+While live (stream ended 1 day 2 hours ago) 
+Views
+0
+Average view duration
+0:00
+Peak concurrent viewers
+0
+Catch me up on this video
+
+Create your first post to start a conversation and get feedback from your community.
+
+Create post
+Channel analytics
+Current subscribers
+68
++1 in last 28 days
+Summary
+Last 28 days
+Views	322	
+
+Watch time (hours)	8.7	
+Top content
+Last 48 hours · Views
+Christ’s Warning of Reform & Relation!
+	
+4
+
+
+My Kingdom is not of this world!
+	
+4
+
+
+Beatitudes Part B
+	
+1
+Go to channel analytics
+Comments
+@HandsIntoHistory
+•
+9 months ago
+Yeaaaa....sound!!!! Thanks for getting these videos up!!!
+@sharonstanley2808
+•
+3 years ago
+So encouraging to be reminded about the power of our God!
+@thunderwhip7056
+•
+3 years ago
+I would say at least Multi-galactic through creation feats, possibly higher. Speed isn't to clear but I would say anywhere from Sub-Relativistic (being able to circle the Earth in seconds) to FTL
+View more
+Recent subscribers
+Lifetime
+Corrie Sandefer
+4 subscribers
+ARCE1 fitness co
+961 subscribers
+rebeccasharvey
+6 subscribers
+See all
+News
+Monthly Creator Roundup
+Catch up on the latest news, features, and trending updates from YouTube Creators to help your channel grow
+Check it out
+1 / 5
+Creator Insider
+Search profile and console updates
+Google lowered Search profile requirements to 35K subscribers. Centralize your links and track performance with new Search Console reports
+Watch on YouTube
+What's new in Studio
+Increasing Shorts length
+Expansion of channel permissions
+Upcoming changes to Community Guidelines warnings
+Terms of use 
+Privacy policy 
+Policies & Safety 
+
+CHANNEL IDENTITY TEXT CHECK
+--------------------------------------------------------------------------------------------
+Expected handle visible in dashboard text: False
+Expected channel name visible in dashboard text: True
+
+DASHBOARD INTERACTIVE ELEMENTS
+--------------------------------------------------------------------------------------------
+[BUTTON] count=15
+  001 tag='BUTTON' text='Skip navigation' aria='Skip navigation' title='' placeholder='' name='' type='' accept='' href=''
+  002 tag='BUTTON' text='Ask Studio' aria='Ask Studio' title='' placeholder='' name='' type='' accept='' href=''
+  003 tag='BUTTON' text='Create' aria='Create' title='' placeholder='' name='' type='' accept='' href=''
+  004 tag='BUTTON' text='Catch me up on this video' aria='Catch me up on this video' title='' placeholder='' name='' type='' accept='' href=''
+  005 tag='BUTTON' text='' aria='Go to video analytics' title='' placeholder='' name='' type='' accept='' href=''
+  006 tag='BUTTON' text='' aria='See comments (0)' title='' placeholder='' name='' type='' accept='' href=''
+  007 tag='BUTTON' text='Create post' aria='Create post' title='' placeholder='' name='' type='' accept='' href=''
+  008 tag='BUTTON' text='Go to channel analytics' aria='Go to channel analytics' title='' placeholder='' name='' type='' accept='' href=''
+  009 tag='BUTTON' text='View more' aria='View more' title='' placeholder='' name='' type='' accept='' href=''
+  010 tag='BUTTON' text='See all' aria='See all' title='' placeholder='' name='' type='' accept='' href=''
+  012 tag='BUTTON' text='Check it out' aria='Check it out' title='' placeholder='' name='' type='' accept='' href=''
+  013 tag='BUTTON' text='Watch on YouTube' aria='Watch on YouTube' title='' placeholder='' name='' type='' accept='' href=''
+
+[LINK] count=37
+  000 tag='A' text='' aria='' title='YouTube Studio dashboard' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  002 tag='A' text='Dashboard' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  003 tag='A' text='Content' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/videos/upload?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  004 tag='A' text='Analytics' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  005 tag='A' text='Community' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/comments/inbox?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  006 tag='A' text='Languages' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/translations?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  007 tag='A' text='Content detection' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/copyright?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  008 tag='A' text='Earn' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/monetization/overview?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  009 tag='A' text='Customization' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/editing/profile?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  010 tag='A' text='Audio library' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/music?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  011 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  012 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/livestreaming?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  013 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='/video/nGQFRDaifdw/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  014 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='/video/nGQFRDaifdw/comments/inbox?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  015 tag='A' text='Create post' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/my_community?pdc=OAk%253D'
+  016 tag='A' text='Christ’s Warning of Reform & Relation!' aria='' title='' placeholder='' name='' type='' accept='' href='/video/LVD0kLI4I1Q/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  017 tag='A' text='4' aria='' title='' placeholder='' name='' type='' accept='' href='/video/LVD0kLI4I1Q/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  018 tag='A' text='My Kingdom is not of this world!' aria='' title='' placeholder='' name='' type='' accept='' href='/video/eXy2hoEPsTw/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  019 tag='A' text='4' aria='' title='' placeholder='' name='' type='' accept='' href='/video/eXy2hoEPsTw/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  020 tag='A' text='Beatitudes Part B' aria='' title='' placeholder='' name='' type='' accept='' href='/video/5sFrqx_ODak/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  021 tag='A' text='1' aria='' title='' placeholder='' name='' type='' accept='' href='/video/5sFrqx_ODak/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  022 tag='A' text='Go to channel analytics' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  023 tag='A' text='View more' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/comments/inbox?c=UCXwqRxA_JKNM3g6JDe76DcQ&filter=%5B%7B%22name%22%3A%22ENGAGED_STATUS%22%2C%22value%22%3A%5B%22COMMENT_CATEGORY_NOT_ENGAGED%22%5D%7D%2C%7B%22isPinned%22%3Atrue%2C%22name%'
+  024 tag='A' text='Corrie Sandefer 4 subscribers' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/channel/UCjb2OJ-DGlnoNz7nfK6xIyQ/'
+  025 tag='A' text='ARCE1 fitness co 961 subscribers' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/channel/UCuiRUBWw1OJ1aOx-HSIi_0g/'
+  026 tag='A' text='rebeccasharvey 6 subscribers' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/channel/UCbWt26ps256jmRB9jpJ7KYg/'
+  027 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/watch?v=VTMhhYTl9Co'
+  028 tag='A' text='Check it out' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  029 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/watch?v=rnXsvMn3x4E'
+  030 tag='A' text='Watch on YouTube' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  031 tag='A' text='Increasing Shorts length' aria='' title='' placeholder='' name='' type='' accept='' href='https://support.google.com/youtube/answer/11286863?hl=en'
+  032 tag='A' text='Expansion of channel permissions' aria='' title='' placeholder='' name='' type='' accept='' href='https://support.google.com/youtube/answer/11286864?hl=en'
+  033 tag='A' text='Upcoming changes to Community Guidelines warnings' aria='' title='' placeholder='' name='' type='' accept='' href='https://support.google.com/youtube/answer/11287076?hl=en'
+  034 tag='A' text='Terms of use' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/t/terms'
+  035 tag='A' text='Privacy policy' aria='' title='' placeholder='' name='' type='' accept='' href='https://policies.google.com/privacy?hl=en'
+  036 tag='A' text='Policies & Safety' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/yt/policyandsafety/'
+
+[INPUT] count=1
+
+[TEXTAREA] count=0
+
+[SELECT] count=0
+
+[ROLE-BUTTON] count=17
+  000 tag='YTCP-ICON-BUTTON' text='' aria='Collapse menu' title='' placeholder='' name='' type='' accept='' href=''
+  002 tag='YTCP-ICON-BUTTON' text='' aria='Search' title='' placeholder='' name='' type='' accept='' href=''
+  003 tag='YTCP-ICON-BUTTON' text='' aria='Help' title='' placeholder='' name='' type='' accept='' href=''
+  004 tag='YTCP-ICON-BUTTON' text='' aria='Notifications' title='' placeholder='' name='' type='' accept='' href=''
+  005 tag='YTCP-TOPBAR-MENU-BUTTON-RENDERER' text="Baptist Church of Perry You're a manager" aria='' title='' placeholder='' name='' type='' accept='' href=''
+  007 tag='TP-YT-PAPER-ICON-ITEM' text='Settings' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  008 tag='TP-YT-PAPER-ICON-ITEM' text='Send feedback' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  009 tag='YTCP-ICON-BUTTON' text='' aria='Upload videos' title='' placeholder='' name='' type='' accept='' href=''
+  010 tag='YTCP-ICON-BUTTON' text='' aria='Go live' title='' placeholder='' name='' type='' accept='' href=''
+  011 tag='YTCP-ICON-BUTTON' text='' aria='Collapse' title='' placeholder='' name='' type='' accept='' href=''
+  012 tag='DIV' text='Views 0' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  013 tag='DIV' text='Average view duration 0:00' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  014 tag='DIV' text='Peak concurrent viewers 0' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  015 tag='YTCP-ICON-BUTTON' text='' aria='Previous Item' title='' placeholder='' name='' type='' accept='' href=''
+  016 tag='YTCP-ICON-BUTTON' text='' aria='Next Item' title='' placeholder='' name='' type='' accept='' href=''
+
+[ROLE-LINK] count=0
+
+[ROLE-MENUITEM] count=9
+  000 tag='A' text='Dashboard' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  001 tag='A' text='Content' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/videos/upload?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  002 tag='A' text='Analytics' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  003 tag='A' text='Community' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/comments/inbox?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  004 tag='A' text='Languages' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/translations?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  005 tag='A' text='Content detection' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/copyright?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  006 tag='A' text='Earn' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/monetization/overview?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  007 tag='A' text='Customization' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/editing/profile?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  008 tag='A' text='Audio library' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/music?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+
+[ROLE-DIALOG] count=1
+
+ACCOUNT / PROFILE MENU
+--------------------------------------------------------------------------------------------
+Menu opened automatically: False
+CREATE / UPLOAD VIDEOS DIALOG
+--------------------------------------------------------------------------------------------
+Automatic open result: True
+Detail: Upload videos dialog opened
+
+Channel dashboard
+Skip navigation
+Ask Studio
+Create
+Baptist Church of Perry
+You're a manager
+Channel
+Baptist Church of Perry
+Dashboard
+Content
+Analytics
+Community
+Languages
+Content detection
+Earn
+Customization
+Audio library
+Settings
+Send feedback
+Channel dashboard
+Latest live stream performance
+Good friday
+0
+0
+0
+While live (stream ended 1 day 2 hours ago) 
+Views
+0
+Average view duration
+0:00
+Peak concurrent viewers
+0
+Catch me up on this video
+
+Create your first post to start a conversation and get feedback from your community.
+
+Create post
+Channel analytics
+Current subscribers
+68
++1 in last 28 days
+Summary
+Last 28 days
+Views	322	
+
+Watch time (hours)	8.7	
+Top content
+Last 48 hours · Views
+Christ’s Warning of Reform & Relation!
+	
+4
+
+
+My Kingdom is not of this world!
+	
+4
+
+
+Beatitudes Part B
+	
+1
+Go to channel analytics
+Comments
+@HandsIntoHistory
+•
+9 months ago
+Yeaaaa....sound!!!! Thanks for getting these videos up!!!
+@sharonstanley2808
+•
+3 years ago
+So encouraging to be reminded about the power of our God!
+@thunderwhip7056
+•
+3 years ago
+I would say at least Multi-galactic through creation feats, possibly higher. Speed isn't to clear but I would say anywhere from Sub-Relativistic (being able to circle the Earth in seconds) to FTL
+View more
+Recent subscribers
+Lifetime
+Corrie Sandefer
+4 subscribers
+ARCE1 fitness co
+961 subscribers
+rebeccasharvey
+6 subscribers
+See all
+News
+Monthly Creator Roundup
+Catch up on the latest news, features, and trending updates from YouTube Creators to help your channel grow
+Check it out
+1 / 5
+Creator Insider
+Search profile and console updates
+Google lowered Search profile requirements to 35K subscribers. Centralize your links and track performance with new Search Console reports
+Watch on YouTube
+What's new in Studio
+Increasing Shorts length
+Expansion of channel permissions
+Upcoming changes to Community Guidelines warnings
+Terms of use 
+Privacy policy 
+Policies & Safety 
+Upload videos
+
+Drag and drop video files to upload
+
+Select files
+
+By submitting your videos to YouTube, you acknowledge that you agree to YouTube's Terms of Service and Community Guidelines.
+
+Please ensure your videos don’t violate anyone else’s privacy or copyright. Learn more
+
+UPLOAD-DIALOG INTERACTIVE ELEMENTS
+--------------------------------------------------------------------------------------------
+[BUTTON] count=22
+  001 tag='BUTTON' text='Skip navigation' aria='Skip navigation' title='' placeholder='' name='' type='' accept='' href=''
+  002 tag='BUTTON' text='Ask Studio' aria='Ask Studio' title='' placeholder='' name='' type='' accept='' href=''
+  003 tag='BUTTON' text='Create' aria='Create' title='' placeholder='' name='' type='' accept='' href=''
+  004 tag='BUTTON' text='Catch me up on this video' aria='Catch me up on this video' title='' placeholder='' name='' type='' accept='' href=''
+  005 tag='BUTTON' text='' aria='Go to video analytics' title='' placeholder='' name='' type='' accept='' href=''
+  006 tag='BUTTON' text='' aria='See comments (0)' title='' placeholder='' name='' type='' accept='' href=''
+  007 tag='BUTTON' text='Create post' aria='Create post' title='' placeholder='' name='' type='' accept='' href=''
+  008 tag='BUTTON' text='Go to channel analytics' aria='Go to channel analytics' title='' placeholder='' name='' type='' accept='' href=''
+  009 tag='BUTTON' text='View more' aria='View more' title='' placeholder='' name='' type='' accept='' href=''
+  010 tag='BUTTON' text='See all' aria='See all' title='' placeholder='' name='' type='' accept='' href=''
+  012 tag='BUTTON' text='Check it out' aria='Check it out' title='' placeholder='' name='' type='' accept='' href=''
+  013 tag='BUTTON' text='Watch on YouTube' aria='Watch on YouTube' title='' placeholder='' name='' type='' accept='' href=''
+  015 tag='BUTTON' text='' aria='Send Feedback' title='' placeholder='' name='' type='' accept='' href=''
+  016 tag='BUTTON' text='' aria='Close' title='' placeholder='' name='' type='' accept='' href=''
+  017 tag='BUTTON' text='Select files' aria='Select files' title='' placeholder='' name='' type='' accept='' href=''
+
+[LINK] count=42
+  000 tag='A' text='' aria='' title='YouTube Studio dashboard' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  002 tag='A' text='Dashboard' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  003 tag='A' text='Content' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/videos/upload?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  004 tag='A' text='Analytics' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  005 tag='A' text='Community' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/comments/inbox?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  006 tag='A' text='Languages' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/translations?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  007 tag='A' text='Content detection' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/copyright?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  008 tag='A' text='Earn' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/monetization/overview?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  009 tag='A' text='Customization' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/editing/profile?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  010 tag='A' text='Audio library' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/music?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  011 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  012 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/livestreaming?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  013 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='/video/nGQFRDaifdw/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  014 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='/video/nGQFRDaifdw/comments/inbox?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  015 tag='A' text='Create post' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/my_community?pdc=OAk%253D'
+  016 tag='A' text='Christ’s Warning of Reform & Relation!' aria='' title='' placeholder='' name='' type='' accept='' href='/video/LVD0kLI4I1Q/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  017 tag='A' text='4' aria='' title='' placeholder='' name='' type='' accept='' href='/video/LVD0kLI4I1Q/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  018 tag='A' text='My Kingdom is not of this world!' aria='' title='' placeholder='' name='' type='' accept='' href='/video/eXy2hoEPsTw/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  019 tag='A' text='4' aria='' title='' placeholder='' name='' type='' accept='' href='/video/eXy2hoEPsTw/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  020 tag='A' text='Beatitudes Part B' aria='' title='' placeholder='' name='' type='' accept='' href='/video/5sFrqx_ODak/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  021 tag='A' text='1' aria='' title='' placeholder='' name='' type='' accept='' href='/video/5sFrqx_ODak/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  022 tag='A' text='Go to channel analytics' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  023 tag='A' text='View more' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/comments/inbox?c=UCXwqRxA_JKNM3g6JDe76DcQ&filter=%5B%7B%22name%22%3A%22ENGAGED_STATUS%22%2C%22value%22%3A%5B%22COMMENT_CATEGORY_NOT_ENGAGED%22%5D%7D%2C%7B%22isPinned%22%3Atrue%2C%22name%'
+  024 tag='A' text='Corrie Sandefer 4 subscribers' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/channel/UCjb2OJ-DGlnoNz7nfK6xIyQ/'
+  025 tag='A' text='ARCE1 fitness co 961 subscribers' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/channel/UCuiRUBWw1OJ1aOx-HSIi_0g/'
+  026 tag='A' text='rebeccasharvey 6 subscribers' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/channel/UCbWt26ps256jmRB9jpJ7KYg/'
+  027 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/watch?v=VTMhhYTl9Co'
+  028 tag='A' text='Check it out' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  029 tag='A' text='' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/watch?v=rnXsvMn3x4E'
+  030 tag='A' text='Watch on YouTube' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  031 tag='A' text='Increasing Shorts length' aria='' title='' placeholder='' name='' type='' accept='' href='https://support.google.com/youtube/answer/11286863?hl=en'
+  032 tag='A' text='Expansion of channel permissions' aria='' title='' placeholder='' name='' type='' accept='' href='https://support.google.com/youtube/answer/11286864?hl=en'
+  033 tag='A' text='Upcoming changes to Community Guidelines warnings' aria='' title='' placeholder='' name='' type='' accept='' href='https://support.google.com/youtube/answer/11287076?hl=en'
+  034 tag='A' text='Terms of use' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/t/terms'
+  035 tag='A' text='Privacy policy' aria='' title='' placeholder='' name='' type='' accept='' href='https://policies.google.com/privacy?hl=en'
+  036 tag='A' text='Policies & Safety' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/yt/policyandsafety/'
+  039 tag='A' text='Terms of Service' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/t/terms'
+  040 tag='A' text='Community Guidelines' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/yt/about/policies/'
+  041 tag='A' text='Learn more' aria='' title='' placeholder='' name='' type='' accept='' href='https://www.youtube.com/yt/copyright'
+
+[INPUT] count=2
+
+[TEXTAREA] count=0
+
+[SELECT] count=0
+
+[ROLE-BUTTON] count=17
+  000 tag='YTCP-ICON-BUTTON' text='' aria='Collapse menu' title='' placeholder='' name='' type='' accept='' href=''
+  002 tag='YTCP-ICON-BUTTON' text='' aria='Search' title='' placeholder='' name='' type='' accept='' href=''
+  003 tag='YTCP-ICON-BUTTON' text='' aria='Help' title='' placeholder='' name='' type='' accept='' href=''
+  004 tag='YTCP-ICON-BUTTON' text='' aria='Notifications' title='' placeholder='' name='' type='' accept='' href=''
+  005 tag='YTCP-TOPBAR-MENU-BUTTON-RENDERER' text="Baptist Church of Perry You're a manager" aria='' title='' placeholder='' name='' type='' accept='' href=''
+  007 tag='TP-YT-PAPER-ICON-ITEM' text='Settings' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  008 tag='TP-YT-PAPER-ICON-ITEM' text='Send feedback' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  009 tag='YTCP-ICON-BUTTON' text='' aria='Upload videos' title='' placeholder='' name='' type='' accept='' href=''
+  010 tag='YTCP-ICON-BUTTON' text='' aria='Go live' title='' placeholder='' name='' type='' accept='' href=''
+  011 tag='YTCP-ICON-BUTTON' text='' aria='Collapse' title='' placeholder='' name='' type='' accept='' href=''
+  012 tag='DIV' text='Views 0' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  013 tag='DIV' text='Average view duration 0:00' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  014 tag='DIV' text='Peak concurrent viewers 0' aria='' title='' placeholder='' name='' type='' accept='' href=''
+  015 tag='YTCP-ICON-BUTTON' text='' aria='Previous Item' title='' placeholder='' name='' type='' accept='' href=''
+  016 tag='YTCP-ICON-BUTTON' text='' aria='Next Item' title='' placeholder='' name='' type='' accept='' href=''
+
+[ROLE-LINK] count=0
+
+[ROLE-MENUITEM] count=15
+  000 tag='A' text='Dashboard' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  001 tag='A' text='Content' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/videos/upload?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  002 tag='A' text='Analytics' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/analytics/tab-overview/period-default?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  003 tag='A' text='Community' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/comments/inbox?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  004 tag='A' text='Languages' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/translations?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  005 tag='A' text='Content detection' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/copyright?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  006 tag='A' text='Earn' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/monetization/overview?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  007 tag='A' text='Customization' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/editing/profile?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+  008 tag='A' text='Audio library' aria='' title='' placeholder='' name='' type='' accept='' href='/channel/UCXwqRxA_JKNM3g6JDe76DcQ/music?c=UCXwqRxA_JKNM3g6JDe76DcQ'
+
+[ROLE-DIALOG] count=3
+  002 tag='TP-YT-PAPER-DIALOG' text="Upload videos Drag and drop video files to upload Select files By submitting your videos to YouTube, you acknowledge that you agree to YouTube's Terms of Service and Community Guidelines. Please ensure your videos don’t violate anyone else’" aria='' title='' placeholder='' name='' type='' accept='' href=''
+
+FILE INPUTS
+--------------------------------------------------------------------------------------------
+Count: 1
+[0] accept='' name='Filedata' id='' multiple='' aria=''
+<input type="file" name="Filedata" multiple="" aria-hidden="true" tabindex="-1" style="position: absolute; overflow: hidden; height: 0px; width: 0px; opacity: 0; left: 0px; top: 0px; display: none;">

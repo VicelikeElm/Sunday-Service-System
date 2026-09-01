@@ -1,0 +1,49 @@
+SSS v22 — INSTALL FIRST
+=======================
+
+1. Close Sunday Service System.
+
+2. Copy ALL files from this v22 package into:
+
+     C:\Church\SermonAI
+
+   Choose Replace/Overwrite when Windows asks.
+
+3. Run ONE TIME:
+
+     Setup-SSS-v22.bat
+
+   This:
+   - installs websocket-client for the isolated OBS audio meter
+   - creates State / Logs / Weekly_Backups
+   - syntax-checks v22
+   - archives obsolete pre-v22 development files instead of deleting them
+
+4. Run:
+
+     Run-Safe-SSS-Test-Mode.bat
+
+   This does NOT record, stream, change Planning, or upload to YouTube.
+
+5. Start SSS normally with:
+
+     START SUNDAY MODE
+
+
+WHAT SHOULD LOOK DIFFERENT
+--------------------------
+Main title:
+  SUNDAY SERVICE SYSTEM • v22
+
+New status rows:
+  Post-service completion
+  Live audio sanity
+  Recording file health
+
+Normal volunteer screen now has:
+  ADMIN / TROUBLESHOOTING
+
+Planning/YouTube maintenance controls are inside Admin.
+
+DO NOT TEST START/STOP RECORDING DURING A REAL SERVICE.
+Use the safe test mode first.

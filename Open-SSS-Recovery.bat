@@ -1,0 +1,6 @@
+@echo off
+setlocal
+cd /d C:\Church\SermonAI
+call venv\Scripts\activate.bat
+pythonw sss_settings.py --recovery
+endlocal

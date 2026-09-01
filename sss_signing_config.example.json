@@ -1,0 +1,8 @@
+{
+  "certificate_thumbprint": "REPLACE_WITH_CODE_SIGNING_CERT_THUMBPRINT",
+  "certificate_store": "CurrentUser",
+  "update_manifest_thumbprint": "",
+  "timestamp_url": "http://timestamp.digicert.com",
+  "signtool_path": "",
+  "publisher_name": "Sunday Service System"
+}

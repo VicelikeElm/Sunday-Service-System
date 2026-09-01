@@ -1,0 +1,103 @@
+{
+  "generated": "2026-08-25T16:35:02",
+  "mode": "SAFE TEST — no recording, stream, Planning write, or YouTube upload",
+  "passed": 19,
+  "total": 19,
+  "tests": [
+    {
+      "name": "Sunday configuration",
+      "ok": true,
+      "detail": "sunday_config.json loaded"
+    },
+    {
+      "name": "Sermon plan",
+      "ok": true,
+      "detail": "Christ’s Warning of Reform & Relation! | Matthew 12:43-50"
+    },
+    {
+      "name": "Writable folder: D:\\2026",
+      "ok": true,
+      "detail": "writable"
+    },
+    {
+      "name": "Writable folder: D:\\2026\\SRT files",
+      "ok": true,
+      "detail": "writable"
+    },
+    {
+      "name": "Writable folder: D:\\2026\\shorts\\ai shorts\\Ready",
+      "ok": true,
+      "detail": "writable"
+    },
+    {
+      "name": "Writable folder: D:\\2026\\shorts\\ai shorts\\Sermon Data",
+      "ok": true,
+      "detail": "writable"
+    },
+    {
+      "name": "ffmpeg",
+      "ok": true,
+      "detail": "C:\\Users\\Vicel\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffmpeg.EXE"
+    },
+    {
+      "name": "ffprobe",
+      "ok": true,
+      "detail": "C:\\Users\\Vicel\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffprobe.EXE"
+    },
+    {
+      "name": "nvidia-smi",
+      "ok": true,
+      "detail": "C:\\Windows\\system32\\nvidia-smi.EXE"
+    },
+    {
+      "name": "OBS WebSocket",
+      "ok": true,
+      "detail": "localhost:4455 reachable"
+    },
+    {
+      "name": "WorshipTools Planning profile",
+      "ok": true,
+      "detail": "C:\\Church\\SermonAI\\WorshipTools_Planning_Profile"
+    },
+    {
+      "name": "YouTube Studio profile",
+      "ok": true,
+      "detail": "C:\\Church\\SermonAI\\YouTube_Studio_Profile"
+    },
+    {
+      "name": "Syntax: sunday_mode.py",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntax: chapter_bridge.py",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntax: gmail_sermon_importer.py",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntax: planning_update_sermon.py",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntax: youtube_studio_upload_worker.py",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntax: post_service_supervisor.py",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "name": "Syntax: audio_sanity_monitor.py",
+      "ok": true,
+      "detail": "OK"
+    }
+  ]
+}

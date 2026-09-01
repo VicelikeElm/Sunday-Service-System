@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "state": "CLOSED",
+  "pid": 11836,
+  "started_at": "2026-08-30T12:10:04.988153-04:00",
+  "heartbeat_at": "2026-08-30T12:18:27.246986-04:00",
+  "profile_name": "Baptist Church of Perry",
+  "last_event": "SSS window closed normally; OBS outputs were left unchanged.",
+  "last_event_at": "2026-08-30T12:18:27.235895-04:00",
+  "recording": false,
+  "streaming": false,
+  "clean_shutdown_at": "2026-08-30T12:18:27.247012-04:00"
+}

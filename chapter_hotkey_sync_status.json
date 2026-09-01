@@ -1,0 +1,37 @@
+{
+  "state": "SYNCED",
+  "message": "Synced 7 sermon chapter hotkey(s) for 2026-08-30. Preserved existing bindings where found.",
+  "scene_collection": "C:\\Users\\Vicel\\AppData\\Roaming\\obs-studio\\basic\\scenes\\Church_recording.json",
+  "backup": "C:\\Church\\SermonAI\\Chapter_Hotkey_Backups\\2026-08-30_12-10-07_Church_recording.json",
+  "plan_id": "aa4d26a05db99974",
+  "service_date": "2026-08-30",
+  "desired": {
+    "prayer": "Prayer",
+    "reference": "Matt 13:10-17",
+    "point1": "Christ Reveals Spiritual Secrets!",
+    "point2": "Christ Judges our Sin-hardened Hearts!",
+    "point3": "Christ Blesses His Light-Receptive Disciples!",
+    "ending_prayer": "Ending Prayer",
+    "benediction": "Benediction"
+  },
+  "roles": {
+    "prayer": "chapter_hotkey_sss_prayer",
+    "reference": "chapter_hotkey_sss_reference",
+    "point1": "chapter_hotkey_sss_point1",
+    "point2": "chapter_hotkey_sss_point2",
+    "ending_prayer": "chapter_hotkey_sss_ending_prayer",
+    "benediction": "chapter_hotkey_sss_benediction",
+    "point3": "chapter_hotkey_sss_point3"
+  },
+  "changes": [],
+  "created": [
+    "prayer",
+    "reference",
+    "point1",
+    "point2",
+    "point3",
+    "ending_prayer",
+    "benediction"
+  ],
+  "updated": "2026-08-30T12:10:07"
+}

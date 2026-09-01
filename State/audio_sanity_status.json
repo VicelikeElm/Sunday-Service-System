@@ -1,0 +1,9 @@
+{
+  "updated": "2026-09-01T09:40:19-04:00",
+  "state": "ERROR",
+  "detail": "[WinError 10061] No connection could be made because the target machine actively refused it",
+  "max_db": -120.0,
+  "silence_seconds": 0.0,
+  "clip_seconds": 0.0,
+  "input": ""
+}

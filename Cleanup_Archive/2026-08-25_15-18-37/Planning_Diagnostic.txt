@@ -1,0 +1,326 @@
+WORSHIPTOOLS PLANNING DIAGNOSTIC
+================================================================================
+Generated: 2026-08-25T14:51:59
+URL: https://planning.worshiptools.com/app/account/9ac65c41-8f43-01af-5702-f2f77a485b91/service/8040c66c-c36b-4670-b479-6444cfa3c30b
+Page title: Aug 30 - Todd Campbell - Planning by WorshipTools
+
+SERMON PLAN
+--------------------------------------------------------------------------------
+Title: Christ’s Warning of Reform & Relation!
+Scripture: Matthew 12:43-50
+Points:
+1. The Demonic Danger of Self-Centered Reformation!
+2. The King’s Kingdom of Saving-Gracefilled Relationship!
+
+VISIBLE PAGE TEXT
+--------------------------------------------------------------------------------
+Corey Golde
+Perry Baptist church
+Dashboard
+Services
+Services
+Service Types
+Service Matrix
+Calendar
+Messages
+Songs
+People
+Back to Services
+Service
+Print
+Clone
+Service General Information
+Aug 30
+Todd Campbell
+Services
+Sunday, August 30, 2026 - 9:00am
+ 2
+Accepted
+ 11
+Not yet responded
+Edit
+Your Role(s)
+Tech Director
+ Accepted
+Busy Loading ...
+Attachments
+No attachments available
+Add Attachment
+Order
+People
+Rehearse
+Charts 
+Order Of Service
+Add Header
+Add
+Item
+Display Options
+Sorting Controls	Length of Time	Description	Controls
+	
+Total Time:
+3:36	
+
+Grip handle for sorting
+	
+ morning slides 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	
+ morning worship 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	3:36	
+He's Done so Much for Me C
+ Hymn 166 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Before The Throne Of God Above D
+ Hymn 121 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Whate'er My God Ordains Is Right
+ Hymn 90 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Prayer -Offfering- E
+ hymn 149- God of Every Grace 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Our God Will Go Before Us C
+ hymn 326 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	
+ Sermon 
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+[blank]
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Matthew 9:1-4 (ESV)
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Doxology Hymn #808 Db
+	
+Edit
+
+
+Grip handle for sorting
+	0:00	
+Communion
+	
+Edit
+
+	3:36	
+Last edited by Corey 9 minutes prior
+Delete
+Busy Loading ...
+Planning by WorshipTools
+© 2026. All rights reserved.
+Apple and Apple Music are trademarks of Apple Inc., registered in the U.S. and other countries
+Build
+Media Player
+
+INTERACTIVE ELEMENTS
+--------------------------------------------------------------------------------
+[BUTTON] count=32
+000 tag='BUTTON' text='Corey Golde\nPerry Baptist church' aria='' title='' placeholder=''
+001 tag='BUTTON' text='Print' aria='' title='' placeholder=''
+002 tag='BUTTON' text='Clone' aria='' title='' placeholder=''
+003 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+004 tag='BUTTON' text='Accepted' aria='' title='' placeholder=''
+005 tag='BUTTON' text='Add Header' aria='' title='' placeholder=''
+006 tag='BUTTON' text='Add\nItem' aria='' title='' placeholder=''
+007 tag='BUTTON' text='Display Options' aria='' title='' placeholder=''
+008 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+009 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+010 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+011 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+012 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+013 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+014 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+015 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+016 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+017 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+018 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+019 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+020 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+021 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+022 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+023 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+024 tag='BUTTON' text='Edit' aria='' title='' placeholder=''
+025 tag='BUTTON' text='Message' aria='' title='' placeholder=''
+026 tag='BUTTON' text='Send invites (0)' aria='' title='' placeholder=''
+027 tag='BUTTON' text='Billing  0 Accepted 0 Declined 0Not yet responded' aria='' title='' placeholder=''
+028 tag='BUTTON' text='Pastor  0 Accepted 0 Declined 0Not yet responded' aria='' title='' placeholder=''
+029 tag='BUTTON' text='Tech Team  1 Accepted 0 Declined 0Not yet responded' aria='' title='' placeholder=''
+030 tag='BUTTON' text='Worship Team  1 Accepted 0 Declined 7Not yet responded' aria='' title='' placeholder=''
+031 tag='BUTTON' text='Add PersonSearch for PersonNo results found.' aria='' title='' placeholder=''
+
+[LINK] count=37
+000 tag='A' text='' aria='' title='' placeholder=''
+001 tag='A' text='Dashboard' aria='' title='' placeholder=''
+002 tag='A' text='Services' aria='' title='' placeholder=''
+003 tag='A' text='Messages' aria='' title='' placeholder=''
+004 tag='A' text='Songs' aria='' title='' placeholder=''
+005 tag='A' text='People' aria='' title='' placeholder=''
+006 tag='A' text='Profile' aria='' title='' placeholder=''
+007 tag='A' text='Settings' aria='' title='' placeholder=''
+008 tag='A' text='Activity Log' aria='' title='' placeholder=''
+009 tag='A' text='Cloud Storage' aria='' title='' placeholder=''
+010 tag='A' text='Sign Out' aria='' title='' placeholder=''
+011 tag='A' text='Help & Docs' aria='' title='' placeholder=''
+012 tag='A' text='Dashboard' aria='' title='' placeholder=''
+013 tag='A' text='Services' aria='' title='' placeholder=''
+014 tag='A' text='Services' aria='' title='' placeholder=''
+015 tag='A' text='Service Types' aria='' title='' placeholder=''
+016 tag='A' text='Service Matrix' aria='' title='' placeholder=''
+017 tag='A' text='Calendar' aria='' title='' placeholder=''
+018 tag='A' text='Messages' aria='' title='' placeholder=''
+019 tag='A' text='Songs' aria='' title='' placeholder=''
+020 tag='A' text='People' aria='' title='' placeholder=''
+021 tag='A' text='Back to Services' aria='' title='' placeholder=''
+022 tag='A' text='' aria='Back to Services' title='' placeholder=''
+023 tag='A' text='Decline' aria='' title='' placeholder=''
+024 tag='A' text='Order' aria='' title='' placeholder=''
+025 tag='A' text='People' aria='' title='' placeholder=''
+026 tag='A' text='Rehearse' aria='' title='' placeholder=''
+027 tag='A' text='Charts' aria='' title='' placeholder=''
+028 tag='A' text='Show All Service Items' aria='' title='' placeholder=''
+029 tag='A' text='Import Service Items' aria='' title='' placeholder=''
+030 tag='A' text='Bulk Delete Service Items' aria='' title='' placeholder=''
+031 tag='A' text='Times' aria='' title='' placeholder=''
+032 tag='A' text='Length' aria='' title='' placeholder=''
+033 tag='A' text='Sun, Aug 30, 2026, 9:00am' aria='' title='' placeholder=''
+034 tag='A' text='Delete' aria='' title='' placeholder=''
+035 tag='A' text='' aria='' title='Toggle Play' placeholder=''
+036 tag='A' text='' aria='' title='Toggle Play' placeholder=''
+
+[INPUT] count=4
+000 tag='INPUT' text='' aria='' title='' placeholder=''
+001 tag='INPUT' text='' aria='' title='' placeholder=''
+002 tag='INPUT' text='' aria='' title='' placeholder=''
+003 tag='INPUT' text='' aria='' title='' placeholder=''
+
+[TEXTAREA] count=0
+
+[SELECT] count=1
+000 tag='SELECT' text='Billing  Pastor  Tech Team  Worship Team' aria='' title='' placeholder=''
+
+[ROLE-BUTTON] count=2
+000 tag='A' text='' aria='' title='Toggle Play' placeholder=''
+001 tag='A' text='' aria='' title='Toggle Play' placeholder=''
+
+[ROLE-LINK] count=0
+
+[ROLE-TEXTBOX] count=0
+
+[ROLE-MENUITEM] count=18
+000 tag='A' text='Dashboard' aria='' title='' placeholder=''
+001 tag='A' text='Services' aria='' title='' placeholder=''
+002 tag='A' text='Messages' aria='' title='' placeholder=''
+003 tag='A' text='Songs' aria='' title='' placeholder=''
+004 tag='A' text='People' aria='' title='' placeholder=''
+005 tag='A' text='Profile' aria='' title='' placeholder=''
+006 tag='A' text='Settings' aria='' title='' placeholder=''
+007 tag='A' text='Activity Log' aria='' title='' placeholder=''
+008 tag='A' text='Cloud Storage' aria='' title='' placeholder=''
+009 tag='A' text='Sign Out' aria='' title='' placeholder=''
+010 tag='A' text='Help & Docs' aria='' title='' placeholder=''
+011 tag='A' text='Decline' aria='' title='' placeholder=''
+012 tag='A' text='Show All Service Items' aria='' title='' placeholder=''
+013 tag='A' text='Import Service Items' aria='' title='' placeholder=''
+014 tag='A' text='Bulk Delete Service Items' aria='' title='' placeholder=''
+015 tag='A' text='Times' aria='' title='' placeholder=''
+016 tag='A' text='Length' aria='' title='' placeholder=''
+017 tag='A' text='Sun, Aug 30, 2026, 9:00am' aria='' title='' placeholder=''
+
+[ROLE-OPTION] count=0
+
+SERMON MATCHES
+--------------------------------------------------------------------------------
+Exact visible text "Sermon": 4 match(es)
+--- Sermon match 1 ---
+<h3 data-v-3dc57186=""> Sermon <!----></h3>
+--- Sermon match 2 ---
+<h3 data-v-3dc57186=""> Sermon <!----></h3>
+--- Sermon match 3 ---
+<h3 data-v-3dc57186=""> Sermon <!----></h3>
+--- Sermon match 4 ---
+<h3 data-v-3dc57186=""> Sermon <!----></h3>
+
+CURRENT SCRIPTURE MATCHES
+--------------------------------------------------------------------------------
+'Matthew 12:43-50': 0 match(es)

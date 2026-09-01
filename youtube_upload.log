@@ -1,0 +1,1295 @@
+[2026-08-25 15:50:45] ERROR: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/channels?part=snippet&mine=true&maxResults=5&alt=json returned "Request had insufficient authentication scopes.". Details: "[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]">
+[2026-08-25 15:51:07] SKIPPED_DATE: Sermon plan is for 2026-08-23; today is 2026-08-25. Nothing was uploaded.
+[2026-08-25 16:12:55] SKIPPED_DATE: Sermon plan is for 2026-08-23; today is 2026-08-25. Nothing was uploaded.
+[2026-08-25 16:38:46] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:39:16] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:39:46] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:40:16] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:40:46] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:41:16] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:41:46] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:42:16] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:42:46] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:43:16] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:43:47] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:44:17] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:44:47] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:45:17] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:45:47] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:46:17] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-25 16:46:47] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:05:51] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:06:21] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:06:51] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:07:21] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:07:51] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:08:21] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:08:51] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:09:21] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:09:51] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:10:21] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:10:51] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:11:21] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:11:51] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:12:21] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:12:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:13:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:13:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:14:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:14:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:15:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:15:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:16:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:16:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:17:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:17:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:18:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:18:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:19:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:19:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:20:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:20:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:21:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:21:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:22:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:22:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:23:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:23:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:24:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:24:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:25:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:25:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:26:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:26:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:27:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:27:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:28:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:28:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:29:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:29:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:30:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:30:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:31:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:31:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:32:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:32:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:33:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:33:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:34:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:34:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:35:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:35:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:36:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:36:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:37:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:37:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:38:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:38:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:39:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:39:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:40:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:40:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:41:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:41:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:42:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:42:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:43:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:43:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:44:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:44:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:45:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:45:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:46:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:46:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:47:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:47:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:48:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:48:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:49:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:49:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:50:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:50:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:51:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:51:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:52:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:52:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:53:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:53:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:54:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:54:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:55:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:55:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:56:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:56:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:57:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:57:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:58:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:58:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:59:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 12:59:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:00:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:00:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:01:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:01:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:02:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:02:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:03:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:03:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:04:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:04:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:05:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:05:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:06:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:06:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:07:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:07:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:08:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:08:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:09:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:09:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:10:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:10:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:11:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:11:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:12:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:12:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:13:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:13:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:14:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:14:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:15:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:15:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:16:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:16:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:17:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:17:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:18:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:18:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:19:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:19:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:20:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:20:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:21:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:21:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:22:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:22:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:23:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:23:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:24:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:24:52] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:25:22] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 13:25:52] ERROR: [WinError 5] Access is denied: 'C:\\Church\\SermonAI\\youtube_upload_status.json.tmp' -> 'C:\\Church\\SermonAI\\youtube_upload_status.json'
+[2026-08-26 16:30:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:30:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:31:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:31:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:32:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:32:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:33:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:33:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:34:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:34:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:35:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:35:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:36:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:36:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:37:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:37:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:38:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:38:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:39:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:39:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:40:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:40:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:41:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:41:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:42:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:42:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:43:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:43:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:44:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:44:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:45:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:45:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:46:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:46:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:47:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:47:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:48:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:48:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:49:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:49:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:50:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:50:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:51:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:51:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:52:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:52:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:53:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:53:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:54:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:54:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:55:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:55:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:56:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:56:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:57:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:57:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:58:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:58:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:59:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 16:59:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:00:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:00:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:01:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:01:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:02:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:02:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:03:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:03:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:04:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:04:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:05:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:05:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:06:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:06:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:07:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:07:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:08:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:08:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:09:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:09:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:10:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:10:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:11:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:11:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:12:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:12:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:13:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:13:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:14:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:14:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:15:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:15:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:16:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:16:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:17:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:17:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:18:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:18:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:19:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:19:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:20:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:20:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:21:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:21:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:22:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:22:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:23:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:23:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:24:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:24:53] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:25:23] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:25:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:26:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:26:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:27:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:27:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:28:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:28:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:29:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:29:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:30:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:30:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:31:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:31:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:32:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:32:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:33:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:33:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:34:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:34:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:35:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:35:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:36:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:36:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:37:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:37:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:38:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:38:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:39:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:39:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:40:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:40:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:41:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:41:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:42:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:42:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:43:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:43:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:44:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:44:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:45:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:45:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:46:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:46:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:47:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:47:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:48:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:48:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:49:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:49:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:50:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:50:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:51:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:51:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:52:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:52:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:53:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:53:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:54:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:54:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:55:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:55:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:56:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:56:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:57:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:57:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:58:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:58:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:59:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 17:59:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:00:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:00:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:01:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:01:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:02:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:02:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:03:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:03:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:04:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:04:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:05:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:05:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:06:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:06:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:07:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:07:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:08:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:08:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:09:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:09:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:10:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:10:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:11:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:11:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:12:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:12:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:13:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:13:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:14:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:14:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:15:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:15:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:16:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:16:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:17:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:17:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:18:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:18:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:19:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:19:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:20:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:20:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:21:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:21:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:22:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:22:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:23:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:23:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:24:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:24:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:25:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:25:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:26:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:26:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:27:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:27:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:28:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:28:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:29:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:29:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:30:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:30:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:31:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:31:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:32:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:32:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:33:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:33:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:34:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:34:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:35:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:35:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:36:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:36:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:37:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:37:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:38:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:38:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:39:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:39:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:40:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:40:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:41:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:41:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:42:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:42:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:43:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:43:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:44:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:44:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:45:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:45:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:46:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:46:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:47:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:47:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:48:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:48:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:49:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:49:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:50:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:50:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:51:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:51:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:52:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:52:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:53:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:53:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:54:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:54:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:55:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:55:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:56:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:56:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:57:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:57:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:58:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:58:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:59:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 18:59:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:00:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:00:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:01:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:01:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:02:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:02:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:03:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:03:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:04:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:04:54] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:05:24] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:05:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:06:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:06:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:07:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:07:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:08:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:08:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:09:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:09:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:10:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:10:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:11:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:11:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:12:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:12:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:13:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:13:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:14:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:14:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:15:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:15:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:16:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:16:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:17:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:17:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:18:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:18:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:19:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:19:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:20:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:20:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:21:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:21:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:22:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:22:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:23:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:23:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:24:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:24:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:25:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:25:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:26:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:26:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:27:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:27:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:28:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:28:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:29:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:29:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:30:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:30:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:31:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:31:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:32:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:32:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:33:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:33:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:34:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:34:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:35:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:35:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:36:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:36:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:37:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:37:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:38:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:38:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:39:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:39:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:40:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:40:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:41:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:41:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:42:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:42:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:43:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:43:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:44:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:44:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:45:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:45:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:46:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:46:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:47:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:47:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:48:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:48:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:49:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:49:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:50:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:50:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:51:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:51:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:52:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:52:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:53:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:53:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:54:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:54:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:55:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:55:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:56:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:56:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:57:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:57:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:58:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:58:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:59:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 19:59:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:00:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:00:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:01:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:01:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:02:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:02:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:03:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:03:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:04:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:04:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:05:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:05:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:06:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:06:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:07:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:07:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:08:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:08:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:09:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:09:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:10:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:10:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:11:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:11:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:12:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:12:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:13:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:13:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:14:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:14:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:15:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:15:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:16:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:16:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:17:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:17:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:18:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:18:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:19:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:19:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:20:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:20:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:21:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:21:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:22:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:22:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:23:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:23:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:24:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:24:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:25:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:25:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:26:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:26:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:27:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:27:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:28:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:28:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:29:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:29:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:30:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:30:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:31:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:31:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:32:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:32:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:33:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:33:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:34:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:34:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:35:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:35:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:36:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:36:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:37:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:37:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:38:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:38:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:39:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:39:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:40:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:40:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:41:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:41:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:42:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:42:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:43:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:43:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:44:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:44:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:45:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:45:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:46:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:46:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:47:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:47:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:48:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:48:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:49:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:49:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:50:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:50:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:51:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:51:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:52:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:52:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:53:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:53:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:54:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:54:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:55:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:55:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:56:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:56:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:57:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:57:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:58:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:58:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:59:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 20:59:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:00:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:00:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:01:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:01:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:02:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:02:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:03:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:03:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:04:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:04:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:05:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:05:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:06:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:06:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:07:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:07:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:08:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:08:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:09:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:09:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:10:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:10:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:11:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:11:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:12:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:12:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:13:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:13:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:14:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:14:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:15:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:15:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:16:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:16:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:17:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:17:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:18:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:18:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:19:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:19:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:20:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:20:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:21:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:21:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:22:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:22:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:23:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:23:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:24:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:24:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:25:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:25:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:26:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:26:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:27:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:27:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:28:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:28:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:29:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:29:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:30:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:30:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:31:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:31:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:32:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:32:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:33:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:33:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:34:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:34:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:35:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:35:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:36:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:36:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:37:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:37:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:38:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:38:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:39:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:39:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:40:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:40:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:41:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:41:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:42:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:42:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:43:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:43:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:44:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:44:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:45:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:45:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:46:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:46:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:47:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:47:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:48:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:48:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:49:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:49:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:50:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:50:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:51:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:51:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:52:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:52:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:53:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:53:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:54:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:54:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:55:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:55:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:56:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:56:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:57:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:57:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:58:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:58:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:59:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 21:59:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:00:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:00:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:01:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:01:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:02:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:02:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:03:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:03:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:04:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:04:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:05:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:05:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:06:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:06:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:07:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:07:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:08:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:08:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:09:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:09:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:10:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:10:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:11:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:11:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:12:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:12:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:13:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:13:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:14:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:14:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:15:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:15:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:16:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:16:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:17:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:17:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:18:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:18:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:19:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:19:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:20:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:20:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:21:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:21:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:22:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:22:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:23:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:23:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:24:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:24:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:25:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:25:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:26:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:26:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:27:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:27:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:28:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:28:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:29:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:29:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-23.
+[2026-08-26 22:30:26] NO_RECORDING: No full sermon recording became eligible before the wait period expired.
+[2026-08-30 10:52:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:52:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:53:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:53:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:54:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:54:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:55:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:55:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:56:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:56:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:57:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:57:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:58:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:58:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:59:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 10:59:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:00:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:00:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:01:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:01:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:02:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:02:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:03:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:03:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:04:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:04:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:05:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:05:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:06:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:06:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:07:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:07:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:08:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:08:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:09:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:09:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:10:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:10:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:11:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:11:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:12:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:12:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:13:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:13:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:14:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:14:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:15:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:15:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:16:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:16:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:17:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:17:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:18:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:18:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:19:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:19:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:20:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:20:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:21:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:21:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:22:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:22:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:23:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:23:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:24:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:24:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:25:25] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:25:55] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:26:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:26:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:27:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:27:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:28:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:28:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:29:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:29:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:30:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:30:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:31:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:31:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:32:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:32:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:33:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:33:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:34:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:34:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:35:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:35:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:36:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:36:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:37:26] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:37:56] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:38:27] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:38:57] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:39:27] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:39:57] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:40:27] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:40:57] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:41:27] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:41:57] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:42:27] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:42:57] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:43:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:43:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:44:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:44:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:45:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:45:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:46:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:46:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:47:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:47:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:48:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:48:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:49:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:49:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:50:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:50:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:51:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:51:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:52:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:52:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:53:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:53:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:54:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:54:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:55:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:55:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:56:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:56:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:57:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:57:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:58:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:58:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:59:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 11:59:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:00:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:00:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:01:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:01:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:02:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:02:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:03:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:03:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:04:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:04:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:05:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:05:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:06:28] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:06:58] WAITING_FOR_RECORDING: Waiting for the full-size, stable sermon recording for 2026-08-30.
+[2026-08-30 12:07:35] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:07:36] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:07:37] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:07:44] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:07:45] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:07:45] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:08:41] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:08:41] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:08:42] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:10:38] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:10:39] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:10:39] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:12:54] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:12:54] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:12:55] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:15:29] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:15:30] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:15:30] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:18:12] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:18:13] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:18:13] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:23:28] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:23:28] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:23:28] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:28:44] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:28:45] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:28:45] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:34:00] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:34:00] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:34:01] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:39:15] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:39:16] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:39:16] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:44:31] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:44:32] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:44:32] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:49:47] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:49:47] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:49:48] ERROR: Could not identify the YouTube title field.
+[2026-08-30 12:55:03] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 12:55:04] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 12:55:04] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:00:19] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:00:19] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:00:20] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:05:31] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:05:32] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:05:32] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:10:44] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:10:45] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:10:45] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:15:56] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:15:57] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:15:57] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:21:09] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:21:09] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:21:10] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:26:21] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:26:21] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:26:22] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:31:33] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:31:34] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:31:34] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:36:45] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:36:46] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:36:46] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:41:58] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:41:58] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:41:59] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:47:10] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:47:10] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:47:11] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:52:23] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:52:23] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:52:24] ERROR: Could not identify the YouTube title field.
+[2026-08-30 13:57:35] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 13:57:35] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 13:57:36] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:02:47] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:02:48] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:02:48] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:08:00] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:08:00] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:08:01] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:13:19] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:13:21] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:13:22] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:18:41] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:18:42] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:18:43] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:24:04] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:24:05] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:24:06] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:29:25] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:29:27] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:29:28] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:34:48] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:34:49] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:34:50] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:40:10] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:40:11] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:40:13] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:45:31] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:45:33] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:45:34] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:50:53] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:50:54] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:50:56] ERROR: Could not identify the YouTube title field.
+[2026-08-30 14:56:14] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 14:56:16] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 14:56:17] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:01:35] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:01:38] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:01:39] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:06:57] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:06:59] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:07:01] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:12:20] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:12:21] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:12:22] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:17:43] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:17:45] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:17:46] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:23:05] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:23:06] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:23:08] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:28:24] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:28:26] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:28:27] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:33:47] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:33:49] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:33:50] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:39:09] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:39:10] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:39:11] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:44:30] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:44:32] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:44:33] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:49:52] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:49:55] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:49:56] ERROR: Could not identify the YouTube title field.
+[2026-08-30 15:55:15] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 15:55:17] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 15:55:18] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:00:38] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:00:40] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:00:41] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:06:00] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:06:02] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:06:03] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:11:22] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:11:24] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:11:25] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:16:45] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:16:47] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:16:48] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:22:08] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:22:09] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:22:10] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:27:30] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:27:31] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:27:33] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:32:53] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:32:54] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:32:55] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:38:14] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:38:15] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:38:16] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:43:36] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:43:38] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:43:39] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:48:59] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:49:00] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:49:01] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:54:21] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:54:23] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:54:24] ERROR: Could not identify the YouTube title field.
+[2026-08-30 16:59:57] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 16:59:58] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 16:59:59] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:05:07] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:05:08] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:05:09] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:10:33] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:10:35] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:10:36] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:15:56] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:15:58] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:15:59] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:21:18] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:21:20] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:21:21] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:26:40] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:26:42] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:26:43] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:32:01] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:32:03] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:32:04] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:37:22] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:37:24] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:37:25] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:42:45] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:42:47] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:42:49] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:48:08] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:48:10] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:48:11] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:53:30] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:53:31] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:53:33] ERROR: Could not identify the YouTube title field.
+[2026-08-30 17:58:51] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 17:58:53] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 17:58:54] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:04:13] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:04:15] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:04:16] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:09:36] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:09:38] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:09:39] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:14:59] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:15:01] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:15:02] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:20:23] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:20:24] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:20:25] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:25:46] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:25:47] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:25:48] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:31:04] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:31:06] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:31:07] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:36:27] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:36:28] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:36:29] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:41:50] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:41:51] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:41:52] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:47:12] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:47:14] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:47:15] ERROR: Could not identify the YouTube title field.
+[2026-08-30 18:52:33] CHANNEL_VERIFIED: Verified Baptist Church of Perry (UCXwqRxA_JKNM3g6JDe76DcQ). Preparing full sermon upload.
+[2026-08-30 18:52:36] UPLOADING: Studio accepted 2026-08-30 11-13-13.mp4. Applying pastor title: "The Purpose in Parables!"
+[2026-08-30 18:52:37] ERROR: Could not identify the YouTube title field.

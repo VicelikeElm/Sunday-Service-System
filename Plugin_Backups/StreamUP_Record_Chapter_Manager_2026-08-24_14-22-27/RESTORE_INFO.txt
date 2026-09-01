@@ -1,0 +1,17 @@
+﻿StreamUP Record Chapter Manager backup
+Created: 08/24/2026 14:22:31
+
+The following OBS plugin item(s) were moved out of their original
+locations so OBS will no longer load them:
+
+
+
+To restore the plugin later, move each item back to its original path.
+
+This script did NOT modify:
+- OBS scenes
+- OBS profiles
+- recording settings
+- obs-websocket
+- Sermon AI
+- the Sunday Mode Chapter Bridge

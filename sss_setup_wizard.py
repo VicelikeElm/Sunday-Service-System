@@ -890,7 +890,7 @@ class SetupWizard:
 
         fields = (
             ("Camera IP address", self.ptz_ip_var),
-            ("HTTP port (blank = default)", self.ptz_port_var),
+            ("Port (blank = 80 for PTZOptics, 52381 for VISCA)", self.ptz_port_var),
             ("Username (if required)", self.ptz_username_var),
             ("Password (if required)", self.ptz_password_var),
             ("Worship preset number", self.ptz_worship_preset_var),
@@ -928,6 +928,14 @@ class SetupWizard:
     def scan_camera_network(self):
         import concurrent.futures
         import socket
+
+        if self.camera_var.get() == "VISCA over IP":
+            self.camera_scan_status_var.set(
+                "Network scanning only supports PTZOptics-style cameras "
+                "right now (VISCA is UDP-based, not a simple reachability "
+                "check) - enter the VISCA camera's IP manually below."
+            )
+            return
 
         try:
             port = int(self.ptz_port_var.get().strip() or "80")
@@ -1005,8 +1013,13 @@ class SetupWizard:
             ).grid(row=row, column=0, sticky="w", pady=1)
 
     def test_camera_connection(self):
-        from sss_camera_adapters import check_tcp_connection
+        from sss_camera_adapters import (
+            VISCA_DEFAULT_PORT,
+            check_tcp_connection,
+            check_visca_connection,
+        )
 
+        is_visca = self.camera_var.get() == "VISCA over IP"
         host = self.ptz_ip_var.get().strip()
 
         if not host:
@@ -1015,8 +1028,10 @@ class SetupWizard:
             )
             return
 
+        default_port = VISCA_DEFAULT_PORT if is_visca else 80
+
         try:
-            port = int(self.ptz_port_var.get().strip() or "80")
+            port = int(self.ptz_port_var.get().strip() or str(default_port))
         except ValueError:
             self.camera_test_status_var.set(
                 "Port must be a number, or leave it blank."
@@ -1027,7 +1042,11 @@ class SetupWizard:
         self.window.update_idletasks()
 
         try:
-            result = check_tcp_connection(host, port, timeout=3.0)
+            if is_visca:
+                result = check_visca_connection(host, port=port, timeout=3.0)
+            else:
+                result = check_tcp_connection(host, port, timeout=3.0)
+
             self.camera_test_status_var.set(
                 f"Reachable — {result['host']}:{result['port']} responded."
             )
@@ -1603,6 +1622,7 @@ class SetupWizard:
 
         if self.camera_enabled_var.get():
             answers.update({
+                "ptz_camera_provider": self.camera_var.get(),
                 "ptz_camera_ip": self.ptz_ip_var.get().strip(),
                 "ptz_camera_scheme": self.ptz_scheme_var.get().strip() or "http",
                 "ptz_camera_http_port": self.ptz_port_var.get().strip(),

@@ -109,6 +109,62 @@ def build_url(config, preset):
     )
 
 
+def recall_preset_visca(config, preset):
+    from sss_camera_adapters import (
+        VISCA_DEFAULT_PORT,
+        recall_visca_preset,
+    )
+
+    host = str(
+        config.get(
+            "ptz_camera_ip",
+            ""
+        )
+    ).strip()
+
+    if not host:
+        raise RuntimeError(
+            "PTZ camera IP is not configured. "
+            "Run Setup-PTZ-Camera.bat."
+        )
+
+    port = str(
+        config.get(
+            "ptz_camera_http_port",
+            ""
+        )
+    ).strip()
+
+    port = int(port) if port else VISCA_DEFAULT_PORT
+
+    timeout = float(
+        config.get(
+            "ptz_camera_timeout_seconds",
+            4
+        )
+    )
+
+    try:
+        recall_visca_preset(
+            host,
+            preset,
+            port=port,
+            timeout=timeout,
+        )
+    except Exception as exc:
+        raise RuntimeError(
+            f"Could not reach PTZ camera: {exc}"
+        ) from exc
+
+    return write_status(
+        "OK",
+        f"PTZ preset {preset} recalled.",
+        int(
+            preset
+        )
+    )
+
+
 def recall_preset(preset):
     base_config = load_config()
     config = load_ptz_settings(
@@ -120,6 +176,19 @@ def recall_preset(preset):
     ):
         raise RuntimeError(
             f"Invalid PTZ preset: {preset}"
+        )
+
+    if str(
+        config.get(
+            "ptz_camera_provider",
+            "PTZOptics / HTTP-CGI"
+        )
+    ).strip() == "VISCA over IP":
+        return recall_preset_visca(
+            config,
+            int(
+                preset
+            ),
         )
 
     url = build_url(

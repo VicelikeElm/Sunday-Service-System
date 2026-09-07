@@ -166,6 +166,7 @@ def build_sunday_config(profile, answers, base=BASE):
         "youtube_category_id",
         "youtube_notify_subscribers",
         "youtube_audience",
+        "ptz_camera_provider",
         "ptz_camera_ip",
         "ptz_camera_scheme",
         "ptz_camera_http_port",
@@ -212,6 +213,7 @@ def build_sunday_config(profile, answers, base=BASE):
     config.setdefault("planning_service_time", "")
     config.setdefault("audio_loopback_name", "")
     config.setdefault("audio_loopback_label", "Audio Interface")
+    config.setdefault("ptz_camera_provider", "PTZOptics / HTTP-CGI")
     config.setdefault("ptz_camera_ip", "")
     config.setdefault("ptz_camera_scheme", "http")
     config.setdefault("ptz_camera_http_port", "")

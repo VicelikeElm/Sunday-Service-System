@@ -7,6 +7,7 @@ PTZ_CONFIG_FILE = BASE / "ptz_camera_config.json"
 
 DEFAULTS = {
     "ptz_camera_enabled": True,
+    "ptz_camera_provider": "PTZOptics / HTTP-CGI",
     "ptz_camera_ip": "",
     "ptz_camera_scheme": "http",
     "ptz_camera_http_port": "",

@@ -38,3 +38,6 @@ Nothing in this repo can talk to Gmail, YouTube, or WorshipTools Planning until 
 ## Admin / Troubleshooting
 
 Inside the running app, the Admin panel covers diagnostics, backup/recovery, event history, security/secrets, software updates, chapter tools, Planning sync, and YouTube upload retry — see the in-app tooltips on each button.
+
+## Install link
+https://github.com/VicelikeElm/Sunday-Service-System/releases/tag/v3.1.0

@@ -4,6 +4,15 @@ Automation for Baptist Church of Perry's Sunday livestream/recording workflow: O
 
 This is a private, single-church operational tool, not a general-purpose distributable product. The instructions below are for reinstalling/rebuilding it on the church PC, not for a stranger setting it up from scratch.
 
+## Install
+
+**Signed release build (normal path):**
+1. `Build-SSS-Windows-Installer.bat` — builds signed Main/Settings/Updater executables and an installer via PyInstaller + Inno Setup (requires `sss_signing_config.json`, see `Configure-SSS-Code-Signing.bat`)
+2. Run the resulting `installer-output\SundayServiceSystem-Setup-*.exe` on the church PC
+
+**Run from source (development/testing):**
+1. `Start-Sunday-Mode-Debug.bat` runs the app directly from source, no build step
+
 ## What it does
 
 - Drives OBS (via `obsws_python`) for recording/streaming, scene switching, and chapter markers
@@ -17,15 +26,6 @@ This is a private, single-church operational tool, not a general-purpose distrib
 - Windows 10/11, OBS Studio with obs-websocket enabled
 - Python (see `venv/` for the pinned environment) and `ffprobe`/`ffmpeg` on PATH
 - A PTZOptics (or compatible HTTP-CGI) PTZ camera, if camera presets are used
-
-## Install
-
-**Signed release build (normal path):**
-1. `Build-SSS-Windows-Installer.bat` — builds signed Main/Settings/Updater executables and an installer via PyInstaller + Inno Setup (requires `sss_signing_config.json`, see `Configure-SSS-Code-Signing.bat`)
-2. Run the resulting `installer-output\SundayServiceSystem-Setup-*.exe` on the church PC
-
-**Run from source (development/testing):**
-1. `Start-Sunday-Mode-Debug.bat` runs the app directly from source, no build step
 
 ## Credentials (not included in this repo)
 

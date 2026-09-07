@@ -1709,6 +1709,11 @@ class SundayModeApp:
     def open_recovery_center(
         self
     ):
+        # Folded in here so a standalone "Run Weekly Snapshot" admin
+        # button is not needed: opening Recovery always makes sure a
+        # fresh weekly rollback snapshot exists too.
+        self.start_weekly_snapshot_async()
+
         try:
             launch_settings(
                 '--recovery'
@@ -2172,28 +2177,6 @@ class SundayModeApp:
             )
         except Exception:
             pass
-
-    def open_profile_migrations(
-        self
-    ):
-        try:
-            launch_settings(
-                '--migrations'
-            )
-
-        except Exception as exc:
-            messagebox.showwarning(
-                'SSS Profile Upgrades',
-                (
-                    'Could not open Profile Upgrades.'
-                    +
-                    "\n\n"
-                    +
-                    str(
-                        exc
-                    )
-                ),
-            )
 
     def open_security_center(
         self
@@ -6200,37 +6183,6 @@ class SundayModeApp:
             message
         )
 
-    def force_unlock_sunday_freeze(
-        self
-    ):
-        okay = messagebox.askyesno(
-            "Force Unlock Sunday Freeze",
-            (
-                "Only unlock if OBS is NOT recording and NOT streaming.\n\n"
-                "Remove the Sunday Freeze marker?"
-            ),
-        )
-
-        if not okay:
-            return
-
-        set_freeze(
-            False
-        )
-
-        self.append_log(
-            "Admin manually removed Sunday Freeze marker."
-        )
-
-        messagebox.showinfo(
-            "Sunday Freeze",
-            (
-                "Freeze marker removed.\n\n"
-                "If OBS is still recording or streaming, the watchdog "
-                "will recreate it."
-            ),
-        )
-
     def set_chapter_test_mode(
         self,
         enabled,
@@ -6462,6 +6414,13 @@ class SundayModeApp:
             and
             window.winfo_exists()
         ):
+            try:
+                window.unbind_all(
+                    "<MouseWheel>"
+                )
+            except Exception:
+                pass
+
             window.destroy()
 
     def open_admin_panel(
@@ -6504,14 +6463,114 @@ class SundayModeApp:
             self.close_admin_panel,
         )
 
+        scroll_container = ttk.Frame(
+            window
+        )
+
+        scroll_container.pack(
+            fill="both",
+            expand=True
+        )
+
+        admin_canvas = tk.Canvas(
+            scroll_container,
+            highlightthickness=0,
+        )
+
+        admin_scrollbar = ttk.Scrollbar(
+            scroll_container,
+            orient="vertical",
+            command=admin_canvas.yview,
+        )
+
+        admin_canvas.configure(
+            yscrollcommand=admin_scrollbar.set
+        )
+
+        admin_canvas.pack(
+            side="left",
+            fill="both",
+            expand=True,
+        )
+
+        admin_scrollbar.pack(
+            side="right",
+            fill="y",
+        )
+
         frame = ttk.Frame(
-            window,
+            admin_canvas,
             padding=14
         )
 
-        frame.pack(
-            fill="both",
-            expand=True
+        admin_frame_window = admin_canvas.create_window(
+            (0, 0),
+            window=frame,
+            anchor="nw",
+        )
+
+        def _admin_frame_configure(
+            event,
+            canvas=admin_canvas,
+        ):
+            canvas.configure(
+                scrollregion=canvas.bbox("all")
+            )
+
+        frame.bind(
+            "<Configure>",
+            _admin_frame_configure,
+        )
+
+        def _admin_canvas_configure(
+            event,
+            canvas=admin_canvas,
+            window_id=admin_frame_window,
+        ):
+            canvas.itemconfig(
+                window_id,
+                width=event.width,
+            )
+
+        admin_canvas.bind(
+            "<Configure>",
+            _admin_canvas_configure,
+        )
+
+        def _admin_mousewheel(
+            event,
+            canvas=admin_canvas,
+        ):
+            canvas.yview_scroll(
+                int(-1 * (event.delta / 120)),
+                "units",
+            )
+
+        def _admin_bind_mousewheel(
+            event,
+            canvas=admin_canvas,
+        ):
+            canvas.bind_all(
+                "<MouseWheel>",
+                _admin_mousewheel,
+            )
+
+        def _admin_unbind_mousewheel(
+            event,
+            canvas=admin_canvas,
+        ):
+            canvas.unbind_all(
+                "<MouseWheel>"
+            )
+
+        admin_canvas.bind(
+            "<Enter>",
+            _admin_bind_mousewheel,
+        )
+
+        admin_canvas.bind(
+            "<Leave>",
+            _admin_unbind_mousewheel,
         )
 
         ttk.Label(
@@ -6843,10 +6902,6 @@ class SundayModeApp:
                 self.open_event_history,
             ),
             (
-                "PROFILE UPGRADES",
-                self.open_profile_migrations,
-            ),
-            (
                 "SECURITY / SECRETS VAULT",
                 self.open_security_center,
             ),
@@ -6879,14 +6934,6 @@ class SundayModeApp:
                 self.start_post_service_supervisor,
             ),
             (
-                "RUN WEEKLY SNAPSHOT",
-                self.start_weekly_snapshot_async,
-            ),
-            (
-                "FORCE UNLOCK SUNDAY FREEZE",
-                self.force_unlock_sunday_freeze,
-            ),
-            (
                 "RUN SAFE TEST MODE",
                 self.run_safe_test_mode,
             ),
@@ -6916,15 +6963,13 @@ class SundayModeApp:
                 "recording/streaming, moving cameras/slides, or changing audio mute."
             ),
             "BACKUP / RECOVERY": (
-                "Creates recovery snapshots, saves a READY system as Last Known Good, "
-                "or performs a guarded restore. Restore is blocked during live outputs."
+                "Creates a fresh weekly rollback snapshot, then opens recovery "
+                "snapshots, Last Known Good, and guarded restore. Restore is "
+                "blocked during live outputs. Also covers checking/migrating "
+                "older church profile formats (Advanced page)."
             ),
             "EVENT HISTORY": (
                 "Shows a human-friendly timeline of SSS actions and warnings across services."
-            ),
-            "PROFILE UPGRADES": (
-                "Checks or safely migrates older church profile formats. "
-                "Each old profile is backed up before rewrite."
             ),
             "SECURITY / SECRETS VAULT": (
                 "Manages local protected credentials in Windows Credential Manager. "
@@ -6956,14 +7001,6 @@ class SundayModeApp:
             "RESUME POST-SERVICE JOBS": (
                 "Restarts unfinished after-service processing such as chapter "
                 "verification, sermon processing, and upload supervision."
-            ),
-            "RUN WEEKLY SNAPSHOT": (
-                "Creates a rollback snapshot of the important SSS files before "
-                "or after Sunday changes."
-            ),
-            "FORCE UNLOCK SUNDAY FREEZE": (
-                "Administrative override that unlocks protected maintenance "
-                "actions. Use only when you are sure no live service is active."
             ),
             "RUN SAFE TEST MODE": (
                 "Runs the SSS reliability checks without starting a recording "

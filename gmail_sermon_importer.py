@@ -488,9 +488,12 @@ def credentials(config, interactive):
         and
         creds.refresh_token
     ):
-        creds.refresh(
-            Request()
-        )
+        try:
+            creds.refresh(
+                Request()
+            )
+        except Exception:
+            creds = None
 
     if not creds or not creds.valid:
         if not interactive:
@@ -605,9 +608,18 @@ def import_latest(interactive=False, authorize_only=False):
         cache_discovery=False
     )
 
-    sender = config.get(
-        "gmail_sermon_sender",
-        "pastorlowther@gmail.com"
+    sender_config = config.get(
+        "gmail_sermon_senders",
+        config.get(
+            "gmail_sermon_sender",
+            ""
+        )
+    )
+
+    senders = (
+        sender_config
+        if isinstance(sender_config, list)
+        else [sender_config]
     )
 
     days = int(
@@ -622,8 +634,15 @@ def import_latest(interactive=False, authorize_only=False):
     #   Matt 13:10-17 "The Purpose of Parables!"
     # Fetch recent direct messages from the pastor and let the structured
     # Title/Text/Outline parser decide which one is a sermon plan.
+    # The pastor sometimes sends from more than one personal address, so
+    # match any of the configured senders rather than exactly one.
+    sender_query = " OR ".join(
+        f"from:{address}"
+        for address in senders
+    )
+
     query = (
-        f"from:{sender} "
+        f"({sender_query}) "
         f"newer_than:{days}d "
         "-in:spam -in:trash"
     )
@@ -665,7 +684,10 @@ def import_latest(interactive=False, authorize_only=False):
             ""
         ).lower()
 
-        if sender.lower() not in from_header:
+        if not any(
+            address.lower() in from_header
+            for address in senders
+        ):
             continue
 
         subject = headers.get(

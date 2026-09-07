@@ -9636,11 +9636,18 @@ class SundayModeApp:
                 ),
             )
 
+            channel_name = str(
+                self.config.get(
+                    "youtube_expected_channel_name",
+                    ""
+                )
+            ).strip() or "the configured"
+
             self.post_ui(
                 self.append_log,
                 (
                     "YouTube Studio worker started. "
-                    "It will verify the Baptist Church of Perry channel, "
+                    f"It will verify the {channel_name} channel, "
                     "choose the largest valid full sermon, and upload it."
                 )
             )

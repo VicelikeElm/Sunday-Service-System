@@ -16,8 +16,8 @@ STATUS_FILE = BASE / "youtube_upload_status.json"
 HISTORY_FILE = BASE / "youtube_upload_history.json"
 LOG_FILE = BASE / "youtube_upload.log"
 
-DEFAULT_CHANNEL_ID = "UCXwqRxA_JKNM3g6JDe76DcQ"
-DEFAULT_CHANNEL_NAME = "Baptist Church of Perry"
+DEFAULT_CHANNEL_ID = ""
+DEFAULT_CHANNEL_NAME = ""
 
 
 def now():
@@ -759,6 +759,8 @@ def verify_church_channel(
 
 
 def open_upload_dialog(page):
+    dismiss_feature_announcement(page)
+
     # Diagnostic confirmed a dedicated Upload videos icon/button exists.
     upload_button = first_visible(
         [
@@ -817,45 +819,146 @@ def open_upload_dialog(page):
 
     upload_button.click()
 
-    file_input = page.locator(
-        'input[type="file"][name="Filedata"]'
-    )
-
-    file_input.wait_for(
-        state="attached",
-        timeout=12000
-    )
-
-    return file_input
-
-
-def find_title_box(page):
-    item = first_visible(
+    select_files_button = first_visible(
         [
-            page.locator(
-                "ytcp-social-suggestions-textbox#title-textarea #textbox"
-            ),
-            page.locator(
-                "#title-textarea #textbox"
-            ),
-            page.locator(
-                '[aria-label*="Title" i][contenteditable="true"]'
-            ),
-            page.get_by_label(
-                re.compile(
-                    r"Title",
+            page.get_by_role(
+                "button",
+                name=re.compile(
+                    r"^\s*Select files\s*$",
                     re.IGNORECASE
-                )
+                ),
+            ),
+            page.get_by_text(
+                "Select files",
+                exact=True
             ),
         ]
     )
 
-    if item is None:
+    if select_files_button is None:
         raise RuntimeError(
-            "Could not identify the YouTube title field."
+            "Could not find the YouTube Studio "
+            "\"Select files\" button."
         )
 
-    return item
+    return select_files_button
+
+
+def select_upload_file(page, select_files_button, path):
+    """
+    Directly calling set_input_files() on the hidden
+    input[type=file][name=Filedata] used to work, but observed
+    2026-09-01: it now makes the "Select files" button flash a
+    disabled state for a moment and then silently reset, with no file
+    ever actually accepted -- Studio's picker no longer appears to be
+    driven by that input's change event alone. Intercepting the real
+    native file-chooser dialog that clicking the button opens
+    (Playwright's expect_file_chooser) works regardless of which JS
+    API the button uses internally underneath.
+    """
+
+    with page.expect_file_chooser(
+        timeout=15000
+    ) as file_chooser_info:
+
+        select_files_button.click()
+
+    file_chooser_info.value.set_files(
+        str(path)
+    )
+
+
+def dismiss_feature_announcement(page):
+    """
+    YouTube Studio occasionally shows a one-off feature-announcement
+    modal ("You're all set / You already have access to this feature")
+    on top of the upload dialog. Observed 2026-09-01 sitting over the
+    Upload videos dialog and permanently blocking the title field from
+    ever becoming reachable, since nothing in the flow dismisses it.
+    Only targets the exact known "Got it" button -- deliberately does
+    NOT swallow generic OK/Close buttons, so a real warning dialog
+    (e.g. a copyright claim) still surfaces to a human.
+    """
+
+    try:
+        button = page.get_by_role(
+            "button",
+            name=re.compile(
+                r"^\s*Got it\s*$",
+                re.IGNORECASE
+            ),
+        )
+
+        if (
+            button.count()
+            and
+            button.first.is_visible()
+        ):
+            button.first.click()
+            page.wait_for_timeout(300)
+
+    except Exception:
+        pass
+
+
+def find_title_box(page, attempts=30, interval_ms=500):
+    """
+    Right after the file is attached, Studio still has to open the
+    upload dialog and render the Details form -- for a large file this
+    can take several seconds. A single immediate lookup reliably misses
+    it, so poll instead of checking once.
+    """
+    locators = [
+        page.locator(
+            "ytcp-social-suggestions-textbox#title-textarea #textbox"
+        ),
+        page.locator(
+            "#title-textarea #textbox"
+        ),
+        page.locator(
+            '[aria-label*="Title" i][contenteditable="true"]'
+        ),
+        page.get_by_label(
+            re.compile(
+                r"Title",
+                re.IGNORECASE
+            )
+        ),
+    ]
+
+    for _ in range(attempts):
+        dismiss_feature_announcement(page)
+
+        item = first_visible(locators)
+
+        if item is not None:
+            return item
+
+        page.wait_for_timeout(interval_ms)
+
+    try:
+        page.screenshot(
+            path=str(
+                Path(__file__).parent
+                / "youtube_title_box_debug.png"
+            ),
+            full_page=False,
+        )
+
+        Path(
+            Path(__file__).parent
+            / "youtube_title_box_debug.html"
+        ).write_text(
+            page.content(),
+            encoding="utf-8",
+        )
+
+    except Exception:
+        pass
+
+    raise RuntimeError(
+        "Could not identify the YouTube title field."
+    )
 
 
 def find_description_box(page):
@@ -1351,6 +1454,48 @@ def run_studio_upload(
                 else context.new_page()
             )
 
+            console_debug_path = (
+                Path(__file__).parent
+                / "youtube_console_debug.txt"
+            )
+
+            console_debug_path.write_text(
+                "",
+                encoding="utf-8"
+            )
+
+            def _log_console(message):
+                try:
+                    with open(
+                        console_debug_path,
+                        "a",
+                        encoding="utf-8"
+                    ) as handle:
+                        handle.write(
+                            f"[{message.type}] {message.text}\n"
+                        )
+                except Exception:
+                    pass
+
+            page.on(
+                "console",
+                _log_console
+            )
+
+            page.on(
+                "pageerror",
+                lambda exc: _log_console(
+                    type(
+                        "M",
+                        (),
+                        {
+                            "type": "pageerror",
+                            "text": str(exc)
+                        }
+                    )()
+                )
+            )
+
             target_url = (
                 "https://studio.youtube.com/channel/"
                 f"{expected_id}"
@@ -1380,7 +1525,7 @@ def run_studio_upload(
                 file=str(candidate["path"]),
             )
 
-            file_input = open_upload_dialog(page)
+            select_files_button = open_upload_dialog(page)
 
             # Hard channel check AGAIN immediately before selecting file.
             verify_church_channel(
@@ -1389,9 +1534,37 @@ def run_studio_upload(
                 expected_name,
             )
 
-            file_input.set_input_files(
-                str(candidate["path"])
+            select_upload_file(
+                page,
+                select_files_button,
+                candidate["path"]
             )
+
+            try:
+                page.wait_for_timeout(2000)
+
+                files_len = page.evaluate(
+                    "document.querySelector("
+                    "'input[type=\"file\"][name=\"Filedata\"]'"
+                    ").files.length"
+                )
+
+                Path(
+                    Path(__file__).parent
+                    / "youtube_files_debug.txt"
+                ).write_text(
+                    f"hidden input files.length = {files_len}\n",
+                    encoding="utf-8",
+                )
+
+            except Exception as debug_error:
+                Path(
+                    Path(__file__).parent
+                    / "youtube_files_debug.txt"
+                ).write_text(
+                    f"debug check failed: {debug_error}\n",
+                    encoding="utf-8",
+                )
 
             write_status(
                 "UPLOADING",

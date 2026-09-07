@@ -3,6 +3,8 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
+from sunday_common import load_config
+
 BASE = Path(r"C:\Church\SermonAI")
 PROFILE = BASE / "YouTube_Studio_Profile"
 OUTPUT = BASE / "YouTube_Studio_Diagnostic.txt"
@@ -10,8 +12,10 @@ ERROR_LOG = BASE / "YouTube_Studio_Diagnostic_Error.txt"
 SCREENSHOT = BASE / "YouTube_Studio_Diagnostic.png"
 
 STUDIO_URL = "https://studio.youtube.com"
-EXPECTED_HANDLE = "@baptistchurchofperry"
-EXPECTED_NAME = "Baptist Church of Perry"
+
+_config = load_config()
+EXPECTED_HANDLE = str(_config.get("youtube_expected_handle", "")).strip()
+EXPECTED_NAME = str(_config.get("youtube_expected_channel_name", "")).strip()
 
 
 def clean(value):

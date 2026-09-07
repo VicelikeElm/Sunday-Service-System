@@ -151,7 +151,7 @@ class SetupWizard:
         camera_connection = camera.get("connection", {})
         camera_presets = camera.get("presets", {})
 
-        self.recording_folder_var = tk.StringVar(value=r"D:\2026")
+        self.recording_folder_var = tk.StringVar(value="")
 
         self.audio_enabled_var = tk.BooleanVar(value=False)
         self.audio_loopback_name_var = tk.StringVar(value="")
@@ -176,6 +176,7 @@ class SetupWizard:
         self.ptz_pastor_preset_var = tk.StringVar(
             value=str(camera_presets.get("pastor", 2))
         )
+        self.camera_test_status_var = tk.StringVar(value="")
 
         self.gmail_sender_var = tk.StringVar(value="")
         self.planning_account_id_var = tk.StringVar(value="")
@@ -192,6 +193,7 @@ class SetupWizard:
         self.youtube_category_var = tk.StringVar(value="29")
         self.youtube_notify_var = tk.BooleanVar(value=True)
         self.youtube_audience_var = tk.StringVar(value="channel_default")
+        self.youtube_test_status_var = tk.StringVar(value="")
 
         self.discovery_status_var = tk.StringVar(
             value="Open OBS, then click CONNECT & DISCOVER."
@@ -631,8 +633,53 @@ class SetupWizard:
                 width=35,
             ).grid(row=row_num, column=1, sticky="ew", pady=5)
 
+        ttk.Button(
+            page,
+            text="TEST CONNECTION",
+            command=self.test_camera_connection,
+        ).grid(row=9, column=0, columnspan=2, sticky="ew", pady=(10, 4))
+
+        ttk.Label(
+            page,
+            textvariable=self.camera_test_status_var,
+            wraplength=700,
+            justify="left",
+        ).grid(row=10, column=0, columnspan=2, sticky="w")
+
         page.columnconfigure(1, weight=1)
         return page
+
+    def test_camera_connection(self):
+        from sss_camera_adapters import check_tcp_connection
+
+        host = self.ptz_ip_var.get().strip()
+
+        if not host:
+            self.camera_test_status_var.set(
+                "Enter the camera's IP address first."
+            )
+            return
+
+        try:
+            port = int(self.ptz_port_var.get().strip() or "80")
+        except ValueError:
+            self.camera_test_status_var.set(
+                "Port must be a number, or leave it blank."
+            )
+            return
+
+        self.camera_test_status_var.set("Testing...")
+        self.window.update_idletasks()
+
+        try:
+            result = check_tcp_connection(host, port, timeout=3.0)
+            self.camera_test_status_var.set(
+                f"Reachable — {result['host']}:{result['port']} responded."
+            )
+        except Exception as exc:
+            self.camera_test_status_var.set(
+                f"Could not reach the camera: {exc}"
+            )
 
     def build_presentation(self):
         page = self.page()
@@ -825,8 +872,74 @@ class SetupWizard:
             state="readonly",
         ).grid(row=8, column=1, sticky="ew", pady=5)
 
+        ttk.Button(
+            page,
+            text="TEST CHANNEL",
+            command=self.test_youtube_channel,
+        ).grid(row=9, column=0, columnspan=2, sticky="ew", pady=(10, 4))
+
+        ttk.Label(
+            page,
+            textvariable=self.youtube_test_status_var,
+            wraplength=700,
+            justify="left",
+        ).grid(row=10, column=0, columnspan=2, sticky="w")
+
         page.columnconfigure(1, weight=1)
         return page
+
+    def test_youtube_channel(self):
+        import re
+        import urllib.request
+
+        channel_id = self.youtube_channel_id_var.get().strip()
+        handle = self.youtube_handle_var.get().strip()
+
+        if not channel_id and not handle:
+            self.youtube_test_status_var.set(
+                "Enter a channel ID or handle first."
+            )
+            return
+
+        if channel_id:
+            url = f"https://www.youtube.com/channel/{channel_id}"
+        else:
+            url = "https://www.youtube.com/@" + handle.lstrip("@")
+
+        self.youtube_test_status_var.set("Looking up channel...")
+        self.window.update_idletasks()
+
+        try:
+            request = urllib.request.Request(
+                url,
+                headers={
+                    "User-Agent": (
+                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                        "AppleWebKit/537.36 (KHTML, like Gecko) "
+                        "Chrome/120.0 Safari/537.36"
+                    )
+                },
+            )
+
+            with urllib.request.urlopen(request, timeout=6) as response:
+                if response.status != 200:
+                    raise RuntimeError(f"YouTube returned HTTP {response.status}.")
+
+                html = response.read(2_000_000).decode("utf-8", errors="replace")
+
+            title_match = re.search(r"<title>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
+            title = title_match.group(1).strip() if title_match else ""
+            title = title.removesuffix(" - YouTube").strip()
+
+            if not title or title.lower() == "youtube":
+                raise RuntimeError("No channel found at that ID/handle.")
+
+            self.youtube_test_status_var.set(f"Found channel: \"{title}\"")
+
+        except Exception as exc:
+            self.youtube_test_status_var.set(
+                f"Could not verify the channel: {exc}"
+            )
 
     def build_integrations(self):
         page = self.page()

@@ -1,4 +1,7 @@
+import json
+import os
 import tkinter as tk
+from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
 from sss_obs_profile import discover_obs
@@ -6,9 +9,12 @@ from sss_profile import (
     get_profile_obs_settings,
     get_profile_setup_status,
     load_active_profile,
+    profile_root,
     save_active_obs_settings,
     save_active_setup_choices,
 )
+
+PROGRESS_FILE_NAME = "first_run_setup_progress.json"
 
 PRESENTATION_OPTIONS = (
     "Not configured",
@@ -225,10 +231,144 @@ class SetupWizard:
             except Exception:
                 pass
 
+        self._resume_step = 0
+
+        if self.first_run:
+            # Restore before build() so every widget shows the resumed
+            # value from its very first render, instead of flashing a
+            # default and then jumping to the restored value.
+            self._maybe_resume_progress()
+
         self.current_step = 0
         self.build()
-        self.show_step(0)
+        self.show_step(self._resume_step)
         self._center_and_raise()
+
+    def _progress_path(self):
+        return Path(profile_root()) / PROGRESS_FILE_NAME
+
+    def _progress_fields(self):
+        return {
+            "church_name": self.church_name_var,
+            "default_preacher": self.default_preacher_var,
+            "help_contact": self.help_contact_var,
+            "obs_source": self.obs_source_var,
+            "obs_collection": self.obs_collection_var,
+            "obs_normal": self.obs_normal_var,
+            "obs_scripture": self.obs_scripture_var,
+            "obs_sermon": self.obs_sermon_var,
+            "recording_folder": self.recording_folder_var,
+            "audio_enabled": self.audio_enabled_var,
+            "audio_loopback_name": self.audio_loopback_name_var,
+            "audio_loopback_label": self.audio_loopback_label_var,
+            "critical_inputs": self.critical_inputs_var,
+            "recommended_inputs": self.recommended_inputs_var,
+            "emergency_mute_inputs": self.emergency_mute_inputs_var,
+            "audio_sanity_inputs": self.audio_sanity_inputs_var,
+            "camera_enabled": self.camera_enabled_var,
+            "camera_provider": self.camera_var,
+            "ptz_ip": self.ptz_ip_var,
+            "ptz_scheme": self.ptz_scheme_var,
+            "ptz_port": self.ptz_port_var,
+            "ptz_username": self.ptz_username_var,
+            "ptz_password": self.ptz_password_var,
+            "ptz_startup_preset": self.ptz_startup_preset_var,
+            "ptz_worship_preset": self.ptz_worship_preset_var,
+            "ptz_pastor_preset": self.ptz_pastor_preset_var,
+            "presentation_provider": self.presentation_var,
+            "sermon_source_provider": self.sermon_source_var,
+            "gmail_sender": self.gmail_sender_var,
+            "planning_account_id": self.planning_account_id_var,
+            "planning_translation": self.planning_translation_var,
+            "planning_service_time": self.planning_service_time_var,
+            "youtube_enabled": self.youtube_enabled_var,
+            "youtube_channel_id": self.youtube_channel_id_var,
+            "youtube_channel_name": self.youtube_channel_name_var,
+            "youtube_handle": self.youtube_handle_var,
+            "youtube_privacy": self.youtube_privacy_var,
+            "youtube_category": self.youtube_category_var,
+            "youtube_notify": self.youtube_notify_var,
+            "youtube_audience": self.youtube_audience_var,
+        }
+
+    def _save_progress(self):
+        if not self.first_run:
+            return
+
+        try:
+            data = {
+                "current_step": self.current_step,
+                "fields": {
+                    name: var.get()
+                    for name, var in self._progress_fields().items()
+                },
+            }
+
+            path = self._progress_path()
+            path.parent.mkdir(parents=True, exist_ok=True)
+
+            temporary = path.with_suffix(path.suffix + ".tmp")
+            temporary.write_text(
+                json.dumps(data, indent=2, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            os.replace(temporary, path)
+
+        except Exception:
+            # Losing the ability to save progress is not worth
+            # interrupting setup over.
+            pass
+
+    def _clear_progress(self):
+        try:
+            path = self._progress_path()
+
+            if path.exists():
+                path.unlink()
+
+        except Exception:
+            pass
+
+    def _maybe_resume_progress(self):
+        path = self._progress_path()
+
+        if not path.exists():
+            return
+
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            self._clear_progress()
+            return
+
+        resume = messagebox.askyesno(
+            "Resume Setup?",
+            (
+                "It looks like setup was started before but not finished.\n\n"
+                "Resume where you left off? Choosing No starts over from "
+                "the beginning and discards the saved progress."
+            ),
+            parent=self.window,
+        )
+
+        if not resume:
+            self._clear_progress()
+            return
+
+        fields = self._progress_fields()
+
+        for name, value in data.get("fields", {}).items():
+            var = fields.get(name)
+
+            if var is None:
+                continue
+
+            try:
+                var.set(value)
+            except Exception:
+                pass
+
+        self._resume_step = int(data.get("current_step", 0) or 0)
 
     def _center_and_raise(self):
         """
@@ -1214,6 +1354,8 @@ class SetupWizard:
         else:
             self.next_button.configure(text="NEXT")
 
+        self._save_progress()
+
     def go_back(self):
         self.show_step(self.current_step - 1)
 
@@ -1330,6 +1472,8 @@ class SetupWizard:
                 config = build_sunday_config(self.profile, self._collect_answers())
                 write_sunday_config(config)
                 provision_filesystem(config)
+
+            self._clear_progress()
 
             status = get_profile_setup_status()
 

@@ -150,10 +150,14 @@ class SetupWizard:
         camera = integrations.get("camera", {})
         camera_connection = camera.get("connection", {})
         camera_presets = camera.get("presets", {})
+        audio = integrations.get("audio", {})
+        youtube = integrations.get("youtube", {})
 
         self.recording_folder_var = tk.StringVar(value="")
 
-        self.audio_enabled_var = tk.BooleanVar(value=False)
+        self.audio_enabled_var = tk.BooleanVar(
+            value=bool(audio.get("enabled", False))
+        )
         self.audio_loopback_name_var = tk.StringVar(value="")
         self.audio_loopback_label_var = tk.StringVar(value="Audio Interface")
         self.critical_inputs_var = tk.StringVar(value="")
@@ -161,7 +165,9 @@ class SetupWizard:
         self.emergency_mute_inputs_var = tk.StringVar(value="")
         self.audio_sanity_inputs_var = tk.StringVar(value="")
 
-        self.camera_enabled_var = tk.BooleanVar(value=False)
+        self.camera_enabled_var = tk.BooleanVar(
+            value=bool(camera.get("enabled", False))
+        )
         self.ptz_ip_var = tk.StringVar(value=str(camera_connection.get("host", "")))
         self.ptz_scheme_var = tk.StringVar(value="http")
         self.ptz_port_var = tk.StringVar(value="")
@@ -185,7 +191,9 @@ class SetupWizard:
         self.default_preacher_var = tk.StringVar(value="")
         self.help_contact_var = tk.StringVar(value="")
 
-        self.youtube_enabled_var = tk.BooleanVar(value=False)
+        self.youtube_enabled_var = tk.BooleanVar(
+            value=bool(youtube.get("enabled", False))
+        )
         self.youtube_channel_id_var = tk.StringVar(value="")
         self.youtube_channel_name_var = tk.StringVar(value="")
         self.youtube_handle_var = tk.StringVar(value="")
@@ -441,7 +449,12 @@ class SetupWizard:
 
         ttk.Radiobutton(
             page,
-            text="LEGACY — keep current working SSS / OBS behavior",
+            text=(
+                "SKIP FOR NOW — I haven't set up OBS scenes yet "
+                "(configure this later from Settings)"
+                if self.first_run
+                else "LEGACY — keep current working SSS / OBS behavior"
+            ),
             variable=self.obs_source_var,
             value="legacy",
         ).grid(row=1, column=0, columnspan=2, sticky="w", pady=2)
@@ -1219,7 +1232,6 @@ class SetupWizard:
         by sunday_config.json field names, for sss_config_bootstrap."""
         answers = {
             "recording_folder": self.recording_folder_var.get().strip(),
-            "scene_collection": self.obs_collection_var.get().strip(),
             "default_preacher": self.default_preacher_var.get().strip(),
             "help_contact_text": self.help_contact_var.get().strip(),
             "audio_sanity_enabled": bool(self.audio_enabled_var.get()),
@@ -1233,6 +1245,11 @@ class SetupWizard:
             "auto_import_sermon_email": self.sermon_source_var.get() == "Pastor Email",
             "auto_upload_youtube": bool(self.youtube_enabled_var.get()),
         }
+
+        scene_collection = self.obs_collection_var.get().strip()
+
+        if scene_collection:
+            answers["scene_collection"] = scene_collection
 
         if self.camera_enabled_var.get():
             answers.update({

@@ -122,6 +122,36 @@ def _extract_collection_names(
     return names
 
 
+def _extract_input_names(
+    response
+):
+    raw = _get_value(
+        response,
+        "inputs",
+    ) or []
+
+    names = []
+
+    for item in raw:
+        name = _get_value(
+            item,
+            "inputName",
+            "input_name",
+            "name",
+        )
+
+        name = _clean(
+            name
+        )
+
+        if name and name not in names:
+            names.append(
+                name
+            )
+
+    return names
+
+
 def connect_local_obs(
     timeout=4
 ):
@@ -207,6 +237,12 @@ def discover_obs():
         )
     )
 
+    try:
+        input_response = client.get_input_list()
+        inputs = _extract_input_names(input_response)
+    except Exception:
+        inputs = []
+
     return {
         "host": str(
             host
@@ -220,6 +256,7 @@ def discover_obs():
         "scenes": scenes,
         "current_program_scene": current_program,
         "current_preview_scene": current_preview,
+        "inputs": inputs,
         "discovered_at": datetime.now().astimezone().isoformat(),
     }
 

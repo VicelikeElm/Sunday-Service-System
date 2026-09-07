@@ -170,6 +170,10 @@ class SetupWizard:
         self.recommended_inputs_var = tk.StringVar(value="")
         self.emergency_mute_inputs_var = tk.StringVar(value="")
         self.audio_sanity_inputs_var = tk.StringVar(value="")
+        self.audio_discover_status_var = tk.StringVar(
+            value="Open OBS, then click DISCOVER OBS INPUTS."
+        )
+        self.audio_checks = {}
 
         self.camera_enabled_var = tk.BooleanVar(
             value=bool(camera.get("enabled", False))
@@ -189,6 +193,9 @@ class SetupWizard:
             value=str(camera_presets.get("pastor", 2))
         )
         self.camera_test_status_var = tk.StringVar(value="")
+        self.camera_scan_status_var = tk.StringVar(
+            value="Click SCAN LOCAL NETWORK, or type the camera's IP below."
+        )
 
         self.gmail_sender_var = tk.StringVar(value="")
         self.planning_account_id_var = tk.StringVar(value="")
@@ -688,6 +695,13 @@ class SetupWizard:
         if chosen:
             self.recording_folder_var.set(chosen)
 
+    AUDIO_CATEGORIES = (
+        ("Critical", "critical_inputs_var"),
+        ("Recommended", "recommended_inputs_var"),
+        ("Emergency\nMute", "emergency_mute_inputs_var"),
+        ("Audio\nSanity", "audio_sanity_inputs_var"),
+    )
+
     def build_audio(self):
         page = self.page()
 
@@ -706,10 +720,6 @@ class SetupWizard:
         fields = (
             ("OBS-monitor audio device name", self.audio_loopback_name_var),
             ("Audio device display label", self.audio_loopback_label_var),
-            ("Critical inputs (comma-separated)", self.critical_inputs_var),
-            ("Recommended inputs (comma-separated)", self.recommended_inputs_var),
-            ("Emergency-mute inputs (comma-separated)", self.emergency_mute_inputs_var),
-            ("Audio-sanity-monitored inputs (comma-separated)", self.audio_sanity_inputs_var),
         )
 
         for row_num, (label, var) in enumerate(fields, start=2):
@@ -724,19 +734,114 @@ class SetupWizard:
                 width=45,
             ).grid(row=row_num, column=1, sticky="ew", pady=5)
 
+        ttk.Button(
+            page,
+            text="DISCOVER OBS INPUTS",
+            command=self.discover_audio_inputs,
+        ).grid(row=4, column=0, columnspan=2, sticky="ew", pady=(10, 4))
+
+        ttk.Label(
+            page,
+            textvariable=self.audio_discover_status_var,
+            wraplength=700,
+            justify="left",
+        ).grid(row=5, column=0, columnspan=2, sticky="w")
+
+        self.audio_matrix_frame = ttk.Frame(page)
+        self.audio_matrix_frame.grid(
+            row=6, column=0, columnspan=2, sticky="ew", pady=(8, 8)
+        )
+
         ttk.Label(
             page,
             text=(
-                "Input names must match your OBS source names exactly. "
-                "You can leave these blank and fill them in later from "
-                "Settings once OBS is set up."
+                "Click DISCOVER OBS INPUTS (OBS must be open) and check which "
+                "role each source plays - no typing needed. You can leave "
+                "everything unchecked and fill it in later from Settings."
             ),
             wraplength=700,
             justify="left",
-        ).grid(row=8, column=0, columnspan=2, sticky="w", pady=(12, 0))
+        ).grid(row=7, column=0, columnspan=2, sticky="w", pady=(4, 0))
 
         page.columnconfigure(1, weight=1)
         return page
+
+    def discover_audio_inputs(self):
+        from sss_obs_profile import discover_obs
+
+        self.audio_discover_status_var.set("Connecting to OBS...")
+        self.window.update_idletasks()
+
+        try:
+            data = discover_obs()
+            inputs = data.get("inputs", [])
+
+            if inputs:
+                self.audio_discover_status_var.set(
+                    f"Found {len(inputs)} OBS input(s)."
+                )
+            else:
+                self.audio_discover_status_var.set(
+                    "Connected, but OBS reported no inputs."
+                )
+
+            self._build_audio_matrix(inputs)
+
+        except Exception as exc:
+            self.audio_discover_status_var.set(
+                f"OBS discovery failed: {exc}"
+            )
+
+    def _build_audio_matrix(self, inputs):
+        for child in self.audio_matrix_frame.winfo_children():
+            child.destroy()
+
+        if not inputs:
+            return
+
+        ttk.Label(
+            self.audio_matrix_frame,
+            text="Input",
+            font=("Segoe UI", 9, "bold"),
+        ).grid(row=0, column=0, sticky="w", padx=(0, 14))
+
+        for col, (label, _) in enumerate(self.AUDIO_CATEGORIES, start=1):
+            ttk.Label(
+                self.audio_matrix_frame,
+                text=label,
+                font=("Segoe UI", 9, "bold"),
+                justify="center",
+            ).grid(row=0, column=col, padx=6)
+
+        self.audio_checks = {}
+
+        for row, name in enumerate(inputs, start=1):
+            ttk.Label(
+                self.audio_matrix_frame,
+                text=name,
+            ).grid(row=row, column=0, sticky="w", padx=(0, 14), pady=2)
+
+            self.audio_checks[name] = {}
+
+            for col, (label, attr_name) in enumerate(self.AUDIO_CATEGORIES, start=1):
+                existing = self._split_names(getattr(self, attr_name).get())
+                check_var = tk.BooleanVar(value=name in existing)
+                self.audio_checks[name][attr_name] = check_var
+
+                ttk.Checkbutton(
+                    self.audio_matrix_frame,
+                    variable=check_var,
+                    command=self._sync_audio_matrix,
+                ).grid(row=row, column=col, padx=10)
+
+    def _sync_audio_matrix(self):
+        for _, attr_name in self.AUDIO_CATEGORIES:
+            selected = [
+                name
+                for name, checks in self.audio_checks.items()
+                if checks[attr_name].get()
+            ]
+            getattr(self, attr_name).set(", ".join(selected))
 
     def build_camera(self):
         page = self.page()
@@ -765,6 +870,24 @@ class SetupWizard:
             state="readonly",
         ).grid(row=2, column=1, sticky="ew", pady=5)
 
+        ttk.Button(
+            page,
+            text="SCAN LOCAL NETWORK",
+            command=self.scan_camera_network,
+        ).grid(row=3, column=0, columnspan=2, sticky="ew", pady=(10, 4))
+
+        ttk.Label(
+            page,
+            textvariable=self.camera_scan_status_var,
+            wraplength=700,
+            justify="left",
+        ).grid(row=4, column=0, columnspan=2, sticky="w")
+
+        self.camera_scan_frame = ttk.Frame(page)
+        self.camera_scan_frame.grid(
+            row=5, column=0, columnspan=2, sticky="w", pady=(2, 8)
+        )
+
         fields = (
             ("Camera IP address", self.ptz_ip_var),
             ("HTTP port (blank = default)", self.ptz_port_var),
@@ -774,7 +897,7 @@ class SetupWizard:
             ("Pastor / startup preset number", self.ptz_pastor_preset_var),
         )
 
-        for row_num, (label, var) in enumerate(fields, start=3):
+        for row_num, (label, var) in enumerate(fields, start=6):
             ttk.Label(
                 page,
                 text=label,
@@ -790,17 +913,96 @@ class SetupWizard:
             page,
             text="TEST CONNECTION",
             command=self.test_camera_connection,
-        ).grid(row=9, column=0, columnspan=2, sticky="ew", pady=(10, 4))
+        ).grid(row=12, column=0, columnspan=2, sticky="ew", pady=(10, 4))
 
         ttk.Label(
             page,
             textvariable=self.camera_test_status_var,
             wraplength=700,
             justify="left",
-        ).grid(row=10, column=0, columnspan=2, sticky="w")
+        ).grid(row=13, column=0, columnspan=2, sticky="w")
 
         page.columnconfigure(1, weight=1)
         return page
+
+    def scan_camera_network(self):
+        import concurrent.futures
+        import socket
+
+        try:
+            port = int(self.ptz_port_var.get().strip() or "80")
+        except ValueError:
+            port = 80
+
+        try:
+            probe = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            probe.connect(("8.8.8.8", 80))
+            local_ip = probe.getsockname()[0]
+            probe.close()
+        except Exception:
+            self.camera_scan_status_var.set(
+                "Could not determine this PC's network address."
+            )
+            return
+
+        parts = local_ip.split(".")
+
+        if len(parts) != 4:
+            self.camera_scan_status_var.set(
+                "Could not determine the local subnet."
+            )
+            return
+
+        subnet_prefix = ".".join(parts[:3])
+
+        self.camera_scan_status_var.set(
+            f"Scanning {subnet_prefix}.0/24 on port {port}..."
+        )
+        self.window.update_idletasks()
+
+        def check(i):
+            ip = f"{subnet_prefix}.{i}"
+            try:
+                with socket.create_connection((ip, port), timeout=0.4):
+                    return ip
+            except Exception:
+                return None
+
+        try:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=64) as executor:
+                found = [
+                    ip
+                    for ip in executor.map(check, range(1, 255))
+                    if ip
+                ]
+        except Exception as exc:
+            self.camera_scan_status_var.set(f"Scan failed: {exc}")
+            return
+
+        found = [ip for ip in found if ip != local_ip]
+        self._build_camera_scan_results(found)
+
+        if found:
+            self.camera_scan_status_var.set(
+                f"Found {len(found)} device(s) responding on port {port} - "
+                "click one to use it, or type the IP manually below."
+            )
+        else:
+            self.camera_scan_status_var.set(
+                f"No devices found responding on port {port} in "
+                f"{subnet_prefix}.0/24. You can still type the IP manually below."
+            )
+
+    def _build_camera_scan_results(self, found_ips):
+        for child in self.camera_scan_frame.winfo_children():
+            child.destroy()
+
+        for row, ip in enumerate(found_ips):
+            ttk.Button(
+                self.camera_scan_frame,
+                text=ip,
+                command=lambda ip=ip: self.ptz_ip_var.set(ip),
+            ).grid(row=row, column=0, sticky="w", pady=1)
 
     def test_camera_connection(self):
         from sss_camera_adapters import check_tcp_connection

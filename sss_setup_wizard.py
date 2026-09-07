@@ -453,7 +453,7 @@ class SetupWizard:
                 "SKIP FOR NOW — I haven't set up OBS scenes yet "
                 "(configure this later from Settings)"
                 if self.first_run
-                else "LEGACY — keep current working SSS / OBS behavior"
+                else "CURRENT SETUP — keep working SSS / OBS behavior as-is"
             ),
             variable=self.obs_source_var,
             value="legacy",
@@ -1129,11 +1129,17 @@ class SetupWizard:
         return True
 
     def refresh_review(self):
-        obs_mode = self.obs_source_var.get().upper()
+        is_legacy = self.obs_source_var.get().upper() == "LEGACY"
 
-        if obs_mode == "LEGACY":
-            obs_detail = "current known-good SSS / OBS behavior"
+        if is_legacy:
+            obs_label = "SKIP FOR NOW" if self.first_run else "CURRENT SETUP"
+            obs_detail = (
+                "OBS scenes not configured yet"
+                if self.first_run
+                else "current known-good SSS / OBS behavior"
+            )
         else:
+            obs_label = "PROFILE"
             obs_detail = (
                 f"{self.obs_collection_var.get()} | "
                 f"normal={self.obs_normal_var.get()} | "
@@ -1143,7 +1149,7 @@ class SetupWizard:
         lines = [
             "Church: " + self.church_name_var.get().strip(),
             "",
-            "OBS: " + obs_mode + " — " + obs_detail,
+            "OBS: " + obs_label + " — " + obs_detail,
         ]
 
         if self.first_run:

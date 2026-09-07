@@ -1,4 +1,5 @@
 # --- Secrets / credentials / OAuth tokens - never commit these ---
+.env
 gmail_credentials.json
 gmail_token.json
 youtube_token.json

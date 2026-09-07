@@ -19,6 +19,18 @@ logging.getLogger("websocket").setLevel(logging.CRITICAL)
 
 
 def load_config():
+    # The first-run setup wizard (sss_first_run.py / sss_setup_wizard.py)
+    # runs before sunday_config.json exists, but some of its features
+    # (e.g. "Connect & Discover OBS") transitively call load_config()
+    # through this module. Every caller already reads config with
+    # config.get(key, default), so an empty dict here behaves exactly
+    # like a config file that's simply missing that key - it does not
+    # let the main app run without a real config, since sunday_mode.py's
+    # startup gate checks CONFIG_PATH.exists() before this is ever
+    # reached on the normal startup path.
+    if not CONFIG_PATH.exists():
+        return {}
+
     # utf-8-sig accepts normal UTF-8 as well as UTF-8 files written
     # with a BOM by Windows PowerShell's Set-Content -Encoding UTF8.
     with open(CONFIG_PATH, "r", encoding="utf-8-sig") as f:

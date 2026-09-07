@@ -1,7 +1,7 @@
 VSVersionInfo(
   ffi=FixedFileInfo(
-    filevers=(3, 1, 1, 0),
-    prodvers=(3, 1, 1, 0),
+    filevers=(3, 1, 2, 0),
+    prodvers=(3, 1, 2, 0),
     mask=0x3f,
     flags=0x0,
     OS=0x40004,
@@ -17,12 +17,12 @@ VSVersionInfo(
           [
             StringStruct('CompanyName', 'Sunday Service System'),
             StringStruct('FileDescription', 'Sunday Service System — Updater'),
-            StringStruct('FileVersion', '3.1.1.0'),
+            StringStruct('FileVersion', '3.1.2.0'),
             StringStruct('InternalName', 'SundayServiceSystemUpdater'),
             StringStruct('LegalCopyright', 'Sunday Service System'),
             StringStruct('OriginalFilename', 'SundayServiceSystemUpdater.exe'),
             StringStruct('ProductName', 'Sunday Service System'),
-            StringStruct('ProductVersion', '3.1.1.0')
+            StringStruct('ProductVersion', '3.1.2.0')
           ]
         )
       ]

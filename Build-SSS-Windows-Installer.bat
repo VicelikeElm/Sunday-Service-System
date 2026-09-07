@@ -1,12 +1,12 @@
 @echo off
 setlocal
-title Sunday Service System - SIGNED Windows Release Build v3.1.1
+title Sunday Service System - SIGNED Windows Release Build v3.1.2
 
 cd /d C:\Church\SermonAI
 
 echo.
 echo ================================================================
-echo SUNDAY SERVICE SYSTEM - SIGNED WINDOWS RELEASE v3.1.1
+echo SUNDAY SERVICE SYSTEM - SIGNED WINDOWS RELEASE v3.1.2
 echo ================================================================
 echo.
 echo This build creates signed Main, Settings, Updater, .sssupdate,
@@ -107,10 +107,10 @@ echo Updater:
 echo   C:\Church\SermonAI\dist\SundayServiceSystemUpdater\SundayServiceSystemUpdater.exe
 echo.
 echo SIGNED update package:
-echo   C:\Church\SermonAI\update-output\SundayServiceSystem-Update-v3.1.1.sssupdate
+echo   C:\Church\SermonAI\update-output\SundayServiceSystem-Update-v3.1.2.sssupdate
 echo.
 echo Installer, when Inno Setup is installed:
-echo   C:\Church\SermonAI\installer-output\SundayServiceSystem-Setup-v3.1.1.exe
+echo   C:\Church\SermonAI\installer-output\SundayServiceSystem-Setup-v3.1.2.exe
 echo.
 echo NEXT for online updates:
 echo   Build-SSS-Signed-Release-Feed.bat

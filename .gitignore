@@ -28,3 +28,10 @@ Logs/
 State/
 Event History/
 Weekly_Backups/
+*.log
+SSS_Test_Report.txt
+sunday_inventory.txt
+YouTube_Studio_Diagnostic.png
+YouTube_Studio_Diagnostic.txt
+YouTube_Studio_Diagnostic_Error.txt
+presenter_ui_diagnostic.txt

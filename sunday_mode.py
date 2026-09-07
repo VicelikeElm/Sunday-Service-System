@@ -24,6 +24,7 @@ except Exception:
 
 
 from sunday_common import (
+    CONFIG_PATH,
     load_config,
     obs_port_open,
     get_obs_status,
@@ -2567,25 +2568,30 @@ class SundayModeApp:
             ),
         )
 
-        help_contact = ttk.Label(
-            outer,
-            text=(
-                "Call Corey Golde if you need help — 585-380-2701 "
-                "— or ask Casey Golde"
-            ),
-            font=(
-                "Segoe UI",
-                11,
-                "bold"
-            ),
-        )
-
-        help_contact.pack(
-            pady=(
-                0,
-                8
+        help_contact_text = str(
+            self.config.get(
+                "help_contact_text",
+                ""
             )
-        )
+        ).strip()
+
+        if help_contact_text:
+            help_contact = ttk.Label(
+                outer,
+                text=help_contact_text,
+                font=(
+                    "Segoe UI",
+                    11,
+                    "bold"
+                ),
+            )
+
+            help_contact.pack(
+                pady=(
+                    0,
+                    8
+                )
+            )
 
         self.bind_tooltip(
             help_contact,
@@ -13095,6 +13101,13 @@ def main():
     set_windows_app_user_model_id()
 
     root = tk.Tk()
+
+    if not CONFIG_PATH.exists():
+        from sss_first_run import run_first_run_setup
+
+        if not run_first_run_setup(root):
+            root.destroy()
+            return
 
     SundayModeApp(
         root

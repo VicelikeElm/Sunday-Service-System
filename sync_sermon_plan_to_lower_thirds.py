@@ -1,15 +1,26 @@
 import json
+import os
 import re
 import shutil
 from datetime import datetime
 from pathlib import Path
+
+from sunday_common import load_config
 
 BASE = Path(r"C:\Church\SermonAI")
 
 PLAN = BASE / "sermon_plan.json"
 
 LOWER_THIRDS = Path(
-    r"C:\Users\Vicel\Documents\Animated-Lower-Thirds\lower thirds"
+    load_config().get(
+        "lower_thirds_folder",
+        str(
+            Path(os.environ.get("USERPROFILE", ""))
+            / "Documents"
+            / "Animated-Lower-Thirds"
+            / "lower thirds"
+        ),
+    )
 )
 
 CONTROL_PANEL = LOWER_THIRDS / "control-panel.html"

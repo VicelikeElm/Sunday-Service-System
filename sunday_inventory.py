@@ -10,29 +10,48 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+from sunday_common import load_config
+
 BASE = Path(r"C:\Church\SermonAI")
 ENV_FILE = BASE / ".env"
 REPORT_FILE = BASE / "sunday_inventory.txt"
 
+_config = load_config()
+
 OBS_LEVELDB = Path(
-    r"C:\Users\Vicel\AppData\Roaming\obs-studio"
-    r"\plugin_config\obs-browser\Local Storage\leveldb"
+    _config.get(
+        "lower_thirds_leveldb",
+        r"C:\Users\Vicel\AppData\Roaming\obs-studio"
+        r"\plugin_config\obs-browser\Local Storage\leveldb",
+    )
 )
 
 LOWER_THIRDS_FOLDER = Path(
-    r"C:\Users\Vicel\Documents\Animated-Lower-Thirds\lower thirds"
+    _config.get(
+        "lower_thirds_folder",
+        str(Path(os.environ.get("USERPROFILE", "")) / "Documents" / "Animated-Lower-Thirds" / "lower thirds"),
+    )
 )
 
-IMPORTANT_FOLDERS = [
-    Path(r"D:\2026"),
-    Path(r"D:\2026\SRT files"),
-    Path(r"D:\2026\shorts\ai shorts"),
-    Path(r"D:\2026\shorts\ai shorts\Raw"),
-    Path(r"D:\2026\shorts\ai shorts\Transcripts"),
-    Path(r"D:\2026\shorts\ai shorts\Verified"),
-    Path(r"D:\2026\shorts\ai shorts\Review"),
-    Path(r"D:\2026\shorts\ai shorts\Ready"),
-    Path(r"D:\2026\shorts\ai shorts\Sermon Data"),
+_RECORDING_FOLDER = Path(_config.get("recording_folder", r"D:\2026"))
+_SHORTS_ROOT = _RECORDING_FOLDER / "shorts" / "ai shorts"
+
+IMPORTANT_FOLDERS = _config.get(
+    "critical_folders",
+    [
+        str(_RECORDING_FOLDER),
+        str(_RECORDING_FOLDER / "SRT files"),
+        str(_SHORTS_ROOT),
+        str(_SHORTS_ROOT / "Ready"),
+        str(_SHORTS_ROOT / "Sermon Data"),
+    ],
+)
+IMPORTANT_FOLDERS = [Path(item) for item in IMPORTANT_FOLDERS] + [
+    _SHORTS_ROOT,
+    _SHORTS_ROOT / "Raw",
+    _SHORTS_ROOT / "Transcripts",
+    _SHORTS_ROOT / "Verified",
+    _SHORTS_ROOT / "Review",
 ]
 
 IMPORTANT_SCRIPTS = [

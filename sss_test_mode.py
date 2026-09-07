@@ -373,7 +373,10 @@ def main():
     )
 
     lower_thirds_folder = Path(
-        r"C:\Users\Vicel\Documents\Animated-Lower-Thirds\lower thirds"
+        config.get(
+            "lower_thirds_folder",
+            str(Path(os.environ.get("USERPROFILE", "")) / "Documents" / "Animated-Lower-Thirds" / "lower thirds"),
+        )
     )
 
     lower_thirds_lua = (

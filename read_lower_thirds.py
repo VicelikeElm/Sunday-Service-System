@@ -6,10 +6,15 @@ from pathlib import Path
 
 from ccl_chromium_reader import ccl_chromium_localstorage
 
+from sunday_common import load_config
+
 
 SOURCE_LEVELDB = Path(
-    r"C:\Users\Vicel\AppData\Roaming\obs-studio"
-    r"\plugin_config\obs-browser\Local Storage\leveldb"
+    load_config().get(
+        "lower_thirds_leveldb",
+        r"C:\Users\Vicel\AppData\Roaming\obs-studio"
+        r"\plugin_config\obs-browser\Local Storage\leveldb",
+    )
 )
 
 

@@ -10,20 +10,28 @@ from pathlib import Path
 from rapidfuzz import fuzz
 from ccl_chromium_reader import ccl_chromium_localstorage
 
+from sunday_common import load_config
+
+_config = load_config()
 
 # =========================================================
 # SETTINGS
 # =========================================================
 
-SERMON_FOLDER = Path(r"D:\2026")
-SRT_FOLDER = Path(r"D:\2026\SRT files")
+SERMON_FOLDER = Path(_config.get("recording_folder", r"D:\2026"))
+SRT_FOLDER = SERMON_FOLDER / "SRT files"
 
-SHORTS_ROOT = Path(r"D:\2026\shorts\ai shorts")
-SERMON_DATA_FOLDER = SHORTS_ROOT / "Sermon Data"
+SHORTS_ROOT = SERMON_FOLDER / "shorts" / "ai shorts"
+SERMON_DATA_FOLDER = Path(
+    _config.get("sermon_data_folder", str(SHORTS_ROOT / "Sermon Data"))
+)
 
 LOWER_THIRDS_LEVELDB = Path(
-    r"C:\Users\Vicel\AppData\Roaming\obs-studio"
-    r"\plugin_config\obs-browser\Local Storage\leveldb"
+    _config.get(
+        "lower_thirds_leveldb",
+        r"C:\Users\Vicel\AppData\Roaming\obs-studio"
+        r"\plugin_config\obs-browser\Local Storage\leveldb",
+    )
 )
 
 LOWER_THIRD_MATCH_THRESHOLD = 62

@@ -35,7 +35,6 @@ def default_sunday_config():
         "chapter_mark_start": False,
         "dashboard_refresh_seconds": 5.0,
         "volunteer_default_action": "recording_only",
-        "sermon_plan_server_port": 8765,
         "gmail_sermon_lookback_days": 14,
         "auto_update_planning_scripture": True,
         "planning_update_timeout_seconds": 60,

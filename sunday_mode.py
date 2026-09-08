@@ -168,11 +168,6 @@ OBS_CLEANUP_SCRIPT = (
     "obs_startup_cleanup.py"
 )
 
-SERMON_PLAN_SERVER = (
-    BASE
-    /
-    "sermon_plan_server.py"
-)
 
 GMAIL_IMPORTER = (
     BASE

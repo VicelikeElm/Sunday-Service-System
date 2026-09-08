@@ -37,7 +37,6 @@ SAFE_RUNTIME_SUPPORT_FILES = (
     "planning_update_sermon.py",
     "post_service_supervisor.py",
     "ptz_camera_control.py",
-    "sermon_plan_server.py",
     "sss_test_mode.py",
     "sunday_action.py",
     "sync_named_chapter_hotkeys.py",

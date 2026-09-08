@@ -8,6 +8,8 @@ import shutil
 import tempfile
 import subprocess
 import logging
+import threading
+import queue
 from datetime import datetime
 
 import pyaudiowpatch as pyaudio
@@ -360,6 +362,104 @@ def find_loopback_device(audio):
         "Could not find the OBS monitor "
         "Headphones loopback device."
     )
+
+
+def open_loopback_stream():
+    """
+    Creates a fresh PyAudio instance + loopback stream. Used both at
+    startup and to recover after the audio stream stalls out.
+    """
+
+    audio = pyaudio.PyAudio()
+
+    device_index = find_loopback_device(audio)
+
+    device_info = audio.get_device_info_by_index(
+        device_index
+    )
+
+    rate = int(
+        device_info["defaultSampleRate"]
+    )
+
+    channels = int(
+        device_info["maxInputChannels"]
+    )
+
+    stream = audio.open(
+        format=pyaudio.paInt16,
+        channels=channels,
+        rate=rate,
+        input=True,
+        input_device_index=device_index,
+        frames_per_buffer=1024,
+    )
+
+    return audio, stream, device_index, rate, channels
+
+
+def read_stream_chunk(
+    stream,
+    frame_count,
+    timeout_seconds=15.0
+):
+    """
+    stream.read() is a blocking native (WASAPI) call. If the underlying
+    Windows Audio session dies mid-service -- observed 2026-08-30, when
+    a crash in Elgato's audio routing server (ElgatoAudioControlServer
+    .exe / WindowsAudioRouterApi.dll) took down the whole Windows Audio
+    service -- the call never returns and never raises. It just hangs
+    forever, silently ending live clip detection for the rest of the
+    service. Run the read on a background thread and time it out
+    instead of blocking the live loop indefinitely.
+    """
+
+    result = queue.Queue(
+        maxsize=1
+    )
+
+    def _read():
+
+        try:
+            result.put(
+                (
+                    "ok",
+                    stream.read(
+                        frame_count,
+                        exception_on_overflow=False,
+                    ),
+                )
+            )
+
+        except Exception as error:
+            result.put(
+                (
+                    "error",
+                    error
+                )
+            )
+
+    threading.Thread(
+        target=_read,
+        daemon=True
+    ).start()
+
+    try:
+        status, payload = result.get(
+            timeout=timeout_seconds
+        )
+
+    except queue.Empty:
+        raise TimeoutError(
+            "Audio stream stalled (no data for "
+            f"{timeout_seconds:.0f}s) -- Windows Audio may "
+            "have restarted underneath the capture stream."
+        )
+
+    if status == "error":
+        raise payload
+
+    return payload
 
 
 # =========================================================
@@ -1315,48 +1415,15 @@ def run_live_sermon(
     # AUDIO
     # -----------------------------------------------------
 
-    audio = pyaudio.PyAudio()
-
-    device_index = (
-        find_loopback_device(
-            audio
-        )
-    )
-
-    device_info = (
-        audio.get_device_info_by_index(
-            device_index
-        )
-    )
-
-    rate = int(
-        device_info[
-            "defaultSampleRate"
-        ]
-    )
-
-    channels = int(
-        device_info[
-            "maxInputChannels"
-        ]
+    audio, stream, device_index, rate, channels = (
+        open_loopback_stream()
     )
 
     log()
     log(
         f"Listening to device "
         f"{device_index}: "
-        f"{device_info['name']}"
-    )
-
-    stream = audio.open(
-        format=pyaudio.paInt16,
-        channels=channels,
-        rate=rate,
-        input=True,
-        input_device_index=(
-            device_index
-        ),
-        frames_per_buffer=1024,
+        f"{audio.get_device_info_by_index(device_index)['name']}"
     )
 
     # -----------------------------------------------------
@@ -1463,16 +1530,81 @@ def run_live_sermon(
                 CHUNK_SECONDS
             )
 
-            for _ in range(
-                chunks_to_read
-            ):
+            try:
 
-                data = stream.read(
-                    1024,
-                    exception_on_overflow=False,
+                for _ in range(
+                    chunks_to_read
+                ):
+
+                    data = read_stream_chunk(
+                        stream,
+                        1024
+                    )
+
+                    frames.append(data)
+
+            except Exception as error:
+
+                log()
+                log(
+                    "WARNING: Audio capture stalled "
+                    f"({error}). Reopening the loopback "
+                    "device..."
                 )
 
-                frames.append(data)
+                try:
+                    stream.stop_stream()
+                    stream.close()
+                except Exception:
+                    pass
+
+                try:
+                    audio.terminate()
+                except Exception:
+                    pass
+
+                reopened = False
+
+                for attempt in range(6):
+
+                    try:
+                        (
+                            audio,
+                            stream,
+                            device_index,
+                            rate,
+                            channels,
+                        ) = open_loopback_stream()
+
+                        reopened = True
+                        break
+
+                    except Exception as reopen_error:
+
+                        log(
+                            f"Retry {attempt + 1}/6: still "
+                            f"cannot reopen audio device "
+                            f"({reopen_error})."
+                        )
+
+                        time.sleep(5)
+
+                if reopened:
+                    log(
+                        "Audio device reopened. Resuming "
+                        "live listening."
+                    )
+                else:
+                    log(
+                        "Could not recover the audio "
+                        "device. Ending live listening for "
+                        "this service."
+                    )
+
+                    session_running = False
+                    break
+
+                continue
 
             # ---------------------------------------------
             # TEMP AUDIO

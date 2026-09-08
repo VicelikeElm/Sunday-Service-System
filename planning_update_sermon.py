@@ -445,6 +445,32 @@ def page_matches_target_service(
     )
 
 
+def wait_for_target_service_match(
+    page,
+    target,
+    attempts=20,
+    interval_ms=500
+):
+    """
+    Planning is a Vue SPA: the date header/body text is still fetching
+    for a second or more after the URL changes, so a single immediate
+    check of page_matches_target_service() reliably sees stale/loading
+    content and reports a false mismatch. Poll instead of checking once.
+    """
+    for _ in range(attempts):
+        if page_matches_target_service(
+            page,
+            target
+        ):
+            return True
+
+        page.wait_for_timeout(
+            interval_ms
+        )
+
+    return False
+
+
 def find_target_service_href(
     page,
     target
@@ -1119,7 +1145,7 @@ def run_update(
                     service_url=page.url,
                 )
 
-            if not page_matches_target_service(
+            if not wait_for_target_service_match(
                 page,
                 target
             ):
@@ -1156,11 +1182,8 @@ def run_update(
                                     continue
 
                                 candidate.click()
-                                page.wait_for_timeout(
-                                    1000
-                                )
 
-                                if page_matches_target_service(
+                                if wait_for_target_service_match(
                                     page,
                                     target
                                 ):
@@ -1206,11 +1229,7 @@ def run_update(
                     except Exception:
                         pass
 
-                    page.wait_for_timeout(
-                        1200
-                    )
-
-            if not page_matches_target_service(
+            if not wait_for_target_service_match(
                 page,
                 target
             ):

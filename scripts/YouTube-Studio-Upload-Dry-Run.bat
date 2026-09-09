@@ -14,6 +14,6 @@ echo Use only when intentionally testing the upload form.
 echo.
 pause
 
-python youtube_studio_upload_worker.py --manual --dry-run
+python core\youtube_studio_upload_worker.py --manual --dry-run
 echo.
 pause

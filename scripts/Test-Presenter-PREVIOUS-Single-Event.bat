@@ -11,7 +11,7 @@ echo It should go back exactly ONE slide.
 echo.
 pause
 
-python test_presenter_single_event.py back
+python core\test_presenter_single_event.py back
 
 echo.
 pause

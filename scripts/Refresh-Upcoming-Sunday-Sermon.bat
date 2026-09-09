@@ -9,7 +9,7 @@ echo.
 echo Looking for the pastor's sermon plan for the upcoming Sunday...
 echo.
 
-python gmail_sermon_importer.py
+python core\gmail_sermon_importer.py
 
 echo.
 if errorlevel 1 (

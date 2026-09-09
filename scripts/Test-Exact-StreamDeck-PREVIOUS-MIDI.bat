@@ -14,7 +14,7 @@ echo   NOTE ON ONLY - NO RELEASE / NOTE OFF
 echo.
 pause
 
-python test_presenter_streamdeck_exact_midi.py back
+python core\test_presenter_streamdeck_exact_midi.py back
 
 echo.
 pause

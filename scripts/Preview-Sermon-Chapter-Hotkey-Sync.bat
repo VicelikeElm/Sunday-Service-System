@@ -10,6 +10,6 @@ echo ============================================================
 echo.
 echo This is READ ONLY. It does not edit OBS and does not fire a chapter.
 echo.
-python sync_named_chapter_hotkeys.py --preview
+python core\sync_named_chapter_hotkeys.py --preview
 echo.
 pause

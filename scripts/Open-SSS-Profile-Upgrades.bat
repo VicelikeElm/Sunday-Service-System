@@ -2,5 +2,5 @@
 setlocal
 cd /d C:\Church\SermonAI
 call venv\Scripts\activate.bat
-pythonw sss_settings.py --migrations
+pythonw core\sss_settings.py --migrations
 endlocal

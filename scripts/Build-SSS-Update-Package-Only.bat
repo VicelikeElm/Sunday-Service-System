@@ -16,7 +16,7 @@ if not exist "C:\Church\SermonAI\sss_signing_config.json" (
     exit /b 1
 )
 
-powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Church\SermonAI\Check-SSS-Code-Signing.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Church\SermonAI\tools\Check-SSS-Code-Signing.ps1"
 if errorlevel 1 exit /b 1
 
 if not exist "C:\Church\SermonAI\dist\SundayServiceSystem\SundayServiceSystem.exe" goto :missingbuild

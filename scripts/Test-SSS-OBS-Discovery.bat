@@ -8,7 +8,7 @@ echo.
 echo This is read-only. It will NOT start/stop recording or streaming
 echo and it will NOT transition anything to Program.
 echo.
-python test_sss_obs_discovery.py
+python core\test_sss_obs_discovery.py
 
 echo.
 pause

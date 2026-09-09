@@ -9,7 +9,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
 timeout /t 1 /nobreak >nul
 
 if exist "C:\Church\SermonAI\venv\Scripts\pythonw.exe" (
-    start "" "C:\Church\SermonAI\venv\Scripts\pythonw.exe" "C:\Church\SermonAI\audio_sanity_monitor.py"
+    start "" "C:\Church\SermonAI\venv\Scripts\pythonw.exe" "C:\Church\SermonAI\core\audio_sanity_monitor.py"
     echo Live audio meter helper restarted.
 ) else (
     echo ERROR: Python environment not found.

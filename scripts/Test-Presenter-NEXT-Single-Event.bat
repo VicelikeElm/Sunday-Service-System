@@ -11,7 +11,7 @@ echo It should advance exactly ONE slide.
 echo.
 pause
 
-python test_presenter_single_event.py next
+python core\test_presenter_single_event.py next
 
 echo.
 pause

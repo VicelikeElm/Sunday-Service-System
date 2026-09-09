@@ -61,7 +61,7 @@ INSTALL
       Run with PowerShell
 
    If Windows blocks that method, run:
-      powershell -ExecutionPolicy Bypass -File C:\Church\SermonAI\install_desktop_shortcut.ps1
+      powershell -ExecutionPolicy Bypass -File C:\Church\SermonAI\tools\install_desktop_shortcut.ps1
 
 5. Open OBS normally.
 
@@ -175,7 +175,7 @@ V6 OBS STARTUP POPUP CLEANER
 ----------------------------
 Sunday Mode now runs:
 
-  C:\Church\SermonAI\obs_startup_cleanup.py
+  C:\Church\SermonAI\core\obs_startup_cleanup.py
 
 for the first 60 seconds around OBS startup.
 

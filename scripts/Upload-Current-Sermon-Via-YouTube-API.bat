@@ -17,6 +17,6 @@ echo   Largest eligible recording wins
 echo   Channel ID verification against the authorized channel
 echo   Duplicate-upload protection
 echo.
-python youtube_api_upload_worker.py --manual
+python core\youtube_api_upload_worker.py --manual
 echo.
 pause

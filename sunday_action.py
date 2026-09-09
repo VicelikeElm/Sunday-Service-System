@@ -1,6 +1,13 @@
 import sys
 from pathlib import Path
 
+# This file is a permanent, fixed-path entry point invoked directly by
+# StreamDeck buttons (see StreamDeck_*.bat) - it stays at the project root
+# forever so those buttons never need reconfiguring. Everything it depends
+# on lives in core/, which is why it's added to sys.path explicitly rather
+# than relying on the usual same-directory import resolution.
+sys.path.insert(0, str(Path(__file__).resolve().parent / "core"))
+
 from sunday_common import (
     obs_connection,
     get_obs_status,

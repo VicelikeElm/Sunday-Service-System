@@ -18,7 +18,7 @@ echo SSS v3.1 SIGNED RELEASE VERIFICATION
 echo ================================================================
 echo.
 
-powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Church\SermonAI\Check-SSS-Code-Signing.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Church\SermonAI\tools\Check-SSS-Code-Signing.ps1"
 if errorlevel 1 goto :fail
 
 for %%F in ("%MAIN%" "%SETTINGS%" "%UPDATER%") do (

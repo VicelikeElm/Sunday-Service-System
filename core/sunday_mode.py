@@ -120,6 +120,12 @@ from sss_build_info import (
     APP_VERSION,
 )
 
+from sss_update_feed import (
+    check_release_feed,
+    load_feed_state,
+    save_feed_state,
+)
+
 
 
 
@@ -876,6 +882,11 @@ class SundayModeApp:
             "<FocusIn>",
             self.refresh_active_profile_label,
             add="+",
+        )
+
+        self.root.after(
+            5000,
+            self.check_for_update_notification,
         )
 
         self.start_live_audio_meter_listener()
@@ -1706,6 +1717,290 @@ class SundayModeApp:
                 ),
             )
 
+    def check_for_update_notification(
+        self
+    ):
+        def worker():
+            try:
+                skipped_version = str(
+                    load_feed_state().get(
+                        "skipped_version",
+                        ""
+                    )
+                )
+
+                result = check_release_feed(
+                    current_version=APP_VERSION,
+                )
+
+                release = result.get(
+                    "latest_release"
+                )
+
+                if (
+                    not release
+                    or
+                    not result.get(
+                        "update_available"
+                    )
+                    or
+                    result.get(
+                        "client_too_old"
+                    )
+                ):
+                    return
+
+                if str(
+                    release.get(
+                        "version",
+                        ""
+                    )
+                ) == skipped_version:
+                    return
+
+                self.post_ui(
+                    self.show_update_notification,
+                    release,
+                )
+
+            except Exception:
+                # Background courtesy check only - a misconfigured or
+                # unreachable feed should never interrupt a live service.
+                # Settings -> Updates still works for a manual check.
+                pass
+
+        threading.Thread(
+            target=worker,
+            daemon=True,
+        ).start()
+
+    def show_update_notification(
+        self,
+        release
+    ):
+        if getattr(
+            self,
+            "_update_notification_open",
+            False
+        ):
+            return
+
+        self._update_notification_open = True
+
+        version = str(
+            release.get(
+                "version",
+                ""
+            )
+        )
+
+        summary = str(
+            release.get(
+                "summary",
+                ""
+            )
+            or
+            ""
+        ).strip()
+
+        window = tk.Toplevel(
+            self.root
+        )
+
+        window.title(
+            "SSS Update Available"
+        )
+
+        window.transient(
+            self.root
+        )
+
+        window.resizable(
+            False,
+            False
+        )
+
+        def on_close():
+            self._update_notification_open = False
+
+            try:
+                window.destroy()
+            except Exception:
+                pass
+
+        window.protocol(
+            "WM_DELETE_WINDOW",
+            on_close,
+        )
+
+        outer = ttk.Frame(
+            window,
+            padding=16,
+        )
+
+        outer.pack(
+            fill="both",
+            expand=True,
+        )
+
+        ttk.Label(
+            outer,
+            text=(
+                "Sunday Service System "
+                +
+                version
+                +
+                " is available."
+            ),
+            font=(
+                "Segoe UI",
+                11,
+                "bold"
+            ),
+        ).pack(
+            anchor="w",
+        )
+
+        ttk.Label(
+            outer,
+            text=(
+                "You're currently running "
+                +
+                str(
+                    APP_VERSION
+                )
+                +
+                "."
+            ),
+            font=(
+                "Segoe UI",
+                9,
+            ),
+        ).pack(
+            anchor="w",
+            pady=(
+                2,
+                10,
+            ),
+        )
+
+        if summary:
+            display_summary = summary
+
+            if len(
+                display_summary
+            ) > 400:
+                display_summary = (
+                    display_summary[
+                        :400
+                    ].rstrip()
+                    +
+                    "…"
+                )
+
+            ttk.Label(
+                outer,
+                text=display_summary,
+                font=(
+                    "Segoe UI",
+                    9,
+                ),
+                wraplength=380,
+                justify="left",
+            ).pack(
+                anchor="w",
+                pady=(
+                    0,
+                    12,
+                ),
+            )
+
+        button_row = ttk.Frame(
+            outer
+        )
+
+        button_row.pack(
+            fill="x",
+        )
+
+        def do_update():
+            on_close()
+
+            try:
+                launch_settings(
+                    "--updates"
+                )
+            except Exception as exc:
+                messagebox.showwarning(
+                    "SSS Update",
+                    (
+                        "Could not open SSS Setup & Settings.\n\n"
+                        +
+                        str(
+                            exc
+                        )
+                    ),
+                )
+
+        def do_skip():
+            try:
+                state = load_feed_state()
+                state["skipped_version"] = version
+                save_feed_state(
+                    state
+                )
+            except Exception:
+                pass
+
+            on_close()
+
+        ttk.Button(
+            button_row,
+            text="UPDATE NOW",
+            command=do_update,
+        ).pack(
+            side="left",
+            expand=True,
+            fill="x",
+            padx=(
+                0,
+                4,
+            ),
+        )
+
+        ttk.Button(
+            button_row,
+            text="SKIP THIS VERSION",
+            command=do_skip,
+        ).pack(
+            side="left",
+            expand=True,
+            fill="x",
+            padx=4,
+        )
+
+        ttk.Button(
+            button_row,
+            text="REMIND ME LATER",
+            command=on_close,
+        ).pack(
+            side="left",
+            expand=True,
+            fill="x",
+            padx=(
+                4,
+                0,
+            ),
+        )
+
+        window.update_idletasks()
+
+        try:
+            window.lift()
+            window.focus_force()
+        except Exception:
+            pass
+
     def open_full_system_diagnostics(
         self
     ):
@@ -2410,7 +2705,30 @@ class SundayModeApp:
                 visible
             )
 
-        for widget, visible in (
+        # When only one of recording/streaming is enabled for this church,
+        # its buttons take over column 1 (the prominent slot) instead of
+        # leaving an empty gap where the disabled one used to sit.
+        stream_start_column = (
+            1
+            if (
+                streaming
+                and
+                not recording
+            )
+            else 2
+        )
+
+        record_stop_column = (
+            1
+            if (
+                recording
+                and
+                not streaming
+            )
+            else 2
+        )
+
+        for widget, visible, row, column in (
             (
                 getattr(
                     self,
@@ -2418,6 +2736,8 @@ class SundayModeApp:
                     None
                 ),
                 recording,
+                1,
+                1,
             ),
             (
                 getattr(
@@ -2426,6 +2746,8 @@ class SundayModeApp:
                     None
                 ),
                 streaming,
+                1,
+                stream_start_column,
             ),
             (
                 getattr(
@@ -2434,14 +2756,8 @@ class SundayModeApp:
                     None
                 ),
                 audio_mute,
-            ),
-            (
-                getattr(
-                    self,
-                    "record_stop_button",
-                    None
-                ),
-                recording,
+                1,
+                3,
             ),
             (
                 getattr(
@@ -2450,6 +2766,18 @@ class SundayModeApp:
                     None
                 ),
                 streaming,
+                5,
+                1,
+            ),
+            (
+                getattr(
+                    self,
+                    "record_stop_button",
+                    None
+                ),
+                recording,
+                5,
+                record_stop_column,
             ),
         ):
             if widget is None:
@@ -2457,7 +2785,13 @@ class SundayModeApp:
 
             try:
                 if visible:
-                    widget.grid()
+                    widget.grid(
+                        row=row,
+                        column=column,
+                        padx=4,
+                        pady=4,
+                        sticky="ew",
+                    )
                 else:
                     widget.grid_remove()
             except Exception:
@@ -2649,15 +2983,10 @@ class SundayModeApp:
             ),
         )
 
-        self.profile_display_label = ttk.Label(
+        self.profile_display_label = ttk.Button(
             outer,
             textvariable=self.profile_display_var,
-            font=(
-                "Segoe UI",
-                9,
-                "bold"
-            ),
-            cursor="hand2",
+            command=self.open_profile_manager,
         )
 
         self.profile_display_label.pack(
@@ -2665,13 +2994,6 @@ class SundayModeApp:
                 0,
                 10
             )
-        )
-
-        self.profile_display_label.bind(
-            "<Button-1>",
-            lambda event:
-                self.open_profile_manager(),
-            add="+",
         )
 
         self.bind_tooltip(
@@ -3223,6 +3545,29 @@ class SundayModeApp:
             (
                 "Refreshes System Status now. Yellow items should be reviewed; "
                 "red items need attention before the service."
+            ),
+        )
+
+        self.reset_chapters_button = ttk.Button(
+            button_frame,
+            text="RESET LT / CHAPTERS",
+            command=self.reset_chapter_rotation,
+        )
+
+        self.reset_chapters_button.grid(
+            row=0,
+            column=3,
+            padx=4,
+            pady=4,
+            sticky="ew",
+        )
+
+        self.bind_tooltip(
+            self.reset_chapters_button,
+            (
+                "Resets the sermon lower-third/chapter sequence back to the "
+                "beginning (Prayer). Only available while OBS is not "
+                "recording, so it can't be used to disturb a live service."
             ),
         )
 
@@ -10275,6 +10620,7 @@ class SundayModeApp:
             self.service_ending = False
             self.recording_started_at = time.time()
             self.last_recording_state = True
+            self.sync_reset_chapters_button()
             self.active_recording_path = ""
             self.last_recording_size = 0
             self.last_recording_growth_time = time.time()
@@ -12517,6 +12863,53 @@ class SundayModeApp:
         self.refresh_chapter_rotation_button()
         self.run_preflight_async()
 
+    def sync_reset_chapters_button(
+        self
+    ):
+        if not hasattr(
+            self,
+            "reset_chapters_button"
+        ):
+            return
+
+        try:
+            self.reset_chapters_button.configure(
+                state=(
+                    "disabled"
+                    if self.last_recording_state
+                    else "normal"
+                )
+            )
+        except Exception:
+            pass
+
+    def reset_chapter_rotation(
+        self
+    ):
+        if self.last_recording_state:
+            self.append_log(
+                (
+                    "RESET LT / CHAPTERS ignored: OBS is currently "
+                    "recording. Stop recording first."
+                )
+            )
+            return
+
+        try:
+            reset_rotation()
+
+        except Exception as exc:
+            self.append_log(
+                f"Could not reset the chapter/lower-third sequence: {exc}"
+            )
+            return
+
+        self.append_log(
+            "Sermon lower-third/chapter sequence reset to the beginning."
+        )
+
+        self.refresh_chapter_rotation_button()
+
     def next_sermon_chapter(
         self
     ):
@@ -12745,6 +13138,8 @@ class SundayModeApp:
         self.last_recording_state = (
             current_recording_state
         )
+
+        self.sync_reset_chapters_button()
 
         self.update_sunday_freeze(
             recording=current_recording_state,

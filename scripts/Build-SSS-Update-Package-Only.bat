@@ -22,7 +22,7 @@ if errorlevel 1 exit /b 1
 if not exist "C:\Church\SermonAI\dist\SundayServiceSystem\SundayServiceSystem.exe" goto :missingbuild
 if not exist "C:\Church\SermonAI\dist\SundayServiceSystemSettings\SundayServiceSystemSettings.exe" goto :missingbuild
 
-"%PROD_PYTHON%" build_sss_update_package.py
+"%PROD_PYTHON%" core\build_sss_update_package.py
 if errorlevel 1 (
     echo.
     echo Signed update package build failed.

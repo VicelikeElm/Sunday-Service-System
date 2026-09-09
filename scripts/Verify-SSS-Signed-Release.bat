@@ -47,7 +47,7 @@ if exist "%INSTALLER%" (
 if exist "%FEEDFOLDER%\latest.json" (
     echo.
     echo Verifying locally-built STABLE online release feed...
-    "%PROD_PYTHON%" sss_release_feed_verify.py --folder "%FEEDFOLDER%"
+    "%PROD_PYTHON%" core\sss_release_feed_verify.py --folder "%FEEDFOLDER%"
     if errorlevel 1 goto :fail
 ) else (
     echo.

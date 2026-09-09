@@ -21,7 +21,7 @@ if not exist "%FOLDER%\latest.json" (
     exit /b 1
 )
 
-"%PROD_PYTHON%" sss_release_feed_verify.py --folder "%FOLDER%"
+"%PROD_PYTHON%" core\sss_release_feed_verify.py --folder "%FOLDER%"
 if errorlevel 1 (
     echo.
     echo [FIX] Release-feed verification failed.

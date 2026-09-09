@@ -2,7 +2,7 @@
 title Sunday Service System - DEBUG
 cd /d C:\Church\SermonAI
 call venv\Scripts\activate.bat
-python -X faulthandler -u sunday_mode.py
+python -X faulthandler -u core\sunday_mode.py
 echo.
 echo ============================================================
 echo Sunday Mode exited.

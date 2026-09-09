@@ -1,0 +1,21 @@
+{
+  "feed_format": 1,
+  "app_id": "SundayServiceSystem.Desktop",
+  "channel": "stable",
+  "generated_at": "2026-09-09T15:37:14.467448-04:00",
+  "signer_thumbprint": "AEB65434AD1728A3EF8859102DAD8E4505D0E610",
+  "releases": [
+    {
+      "version": "3.1.2",
+      "channel": "stable",
+      "published_at": "2026-09-09T15:37:14.422510-04:00",
+      "package_url": "https://vicelikeelm.github.io/Sunday-Service-System/stable/SundayServiceSystem-Update-v3.1.2.sssupdate",
+      "package_sha256": "a768feedcb7038189f91c1579f8c38347aba8a9f7296fda0fe63c1c043ab9f9d",
+      "package_size": 50734896,
+      "summary": "Fresh-install setup wizard with hardware discovery, VISCA-over-IP camera support, and a clean core/tools project layout.",
+      "release_notes_url": "https://github.com/VicelikeElm/Sunday-Service-System/releases/tag/v3.1.2",
+      "minimum_update_client_version": "3.1.0",
+      "withdrawn": false
+    }
+  ]
+}

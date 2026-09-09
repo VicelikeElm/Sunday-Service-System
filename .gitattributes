@@ -1,1 +1,7 @@
 *.dll filter=lfs diff=lfs merge=lfs -text
+
+# Signed release-feed artifacts must survive checkout/commit byte-for-byte -
+# CMS signature verification breaks if git normalizes line endings on these.
+docs/*/latest.json -text
+docs/*/latest.json.p7s -text
+docs/*/*.sssupdate -text

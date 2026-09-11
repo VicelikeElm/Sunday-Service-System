@@ -134,6 +134,17 @@ class SSSSettings(ProfileManager):
             640
         )
 
+        # Some pages (Updates, Recovery) have enough stacked content that
+        # the fixed 1040x720 default clips the bottom of the page. Open
+        # maximized so everything is visible without a manual resize;
+        # 1040x720 remains as the restore size if the user un-maximizes.
+        try:
+            self.root.state(
+                "zoomed"
+            )
+        except Exception:
+            pass
+
         self.name_var = tk.StringVar()
         self.mode_var = tk.StringVar()
         self.path_var = tk.StringVar()

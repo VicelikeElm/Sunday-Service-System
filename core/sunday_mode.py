@@ -898,12 +898,13 @@ class SundayModeApp:
         self.status_detail_text = {}
         self.status_detail_var = None
 
-        # Which status keys are currently showing the plain "everything is
-        # fine" color rather than a warning/problem color. A light/dark
-        # theme switch only needs to touch these - the rest are already
-        # showing an intentional, theme-independent alert color.
-        self.status_neutral_keys = set()
-        self.audio_meter_issue_is_neutral = True
+        # Which color each status box is currently showing ("neutral",
+        # "warning", or "problem"), so a theme toggle can instantly put
+        # the CORRECT color back on every box in one pass instead of
+        # leaving warning/problem boxes to be caught up whenever the next
+        # preflight check happens to finish.
+        self.status_color_state = {}
+        self.audio_meter_issue_level = "normal"
 
         self.tooltip_help_frame = None
         self.tooltip_prefix_label = None
@@ -1888,7 +1889,7 @@ class SundayModeApp:
         # to happen to touch each one - otherwise the switch visibly
         # "loads in" piece by piece instead of happening all at once.
         try:
-            self._reapply_neutral_theme_colors()
+            self._reapply_status_theme_colors()
         except Exception:
             pass
 
@@ -3674,9 +3675,9 @@ class SundayModeApp:
                         key
                     ] = status_label
 
-                    self.status_neutral_keys.add(
+                    self.status_color_state[
                         key
-                    )
+                    ] = "neutral"
 
                     status_label.configure(
                         cursor="hand2"
@@ -4793,21 +4794,20 @@ class SundayModeApp:
         if label is None:
             return
 
+        self.audio_meter_issue_level = level
+
         if level == "problem":
             background = "#FFC7CE"
             foreground = "#9C0006"
-            self.audio_meter_issue_is_neutral = False
 
         elif level == "review":
             background = "#FFEB9C"
             foreground = "#7F6000"
-            self.audio_meter_issue_is_neutral = False
 
         else:
             background, foreground = (
                 self._neutral_status_colors()
             )
-            self.audio_meter_issue_is_neutral = True
 
         try:
             label.configure(
@@ -5739,26 +5739,45 @@ class SundayModeApp:
 
         return "#F4F4F4", "#202020"
 
-    def _reapply_neutral_theme_colors(
+    def _reapply_status_theme_colors(
         self
     ):
         """
-        Re-color every raw tk widget that is currently showing the plain
-        "everything is fine" color, right when the theme toggle fires.
+        Re-color every raw tk widget right when the theme toggle fires,
+        instead of leaving some of them to be caught up whenever the next
+        preflight check happens to touch each one.
 
         sv_ttk.set_theme() instantly re-colors every ttk widget, but the
-        raw tk.Label/tk.Text/tk.Canvas status boxes only pick up a new
-        background whenever something next calls set_status() on them -
-        which otherwise trickles in one at a time as the next preflight
-        check happens to touch each one, instead of everything switching
-        together.
+        raw tk.Label/tk.Text/tk.Canvas status boxes don't follow it on
+        their own. A box currently showing a warning/problem color uses
+        the same literal color in either theme, so re-applying it here is
+        a no-op for its own color - but it still has to happen in this
+        same pass, otherwise that box is left waiting for the next async
+        preflight round-trip (up to a few seconds) while everything else
+        around it has already switched, which is what made the switch
+        look like it was "loading in" one piece at a time.
         """
         neutral_bg, neutral_fg = (
             self._neutral_status_colors()
         )
 
-        for key in list(
-            self.status_neutral_keys
+        state_colors = {
+            "neutral": (
+                neutral_bg,
+                neutral_fg,
+            ),
+            "warning": (
+                "#FFEB9C",
+                "#7F6000",
+            ),
+            "problem": (
+                "#FFC7CE",
+                "#9C0006",
+            ),
+        }
+
+        for key, state in list(
+            self.status_color_state.items()
         ):
             label = self.status_labels.get(
                 key
@@ -5767,10 +5786,18 @@ class SundayModeApp:
             if label is None:
                 continue
 
+            background, foreground = state_colors.get(
+                state,
+                (
+                    neutral_bg,
+                    neutral_fg,
+                ),
+            )
+
             try:
                 label.configure(
-                    background=neutral_bg,
-                    foreground=neutral_fg,
+                    background=background,
+                    foreground=foreground,
                 )
             except Exception:
                 pass
@@ -5794,15 +5821,30 @@ class SundayModeApp:
             except Exception:
                 pass
 
-        if (
-            self.audio_meter_issue_is_neutral
-            and
-            self.audio_meter_issue_label is not None
-        ):
+        if self.audio_meter_issue_label is not None:
+            issue_colors = {
+                "problem": (
+                    "#FFC7CE",
+                    "#9C0006",
+                ),
+                "review": (
+                    "#FFEB9C",
+                    "#7F6000",
+                ),
+            }
+
+            background, foreground = issue_colors.get(
+                self.audio_meter_issue_level,
+                (
+                    neutral_bg,
+                    neutral_fg,
+                ),
+            )
+
             try:
                 self.audio_meter_issue_label.configure(
-                    background=neutral_bg,
-                    foreground=neutral_fg,
+                    background=background,
+                    foreground=foreground,
                 )
             except Exception:
                 pass
@@ -5900,24 +5942,24 @@ class SundayModeApp:
         if warning:
             background = "#FFEB9C"
             foreground = "#7F6000"
-            self.status_neutral_keys.discard(
+            self.status_color_state[
                 key
-            )
+            ] = "warning"
 
         elif not ok:
             background = "#FFC7CE"
             foreground = "#9C0006"
-            self.status_neutral_keys.discard(
+            self.status_color_state[
                 key
-            )
+            ] = "problem"
 
         else:
             background, foreground = (
                 self._neutral_status_colors()
             )
-            self.status_neutral_keys.add(
+            self.status_color_state[
                 key
-            )
+            ] = "neutral"
 
         self.status_vars[
             key

@@ -15,7 +15,68 @@ try:
 except Exception:
     sv_ttk = None
 
+try:
+    import pywinstyles
+except Exception:
+    pywinstyles = None
+
+
+def apply_titlebar_theme(
+    root
+):
+    """
+    sv_ttk re-themes ttk widgets but never the native Windows title bar
+    itself. pywinstyles closes that gap - Windows 11 can recolor the
+    title bar directly; Windows 10 only supports the built-in
+    dark/normal style, not an arbitrary color.
+    """
+    if pywinstyles is None or sv_ttk is None:
+        return
+
+    try:
+        is_dark = (
+            sv_ttk.get_theme()
+            ==
+            "dark"
+        )
+
+        version = sys.getwindowsversion()
+
+        if (
+            version.major == 10
+            and
+            version.build >= 22000
+        ):
+            pywinstyles.change_header_color(
+                root,
+                "#1c1c1c"
+                if is_dark
+                else "#fafafa"
+            )
+
+        elif version.major == 10:
+            pywinstyles.apply_style(
+                root,
+                "dark"
+                if is_dark
+                else "normal"
+            )
+
+            root.wm_attributes(
+                "-alpha",
+                0.99
+            )
+
+            root.wm_attributes(
+                "-alpha",
+                1
+            )
+
+    except Exception:
+        pass
+
 from sunday_common import (
+    BASE,
     load_config,
 )
 
@@ -6823,6 +6884,18 @@ def main():
 
     root = tk.Tk()
 
+    church_icon = BASE / "church_shortcut_icon.ico"
+
+    if church_icon.exists():
+        try:
+            root.iconbitmap(
+                default=str(
+                    church_icon
+                )
+            )
+        except Exception:
+            pass
+
     if sv_ttk is not None:
         try:
             sv_ttk.set_theme(
@@ -6833,6 +6906,10 @@ def main():
             )
         except Exception:
             pass
+
+        apply_titlebar_theme(
+            root
+        )
 
     app = SSSSettings(
         root

@@ -27,6 +27,67 @@ try:
 except Exception:
     sv_ttk = None
 
+try:
+    import pywinstyles
+except Exception:
+    pywinstyles = None
+
+
+def apply_titlebar_theme(
+    root
+):
+    """
+    sv_ttk re-themes ttk widgets but never the native Windows title bar
+    itself, so a dark-mode window otherwise keeps a bright white title
+    bar. pywinstyles closes that gap - Windows 11 can recolor the title
+    bar directly; Windows 10 only supports the built-in dark/normal
+    style, not an arbitrary color.
+    """
+    if pywinstyles is None or sv_ttk is None:
+        return
+
+    try:
+        is_dark = (
+            sv_ttk.get_theme()
+            ==
+            "dark"
+        )
+
+        version = sys.getwindowsversion()
+
+        if (
+            version.major == 10
+            and
+            version.build >= 22000
+        ):
+            pywinstyles.change_header_color(
+                root,
+                "#1c1c1c"
+                if is_dark
+                else "#fafafa"
+            )
+
+        elif version.major == 10:
+            pywinstyles.apply_style(
+                root,
+                "dark"
+                if is_dark
+                else "normal"
+            )
+
+            root.wm_attributes(
+                "-alpha",
+                0.99
+            )
+
+            root.wm_attributes(
+                "-alpha",
+                1
+            )
+
+    except Exception:
+        pass
+
 
 from sunday_common import (
     CONFIG_PATH,
@@ -837,6 +898,17 @@ class SundayModeApp:
         self.status_detail_text = {}
         self.status_detail_var = None
 
+        # Which status keys are currently showing the plain "everything is
+        # fine" color rather than a warning/problem color. A light/dark
+        # theme switch only needs to touch these - the rest are already
+        # showing an intentional, theme-independent alert color.
+        self.status_neutral_keys = set()
+        self.audio_meter_issue_is_neutral = True
+
+        self.tooltip_help_frame = None
+        self.tooltip_prefix_label = None
+        self.tooltip_help_label = None
+
         # Live program-audio meter. The separate audio_sanity_monitor.py
         # sends instantaneous levels over localhost UDP; the existing
         # status JSON remains a 1-second fallback.
@@ -926,61 +998,18 @@ class SundayModeApp:
             "Sunday Service System ready."
         )
 
-        # Create a weekly rollback snapshot before the Sunday workflow
-        # begins changing plan/status files.
-        if self.config.get(
-            "auto_weekly_snapshot",
-            True
-        ):
-            try:
-                destination = weekly_snapshot(
-                    retention_weeks=int(
-                        self.config.get(
-                            "weekly_backup_retention_weeks",
-                            12
-                        )
-                    ),
-                    phase="pre_start",
-                )
-
-                self.append_log(
-                    "Pre-start rollback snapshot ready: "
-                    f"{destination.parent.name}"
-                )
-
-            except Exception as exc:
-                self.append_log(
-                    "Pre-start snapshot warning: "
-                    f"{exc}"
-                )
-
-        self.start_sermon_plan_services()
-        self.refresh_chapter_rotation_button(
-            reset_if_plan_changed=True
-        )
-
-        if self.config.get(
-            "auto_weekly_snapshot",
-            True
-        ):
-            self.start_weekly_snapshot_async(
-                "current"
-            )
-        self.launch_background_helpers()
-        self.start_obs_cleanup_helper()
-        self.start_audio_sanity_monitor()
-
-        if self.config.get(
-            "auto_start_obs",
-            True
-        ):
-            self.ensure_obs_running()
-
-        if self.config.get(
-            "auto_start_presenter",
-            True
-        ):
-            self.ensure_presenter_running()
+        # The startup checks below shell out to PowerShell/Python
+        # subprocesses repeatedly - including a real Gmail network call
+        # inside start_sermon_plan_services() - which used to run right
+        # here on the Tk main thread and left the window unresponsive for
+        # a few seconds on every launch. Run them in the background so the
+        # window finishes opening immediately; ensure_obs_running() /
+        # ensure_presenter_running() still run afterward in the same order
+        # as before, so OBS still only launches once sermon prep is done.
+        threading.Thread(
+            target=self._startup_prepare_worker,
+            daemon=True,
+        ).start()
 
         # Put the PTZ camera on the pastor shot when SSS opens.
         # PTZ settings are stored separately from sunday_config.json so
@@ -1052,6 +1081,89 @@ class SundayModeApp:
             refresh_ms,
             self.periodic_refresh
         )
+
+    def _startup_prepare_worker(
+        self
+    ):
+        """
+        Off the Tk main thread. Covers everything from the old synchronous
+        startup block that doesn't need root.after() or a direct widget
+        touch: the pre-start snapshot copy, sermon plan prep (Gmail import
+        + lower-third embed + chapter hotkey sync - the slow, network-
+        touching part), and the other auto-start helper process checks.
+        append_log() detects it isn't on the main thread and posts back
+        through the UI queue on its own, so these can be called as-is.
+        """
+        if self.config.get(
+            "auto_weekly_snapshot",
+            True
+        ):
+            try:
+                destination = weekly_snapshot(
+                    retention_weeks=int(
+                        self.config.get(
+                            "weekly_backup_retention_weeks",
+                            12
+                        )
+                    ),
+                    phase="pre_start",
+                )
+
+                self.append_log(
+                    "Pre-start rollback snapshot ready: "
+                    f"{destination.parent.name}"
+                )
+
+            except Exception as exc:
+                self.append_log(
+                    "Pre-start snapshot warning: "
+                    f"{exc}"
+                )
+
+        self.start_sermon_plan_services()
+
+        if self.config.get(
+            "auto_weekly_snapshot",
+            True
+        ):
+            self.start_weekly_snapshot_async(
+                "current"
+            )
+
+        self.launch_background_helpers()
+        self.start_obs_cleanup_helper()
+        self.start_audio_sanity_monitor()
+
+        self.post_ui(
+            self._finish_startup_launch_sequence
+        )
+
+    def _finish_startup_launch_sequence(
+        self
+    ):
+        """
+        Back on the Tk main thread once _startup_prepare_worker() finishes.
+        refresh_chapter_rotation_button() touches the chapter button
+        directly, and ensure_obs_running()/ensure_presenter_running()
+        schedule their own root.after() retries, so these have to run
+        here rather than in the background worker. OBS/Presenter still
+        only launch after sermon prep is done, same order as before.
+        """
+        self.refresh_chapter_rotation_button(
+            reset_if_plan_changed=True
+        )
+
+        if self.config.get(
+            "auto_start_obs",
+            True
+        ):
+            self.ensure_obs_running()
+
+        if self.config.get(
+            "auto_start_presenter",
+            True
+        ):
+            self.ensure_presenter_running()
 
     def post_ui(
         self,
@@ -1765,6 +1877,25 @@ class SundayModeApp:
             return
 
         self._refresh_theme_toggle_label()
+
+        apply_titlebar_theme(
+            self.root
+        )
+
+        # sv_ttk.set_theme() already just re-colored every ttk widget
+        # instantly. Do the same for the raw tk status boxes/log/meter
+        # right now too, instead of waiting for the next preflight check
+        # to happen to touch each one - otherwise the switch visibly
+        # "loads in" piece by piece instead of happening all at once.
+        try:
+            self._reapply_neutral_theme_colors()
+        except Exception:
+            pass
+
+        try:
+            self.run_preflight_async()
+        except Exception:
+            pass
 
         try:
             config = load_config()
@@ -3399,6 +3530,10 @@ class SundayModeApp:
                         value="-60 dB"
                     )
 
+                    _neutral_bg, _neutral_fg = (
+                        self._neutral_status_colors()
+                    )
+
                     self.audio_meter_db_label = tk.Label(
                         meter_frame,
                         textvariable=self.audio_meter_db_var,
@@ -3410,8 +3545,8 @@ class SundayModeApp:
                         width=7,
                         anchor="e",
                         padx=3,
-                        background="#F4F4F4",
-                        foreground="#303030",
+                        background=_neutral_bg,
+                        foreground=_neutral_fg,
                     )
 
                     self.audio_meter_db_label.pack(
@@ -3427,7 +3562,7 @@ class SundayModeApp:
                         height=32,
                         width=250,
                         highlightthickness=0,
-                        background="#F4F4F4",
+                        background=_neutral_bg,
                     )
 
                     self.audio_meter_canvas.pack(
@@ -3455,8 +3590,8 @@ class SundayModeApp:
                         anchor="center",
                         justify="center",
                         padx=3,
-                        background="#F4F4F4",
-                        foreground="#303030",
+                        background=_neutral_bg,
+                        foreground=_neutral_fg,
                     )
 
                     self.audio_meter_issue_label.pack(
@@ -3504,6 +3639,10 @@ class SundayModeApp:
                     )
 
                 else:
+                    _status_bg, _status_fg = (
+                        self._neutral_status_colors()
+                    )
+
                     status_label = tk.Label(
                         parent,
                         textvariable=var,
@@ -3519,6 +3658,8 @@ class SundayModeApp:
                         pady=2,
                         relief="groove",
                         borderwidth=1,
+                        background=_status_bg,
+                        foreground=_status_fg,
                     )
 
                     status_label.grid(
@@ -3532,6 +3673,10 @@ class SundayModeApp:
                     self.status_labels[
                         key
                     ] = status_label
+
+                    self.status_neutral_keys.add(
+                        key
+                    )
 
                     status_label.configure(
                         cursor="hand2"
@@ -3578,11 +3723,17 @@ class SundayModeApp:
         # Preflight is collapsed.
         # Reserve a fixed two-line area for tooltip help. This prevents
         # longer explanations from changing the window layout.
+        _tooltip_bg, _tooltip_fg = (
+            self._neutral_status_colors()
+        )
+
         tooltip_help_frame = tk.Frame(
             outer,
             height=38,
-            background="#F0F0F0",
+            background=_tooltip_bg,
         )
+
+        self.tooltip_help_frame = tooltip_help_frame
 
         tooltip_help_frame.pack(
             fill="x",
@@ -3605,9 +3756,12 @@ class SundayModeApp:
                 8,
                 "bold"
             ),
-            background="#F0F0F0",
+            background=_tooltip_bg,
+            foreground=_tooltip_fg,
             anchor="nw",
         )
+
+        self.tooltip_prefix_label = tooltip_prefix
 
         tooltip_prefix.pack(
             side="left",
@@ -3627,11 +3781,14 @@ class SundayModeApp:
                 8
             ),
             height=2,
-            background="#F0F0F0",
+            background=_tooltip_bg,
+            foreground=_tooltip_fg,
             wraplength=980,
             justify="left",
             anchor="nw",
         )
+
+        self.tooltip_help_label = tooltip_help_label
 
         tooltip_help_label.pack(
             side="left",
@@ -4291,6 +4448,10 @@ class SundayModeApp:
             expand=True,
         )
 
+        _log_bg, _log_fg = (
+            self._neutral_status_colors()
+        )
+
         self.log_widget = tk.Text(
             log_frame,
             height=5,
@@ -4300,6 +4461,8 @@ class SundayModeApp:
                 "Consolas",
                 10
             ),
+            background=_log_bg,
+            foreground=_log_fg,
         )
 
         self.log_widget.pack(
@@ -4381,6 +4544,16 @@ class SundayModeApp:
         self,
         message
     ):
+        if threading.current_thread() is not threading.main_thread():
+            # Background startup/helper threads never touch Tk directly.
+            # Hand this back to the main thread through the same queue
+            # post_ui() uses everywhere else.
+            self.post_ui(
+                self.append_log,
+                message,
+            )
+            return
+
         stamp = time.strftime(
             "%H:%M:%S"
         )
@@ -4623,14 +4796,18 @@ class SundayModeApp:
         if level == "problem":
             background = "#FFC7CE"
             foreground = "#9C0006"
+            self.audio_meter_issue_is_neutral = False
 
         elif level == "review":
             background = "#FFEB9C"
             foreground = "#7F6000"
+            self.audio_meter_issue_is_neutral = False
 
         else:
-            background = "#F4F4F4"
-            foreground = "#303030"
+            background, foreground = (
+                self._neutral_status_colors()
+            )
+            self.audio_meter_issue_is_neutral = True
 
         try:
             label.configure(
@@ -5544,6 +5721,134 @@ class SundayModeApp:
             "OK"
         )
 
+    def _neutral_status_colors(
+        self
+    ):
+        """
+        Background/foreground for a status box in its normal (no
+        warning/problem) state. These status widgets are raw tk.Label,
+        not ttk, so they don't pick up sv_ttk's theme automatically and
+        need their own light/dark pair.
+        """
+        if sv_ttk is not None:
+            try:
+                if sv_ttk.get_theme() == "dark":
+                    return "#3A3A3A", "#E8E8E8"
+            except Exception:
+                pass
+
+        return "#F4F4F4", "#202020"
+
+    def _reapply_neutral_theme_colors(
+        self
+    ):
+        """
+        Re-color every raw tk widget that is currently showing the plain
+        "everything is fine" color, right when the theme toggle fires.
+
+        sv_ttk.set_theme() instantly re-colors every ttk widget, but the
+        raw tk.Label/tk.Text/tk.Canvas status boxes only pick up a new
+        background whenever something next calls set_status() on them -
+        which otherwise trickles in one at a time as the next preflight
+        check happens to touch each one, instead of everything switching
+        together.
+        """
+        neutral_bg, neutral_fg = (
+            self._neutral_status_colors()
+        )
+
+        for key in list(
+            self.status_neutral_keys
+        ):
+            label = self.status_labels.get(
+                key
+            )
+
+            if label is None:
+                continue
+
+            try:
+                label.configure(
+                    background=neutral_bg,
+                    foreground=neutral_fg,
+                )
+            except Exception:
+                pass
+
+        # The meter's own background/reading are always neutral - only the
+        # issue label to its right ever switches to a warning/problem color.
+        if self.audio_meter_db_label is not None:
+            try:
+                self.audio_meter_db_label.configure(
+                    background=neutral_bg,
+                    foreground=neutral_fg,
+                )
+            except Exception:
+                pass
+
+        if self.audio_meter_canvas is not None:
+            try:
+                self.audio_meter_canvas.configure(
+                    background=neutral_bg
+                )
+            except Exception:
+                pass
+
+        if (
+            self.audio_meter_issue_is_neutral
+            and
+            self.audio_meter_issue_label is not None
+        ):
+            try:
+                self.audio_meter_issue_label.configure(
+                    background=neutral_bg,
+                    foreground=neutral_fg,
+                )
+            except Exception:
+                pass
+
+        for widget in (
+            self.tooltip_help_frame,
+            self.tooltip_prefix_label,
+            self.tooltip_help_label,
+        ):
+            if widget is None:
+                continue
+
+            try:
+                widget.configure(
+                    background=neutral_bg
+                )
+            except Exception:
+                pass
+
+        for widget in (
+            self.tooltip_prefix_label,
+            self.tooltip_help_label,
+        ):
+            if widget is None:
+                continue
+
+            try:
+                widget.configure(
+                    foreground=neutral_fg
+                )
+            except Exception:
+                pass
+
+        if getattr(
+            self,
+            "log_widget",
+            None
+        ) is not None:
+            try:
+                self.log_widget.configure(
+                    background=neutral_bg,
+                    foreground=neutral_fg,
+                )
+            except Exception:
+                pass
+
     def set_status(
         self,
         key,
@@ -5595,14 +5900,24 @@ class SundayModeApp:
         if warning:
             background = "#FFEB9C"
             foreground = "#7F6000"
+            self.status_neutral_keys.discard(
+                key
+            )
 
         elif not ok:
             background = "#FFC7CE"
             foreground = "#9C0006"
+            self.status_neutral_keys.discard(
+                key
+            )
 
         else:
-            background = "#F4F4F4"
-            foreground = "#202020"
+            background, foreground = (
+                self._neutral_status_colors()
+            )
+            self.status_neutral_keys.add(
+                key
+            )
 
         self.status_vars[
             key
@@ -10638,10 +10953,6 @@ class SundayModeApp:
             )
             or
             process_running_contains(
-                "Presenter.exe"
-            )
-            or
-            process_running_contains(
                 "WorshipTools Presenter"
             )
         ):
@@ -11104,13 +11415,11 @@ class SundayModeApp:
 
                 self.mute_state = all_muted
 
-                self.mute_button.configure(
-                    text=(
-                        "UNMUTE AUDIO"
-                        if all_muted
-                        else
-                        "MUTE AUDIO"
-                    )
+                self._set_mute_button_text(
+                    "UNMUTE AUDIO"
+                    if all_muted
+                    else
+                    "MUTE AUDIO"
                 )
 
                 return
@@ -11156,18 +11465,30 @@ class SundayModeApp:
 
         self.mute_state = all_muted
 
+        self._set_mute_button_text(
+            "UNMUTE AUDIO"
+            if all_muted
+            else
+            "MUTE AUDIO"
+        )
+
+    def _set_mute_button_text(
+        self,
+        text
+    ):
+        if threading.current_thread() is not threading.main_thread():
+            self.post_ui(
+                self._set_mute_button_text,
+                text,
+            )
+            return
+
         try:
             self.mute_button.configure(
-                text=(
-                    "UNMUTE AUDIO"
-                    if all_muted
-                    else
-                    "MUTE AUDIO"
-                )
+                text=text
             )
         except Exception:
             pass
-
 
     def emergency_mute(
         self
@@ -13539,10 +13860,13 @@ class SundayModeApp:
 
         # Keep MUTE / UNMUTE wording synchronized with OBS even if someone
         # changed the mute state directly in OBS or from another controller.
-        try:
-            self.refresh_mute_button_label()
-        except Exception:
-            pass
+        # This opens its own OBS connection, so it runs in the background -
+        # doing that on the main thread every refresh tick is what made the
+        # whole dashboard pause for a moment every few seconds.
+        threading.Thread(
+            target=self.refresh_mute_button_label,
+            daemon=True,
+        ).start()
 
         if not self.watchdog_running:
             self.watchdog_running = True
@@ -13753,6 +14077,10 @@ def main():
             )
         except Exception:
             pass
+
+        apply_titlebar_theme(
+            root
+        )
 
     if not CONFIG_PATH.exists():
         from sss_first_run import run_first_run_setup

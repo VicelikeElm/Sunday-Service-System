@@ -18,6 +18,13 @@ from sss_updater_core import (
     verify_update_package,
 )
 
+# Same source file sunday_mode.py uses for its own window icon. Without
+# this, Tk shows its own default feather icon instead of the exe's icon
+# while the Updater window is actually open.
+CHURCH_WINDOW_ICON = Path(
+    r"C:\Church\SermonAI\church_shortcut_icon.ico"
+)
+
 
 class UpdaterWindow:
     def __init__(
@@ -534,6 +541,16 @@ def main():
     args = parse_args()
 
     root = tk.Tk()
+
+    if CHURCH_WINDOW_ICON.exists():
+        try:
+            root.iconbitmap(
+                default=str(
+                    CHURCH_WINDOW_ICON
+                )
+            )
+        except Exception:
+            pass
 
     UpdaterWindow(
         root,

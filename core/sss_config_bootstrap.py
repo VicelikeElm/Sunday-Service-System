@@ -39,6 +39,8 @@ def default_sunday_config():
         "auto_update_planning_scripture": True,
         "planning_update_timeout_seconds": 60,
         "auto_start_presenter": True,
+        "auto_start_obs": True,
+        "ui_theme": "light",
         "youtube_video_extensions": [".mp4"],
         "youtube_min_file_mb": 500,
         "youtube_min_duration_minutes": 20,

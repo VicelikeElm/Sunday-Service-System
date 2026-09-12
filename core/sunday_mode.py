@@ -22,6 +22,11 @@ try:
 except Exception:
     winsound = None
 
+try:
+    import sv_ttk
+except Exception:
+    sv_ttk = None
+
 
 from sunday_common import (
     CONFIG_PATH,
@@ -30,6 +35,11 @@ from sunday_common import (
     get_obs_status,
     process_running_contains,
     process_name_running,
+    stop_processes_containing,
+)
+
+from sss_config_bootstrap import (
+    write_sunday_config,
 )
 
 from sss_event_history import (
@@ -959,7 +969,12 @@ class SundayModeApp:
         self.launch_background_helpers()
         self.start_obs_cleanup_helper()
         self.start_audio_sanity_monitor()
-        self.ensure_obs_running()
+
+        if self.config.get(
+            "auto_start_obs",
+            True
+        ):
+            self.ensure_obs_running()
 
         if self.config.get(
             "auto_start_presenter",
@@ -1697,6 +1712,71 @@ class SundayModeApp:
                 )
             )
 
+    def _refresh_theme_toggle_label(
+        self
+    ):
+        current = "light"
+
+        if sv_ttk is not None:
+            try:
+                current = sv_ttk.get_theme()
+            except Exception:
+                pass
+
+        self.theme_toggle_var.set(
+            "DARK MODE"
+            if current == "light"
+            else "LIGHT MODE"
+        )
+
+    def toggle_ui_theme(
+        self
+    ):
+        if sv_ttk is None:
+            messagebox.showwarning(
+                "Theme",
+                (
+                    "The sv_ttk theming package is not installed, so "
+                    "light/dark mode is unavailable."
+                ),
+            )
+            return
+
+        try:
+            current = sv_ttk.get_theme()
+        except Exception:
+            current = "light"
+
+        new_theme = (
+            "dark"
+            if current == "light"
+            else "light"
+        )
+
+        try:
+            sv_ttk.set_theme(
+                new_theme
+            )
+        except Exception as exc:
+            messagebox.showwarning(
+                "Theme",
+                f"Could not switch theme: {exc}",
+            )
+            return
+
+        self._refresh_theme_toggle_label()
+
+        try:
+            config = load_config()
+            config[
+                "ui_theme"
+            ] = new_theme
+            write_sunday_config(
+                config
+            )
+        except Exception:
+            pass
+
     def open_profile_manager(
         self
     ):
@@ -2126,12 +2206,115 @@ class SundayModeApp:
         except Exception:
             pass
 
+    def _post_service_still_active(
+        self
+    ):
+        """
+        Returns a short human-readable reason if post-service processing
+        (YouTube upload, transcript, Planning, etc.) for the CURRENT
+        service is still actively running or needs attention, or None if
+        it's complete, idle, or belongs to a different/older service.
+        """
+        if not POST_STATUS_FILE.exists():
+            return None
+
+        try:
+            payload = read_json(
+                POST_STATUS_FILE,
+                {}
+            )
+
+            current_plan = read_json(
+                SERMON_PLAN_FILE,
+                {}
+            )
+
+            if (
+                payload.get(
+                    "plan_id"
+                )
+                and
+                current_plan.get(
+                    "plan_id"
+                )
+                and
+                payload.get(
+                    "plan_id"
+                )
+                !=
+                current_plan.get(
+                    "plan_id"
+                )
+            ):
+                # Status file is for a different/older service - stale.
+                return None
+
+            state = str(
+                payload.get(
+                    "state",
+                    ""
+                )
+            ).upper()
+
+            if state in (
+                "RUNNING",
+                "ATTENTION",
+            ):
+                return str(
+                    payload.get(
+                        "message",
+                        ""
+                    )
+                ).strip() or "Post-service processing is still running"
+
+        except Exception:
+            pass
+
+        return None
+
+    def _stop_background_helpers(
+        self
+    ):
+        for script_name in (
+            "chapter_bridge.py",
+            "audio_sanity_monitor.py",
+            "post_service_supervisor.py",
+            "obs_startup_cleanup.py",
+        ):
+            try:
+                stop_processes_containing(
+                    script_name
+                )
+            except Exception:
+                pass
+
     def on_app_close(
         self
     ):
         """
-        Record a normal shutdown and leave all live OBS outputs untouched.
+        Record a normal shutdown, leave all live OBS outputs untouched, and
+        stop SSS's own hidden helper processes so closing the main window
+        doesn't leave several background windows/processes to clean up by
+        hand. Warns first if post-service processing looks unfinished.
         """
+        still_active = self._post_service_still_active()
+
+        if still_active:
+            proceed = messagebox.askyesno(
+                "Sunday Service System",
+                (
+                    still_active
+                    + (
+                        "\n\nClosing now will stop it before it "
+                        "finishes (for example, the YouTube upload). "
+                        "Close anyway?"
+                    )
+                ),
+            )
+
+            if not proceed:
+                return
+
         try:
             client = self.connect_obs()
 
@@ -2171,6 +2354,8 @@ class SundayModeApp:
             )
         except Exception:
             pass
+
+        self._stop_background_helpers()
 
         try:
             self.root.destroy()
@@ -2983,17 +3168,25 @@ class SundayModeApp:
             ),
         )
 
+        profile_row = ttk.Frame(
+            outer
+        )
+
+        profile_row.pack(
+            pady=(
+                0,
+                10
+            )
+        )
+
         self.profile_display_label = ttk.Button(
-            outer,
+            profile_row,
             textvariable=self.profile_display_var,
             command=self.open_profile_manager,
         )
 
         self.profile_display_label.pack(
-            pady=(
-                0,
-                10
-            )
+            side="left"
         )
 
         self.bind_tooltip(
@@ -3003,6 +3196,31 @@ class SundayModeApp:
                 "Click this label to open SSS Setup & Settings."
             ),
         )
+
+        self.theme_toggle_var = tk.StringVar(
+            value=""
+        )
+
+        self.theme_toggle_button = ttk.Button(
+            profile_row,
+            textvariable=self.theme_toggle_var,
+            command=self.toggle_ui_theme,
+        )
+
+        self.theme_toggle_button.pack(
+            side="left",
+            padx=(
+                8,
+                0
+            ),
+        )
+
+        self.bind_tooltip(
+            self.theme_toggle_button,
+            "Switches Sunday Service System between light and dark mode.",
+        )
+
+        self._refresh_theme_toggle_label()
 
         preflight_wrapper = ttk.Frame(
             outer
@@ -13524,6 +13742,17 @@ def main():
     set_windows_app_user_model_id()
 
     root = tk.Tk()
+
+    if sv_ttk is not None:
+        try:
+            sv_ttk.set_theme(
+                load_config().get(
+                    "ui_theme",
+                    "light"
+                )
+            )
+        except Exception:
+            pass
 
     if not CONFIG_PATH.exists():
         from sss_first_run import run_first_run_setup

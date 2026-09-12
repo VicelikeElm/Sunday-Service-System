@@ -222,6 +222,63 @@ def process_running_contains(
         return False
 
 
+def stop_processes_containing(needle):
+    """
+    Terminate any process (other than this one) whose command line
+    contains `needle`. Used to clean up SSS's own hidden helper scripts
+    (chapter_bridge.py, audio_sanity_monitor.py, etc.) when the main
+    window closes, mirroring process_running_contains()'s matching style.
+
+    Returns the number of processes asked to stop. Best-effort: a process
+    that exits on its own between the query and the stop is not an error.
+    """
+    escaped = needle.replace(
+        "'",
+        "''"
+    )
+
+    ps = (
+        "$selfPid = $PID; "
+        "$targets = Get-CimInstance Win32_Process | "
+        "Where-Object { "
+        "$_.ProcessId -ne $selfPid -and "
+        "$_.CommandLine -and "
+        f"$_.CommandLine -like '*{escaped}*' "
+        "}; "
+        "foreach ($p in $targets) { "
+        "try { Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue } catch {} "
+        "}; "
+        "($targets | Measure-Object).Count"
+    )
+
+    try:
+        cp = subprocess.run(
+            [
+                "powershell",
+                "-NoProfile",
+                "-Command",
+                ps,
+            ],
+            capture_output=True,
+            text=True,
+            timeout=8,
+            creationflags=(
+                subprocess.CREATE_NO_WINDOW
+                if os.name == "nt"
+                else 0
+            ),
+        )
+
+        return int(
+            cp.stdout.strip()
+            or
+            0
+        )
+
+    except Exception:
+        return 0
+
+
 def process_name_running(name):
     try:
         cp = subprocess.run(

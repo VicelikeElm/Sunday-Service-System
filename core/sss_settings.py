@@ -10,6 +10,19 @@ from tkinter import (
     ttk,
 )
 
+try:
+    import sv_ttk
+except Exception:
+    sv_ttk = None
+
+from sunday_common import (
+    load_config,
+)
+
+from sss_config_bootstrap import (
+    write_sunday_config,
+)
+
 from sss_profile import (
     active_profile_path,
     get_profile_audio_settings,
@@ -250,6 +263,22 @@ class SSSSettings(ProfileManager):
         )
         self.online_release = None
         self.online_busy = False
+
+        self.auto_start_obs_var = tk.BooleanVar(
+            value=True
+        )
+        self.auto_start_presenter_var = tk.BooleanVar(
+            value=True
+        )
+        self.auto_start_sermon_ai_var = tk.BooleanVar(
+            value=True
+        )
+        self.auto_start_chapter_bridge_var = tk.BooleanVar(
+            value=True
+        )
+        self.startup_helpers_status_var = tk.StringVar(
+            value=""
+        )
 
         self._build_settings_ui()
         self.refresh()
@@ -986,6 +1015,102 @@ class SSSSettings(ProfileManager):
         ).pack(
             anchor="w",
             pady=8,
+        )
+
+        startup_frame = ttk.LabelFrame(
+            page,
+            text="Startup Helpers",
+            padding=10,
+        )
+
+        startup_frame.pack(
+            fill="x",
+            pady=(
+                0,
+                10
+            ),
+        )
+
+        ttk.Label(
+            startup_frame,
+            text=(
+                "Choose what Sunday Service System launches on its own when "
+                "it opens. Anything unchecked here can still be started "
+                "manually (LAUNCH SUNDAY APPS on the main screen, or the "
+                "program itself) - unchecking it only turns off the "
+                "automatic launch."
+            ),
+            wraplength=700,
+            justify="left",
+        ).pack(
+            anchor="w",
+            pady=(
+                0,
+                8
+            ),
+        )
+
+        ttk.Checkbutton(
+            startup_frame,
+            text="Auto-start OBS",
+            variable=self.auto_start_obs_var,
+        ).pack(
+            anchor="w"
+        )
+
+        ttk.Checkbutton(
+            startup_frame,
+            text="Auto-start Presenter",
+            variable=self.auto_start_presenter_var,
+        ).pack(
+            anchor="w"
+        )
+
+        ttk.Checkbutton(
+            startup_frame,
+            text="Auto-start Sermon AI (live transcription/shorts watchdog)",
+            variable=self.auto_start_sermon_ai_var,
+        ).pack(
+            anchor="w"
+        )
+
+        ttk.Checkbutton(
+            startup_frame,
+            text="Auto-start Chapter Bridge (lower-third -> chapter marker sync)",
+            variable=self.auto_start_chapter_bridge_var,
+        ).pack(
+            anchor="w"
+        )
+
+        save_row = ttk.Frame(
+            startup_frame
+        )
+
+        save_row.pack(
+            fill="x",
+            pady=(
+                8,
+                0
+            ),
+        )
+
+        ttk.Button(
+            save_row,
+            text="SAVE STARTUP HELPERS",
+            command=self.save_startup_helpers,
+        ).pack(
+            side="left"
+        )
+
+        ttk.Label(
+            save_row,
+            textvariable=self.startup_helpers_status_var,
+        ).pack(
+            side="left",
+            padx=(
+                8,
+                0
+            ),
         )
 
         # Updates -------------------------------------------------
@@ -5945,12 +6070,117 @@ class SSSSettings(ProfileManager):
                 parent=self.root,
             )
 
+    def _refresh_startup_helpers(
+        self
+    ):
+        try:
+            config = load_config()
+        except Exception:
+            config = {}
+
+        self.auto_start_obs_var.set(
+            bool(
+                config.get(
+                    "auto_start_obs",
+                    True
+                )
+            )
+        )
+
+        self.auto_start_presenter_var.set(
+            bool(
+                config.get(
+                    "auto_start_presenter",
+                    True
+                )
+            )
+        )
+
+        self.auto_start_sermon_ai_var.set(
+            bool(
+                config.get(
+                    "auto_start_sermon_ai",
+                    True
+                )
+            )
+        )
+
+        self.auto_start_chapter_bridge_var.set(
+            bool(
+                config.get(
+                    "auto_start_chapter_bridge",
+                    True
+                )
+            )
+        )
+
+        self.startup_helpers_status_var.set(
+            ""
+        )
+
+    def save_startup_helpers(
+        self
+    ):
+        try:
+            config = load_config()
+
+            config[
+                "auto_start_obs"
+            ] = bool(
+                self.auto_start_obs_var.get()
+            )
+
+            config[
+                "auto_start_presenter"
+            ] = bool(
+                self.auto_start_presenter_var.get()
+            )
+
+            config[
+                "auto_start_sermon_ai"
+            ] = bool(
+                self.auto_start_sermon_ai_var.get()
+            )
+
+            config[
+                "auto_start_chapter_bridge"
+            ] = bool(
+                self.auto_start_chapter_bridge_var.get()
+            )
+
+            write_sunday_config(
+                config
+            )
+
+            self.startup_helpers_status_var.set(
+                "Saved. Takes effect next time Sunday Service System opens."
+            )
+
+        except Exception as exc:
+            self.startup_helpers_status_var.set(
+                ""
+            )
+
+            messagebox.showwarning(
+                "Startup Helpers",
+                (
+                    "Could not save startup helper settings.\n\n"
+                    +
+                    str(
+                        exc
+                    )
+                ),
+                parent=self.root,
+            )
+
     def refresh(
         self
     ):
         # Reuse the proven profile selector / identity logic from
         # ProfileManager.
         super().refresh()
+
+        self._refresh_startup_helpers()
 
         profile = load_active_profile()
 
@@ -6592,6 +6822,17 @@ def main():
     set_windows_app_user_model_id()
 
     root = tk.Tk()
+
+    if sv_ttk is not None:
+        try:
+            sv_ttk.set_theme(
+                load_config().get(
+                    "ui_theme",
+                    "light"
+                )
+            )
+        except Exception:
+            pass
 
     app = SSSSettings(
         root

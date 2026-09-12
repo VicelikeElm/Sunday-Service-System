@@ -663,6 +663,21 @@ def _pyinstaller_base(
         "obsws_python",
     ]
 
+    # sv_ttk ships its .tcl theme scripts and sprite sheets as package data,
+    # not Python modules - PyInstaller's import analysis can't see them, so
+    # they must be collected explicitly or the packaged EXE falls back to
+    # the plain (pre-theme) look with no error. Optional at packaging time,
+    # same reasoning as the MIDI packages below.
+    if importlib.util.find_spec(
+        "sv_ttk"
+    ) is not None:
+        command.extend(
+            [
+                "--collect-data",
+                "sv_ttk",
+            ]
+        )
+
     # MIDI packages are optional at packaging time. If the production SSS
     # environment actually has them, include them explicitly. If it does not,
     # do not ask PyInstaller for nonexistent hidden imports (which only creates

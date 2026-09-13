@@ -17,6 +17,24 @@ import tkinter as tk
 from tkinter import ttk
 
 
+def _theme_background():
+    """The same neutral light/dark background pair sunday_mode.py's own
+    _neutral_status_colors() uses for raw tk widgets - a plain tk.Canvas
+    doesn't pick up sv_ttk's theme automatically (ttk.Style().lookup()
+    returns nothing useful for sv_ttk's light theme), so without this it
+    defaults to Tk's plain system background and visibly flashes against
+    a dark theme for a moment before real content covers it."""
+    try:
+        import sv_ttk
+
+        if sv_ttk.get_theme() == "dark":
+            return "#3A3A3A"
+    except Exception:
+        pass
+
+    return "#F4F4F4"
+
+
 def add_vertical_scroll(parent, *, stretch_width=True, inner_padding=0):
     """Turn parent into a scrollable region; return (canvas, inner_frame).
 
@@ -45,6 +63,7 @@ def add_vertical_scroll(parent, *, stretch_width=True, inner_padding=0):
         highlightthickness=0,
         width=1,
         height=1,
+        background=_theme_background(),
     )
 
     scrollbar = ttk.Scrollbar(

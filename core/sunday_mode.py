@@ -3196,7 +3196,7 @@ class SundayModeApp:
             expand=True
         )
 
-        _dashboard_canvas, outer = add_vertical_scroll(
+        self.dashboard_canvas, outer = add_vertical_scroll(
             scroll_root,
             stretch_width=True,
             inner_padding=14,
@@ -5819,6 +5819,13 @@ class SundayModeApp:
         neutral_bg, neutral_fg = (
             self._neutral_status_colors()
         )
+
+        try:
+            self.dashboard_canvas.configure(
+                background=neutral_bg
+            )
+        except Exception:
+            pass
 
         state_colors = {
             "neutral": (

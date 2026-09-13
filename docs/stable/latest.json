@@ -2,18 +2,18 @@
   "feed_format": 1,
   "app_id": "SundayServiceSystem.Desktop",
   "channel": "stable",
-  "generated_at": "2026-09-12T20:22:40.069071-04:00",
+  "generated_at": "2026-09-13T10:55:28.734206-04:00",
   "signer_thumbprint": "AEB65434AD1728A3EF8859102DAD8E4505D0E610",
   "releases": [
     {
-      "version": "3.1.4",
+      "version": "3.1.5",
       "channel": "stable",
-      "published_at": "2026-09-12T20:22:40.020146-04:00",
-      "package_url": "https://vicelikeelm.github.io/Sunday-Service-System/stable/SundayServiceSystem-Update-v3.1.4.sssupdate",
-      "package_sha256": "ebf3312374a95775a546d60ea4319e328466694e17eaaa72d83833f5c6d7d17a",
-      "package_size": 51000823,
-      "summary": "Settings now opens on a new Overview dashboard with system health at a glance, and Sunday Mode shows a live status card that states the current phase of the service and what to do next. Also a large internal cleanup removing unused code and two latent bug fixes.",
-      "release_notes_url": "https://github.com/VicelikeElm/Sunday-Service-System/releases/tag/v3.1.4",
+      "published_at": "2026-09-13T10:55:28.680408-04:00",
+      "package_url": "https://vicelikeelm.github.io/Sunday-Service-System/stable/SundayServiceSystem-Update-v3.1.5.sssupdate",
+      "package_sha256": "56b0c38649967247acb77a0905632fce5185bc2f914bc9b6ed9acb9889a98721",
+      "package_size": 51540379,
+      "summary": "Both Settings and Sunday Mode now scroll instead of clipping content on smaller windows. Fixed a real freeze risk where clicking START RECORDING could lock up the app for several seconds. Two system checks (audio device detection, sermon-AI status) that were each taking 1.5-2.5 seconds via PowerShell now run natively in milliseconds. The new Performance page shows exactly where startup and check time goes.",
+      "release_notes_url": "https://github.com/VicelikeElm/Sunday-Service-System/releases/tag/v3.1.5",
       "minimum_update_client_version": "3.1.0",
       "withdrawn": false
     }

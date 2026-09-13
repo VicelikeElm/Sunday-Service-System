@@ -103,6 +103,10 @@ from sss_profile import (
 
 from sss_profile_manager import ProfileManager
 
+from sss_scrollable import (
+    add_vertical_scroll,
+)
+
 from sss_diagnostics import (
     export_diagnostic_bundle,
     run_full_system_test,
@@ -528,13 +532,13 @@ class SSSSettings(ProfileManager):
             weight=1
         )
 
-        nav = ttk.LabelFrame(
+        nav_outer = ttk.LabelFrame(
             body,
             text="Settings",
             padding=8,
         )
 
-        nav.grid(
+        nav_outer.grid(
             row=0,
             column=0,
             sticky="nsw",
@@ -542,6 +546,11 @@ class SSSSettings(ProfileManager):
                 0,
                 10
             ),
+        )
+
+        _nav_canvas, nav = add_vertical_scroll(
+            nav_outer,
+            stretch_width=False,
         )
 
         content = ttk.Frame(
@@ -763,20 +772,25 @@ class SSSSettings(ProfileManager):
         self,
         key
     ):
-        page = ttk.Frame(
-            self.page_host,
-            padding=12,
+        page_wrapper = ttk.Frame(
+            self.page_host
         )
 
-        page.grid(
+        page_wrapper.grid(
             row=0,
             column=0,
             sticky="nsew",
         )
 
+        _canvas, page = add_vertical_scroll(
+            page_wrapper,
+            stretch_width=True,
+            inner_padding=12,
+        )
+
         self.pages[
             key
-        ] = page
+        ] = page_wrapper
 
         return page
 
@@ -965,17 +979,41 @@ class SSSSettings(ProfileManager):
                 value=""
             )
 
-            ttk.Label(
+            detail_label = ttk.Label(
                 card,
                 textvariable=detail_var,
                 wraplength=180,
                 justify="left",
-            ).pack(
+            )
+
+            detail_label.pack(
                 anchor="w",
                 pady=(
                     4,
                     6
                 ),
+            )
+
+            def _on_card_configure(
+                event,
+                label=detail_label
+            ):
+                # Keep the detail text wrapping at the card's actual
+                # column width instead of a fixed guess - the 4 columns
+                # are proportionally weighted, so their real width
+                # varies with the window. 24px covers the card's own
+                # padding=10 on each side; 80 floors the earliest
+                # <Configure> firing before layout has settled.
+                label.configure(
+                    wraplength=max(
+                        80,
+                        event.width - 24
+                    )
+                )
+
+            card.bind(
+                "<Configure>",
+                _on_card_configure,
             )
 
             ttk.Button(
@@ -5865,10 +5903,22 @@ class SSSSettings(ProfileManager):
 
         operation_labels = {
             "preflight": "Preflight",
+            "start_recording_check": "Start Recording (system check)",
             "next_chapter": "Next chapter",
-            "ptz_recall": "PTZ recall",
+            "ptz_recall": "PTZ recall (subprocess + camera)",
+            "ptz_camera_http_call": "PTZ camera call only",
             "mute_toggle": "Mute toggle",
         }
+
+        def _operation_label(key):
+            if key.startswith("check:"):
+                return (
+                    "Check: "
+                    +
+                    key[len("check:"):].replace("_", " ").title()
+                )
+
+            return operation_labels.get(key, key)
 
         if not operations:
             ttk.Label(
@@ -5892,7 +5942,7 @@ class SSSSettings(ProfileManager):
                 ttk.Label(
                     self.performance_operations_frame,
                     text=(
-                        f"{operation_labels.get(key, key)}: "
+                        f"{_operation_label(key)}: "
                         f"{duration:.1f} ms (at {at})"
                     ),
                 ).pack(

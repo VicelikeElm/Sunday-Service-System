@@ -3,6 +3,7 @@ import base64
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -21,12 +22,15 @@ BASE = Path(r"C:\Church\SermonAI")
 STATUS_FILE = BASE / "ptz_camera_status.json"
 
 
-def write_status(state, message, preset=None):
+def write_status(state, message, preset=None, duration_ms=None):
     payload = {
         "state": state,
         "message": message,
         "preset": preset,
     }
+
+    if duration_ms is not None:
+        payload["duration_ms"] = round(duration_ms, 1)
 
     try:
         STATUS_FILE.write_text(
@@ -151,6 +155,8 @@ def recall_preset_visca(config, preset):
         )
     )
 
+    call_start = time.perf_counter()
+
     try:
         recall_visca_preset(
             host,
@@ -163,12 +169,19 @@ def recall_preset_visca(config, preset):
             f"Could not reach PTZ camera: {exc}"
         ) from exc
 
+    call_duration_ms = (
+        time.perf_counter()
+        -
+        call_start
+    ) * 1000
+
     return write_status(
         "OK",
         f"PTZ preset {preset} recalled.",
         int(
             preset
-        )
+        ),
+        duration_ms=call_duration_ms,
     )
 
 
@@ -245,6 +258,8 @@ def recall_preset(preset):
         )
     )
 
+    call_start = time.perf_counter()
+
     try:
         with urllib.request.urlopen(
             request,
@@ -256,6 +271,12 @@ def recall_preset(preset):
                 200
             )
 
+        call_duration_ms = (
+            time.perf_counter()
+            -
+            call_start
+        ) * 1000
+
         if int(code) >= 400:
             raise RuntimeError(
                 f"Camera returned HTTP {code}."
@@ -266,7 +287,8 @@ def recall_preset(preset):
             f"PTZ preset {preset} recalled.",
             int(
                 preset
-            )
+            ),
+            duration_ms=call_duration_ms,
         )
 
     except urllib.error.HTTPError as exc:

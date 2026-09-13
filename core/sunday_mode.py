@@ -99,6 +99,10 @@ from sunday_common import (
     stop_processes_containing,
 )
 
+from sss_scrollable import (
+    add_vertical_scroll,
+)
+
 from sss_config_bootstrap import (
     write_sunday_config,
 )
@@ -774,6 +778,7 @@ class SundayModeApp:
         self.chapter_test_mode = False
         self.chapter_test_index = 0
         self.chapter_action_running = False
+        self.start_recording_running = False
         self.admin_chapter_test_var = None
         self.admin_chapter_test_status_var = None
 
@@ -1034,6 +1039,28 @@ class SundayModeApp:
                 duration_ms,
                 now_iso()
             )
+
+            atomic_json(
+                PERFORMANCE_FILE,
+                self.perf_data
+            )
+        except Exception:
+            pass
+
+    def _perf_record_breakdown(
+        self,
+        check_timings
+    ):
+        try:
+            at = now_iso()
+
+            for name, duration_ms in check_timings.items():
+                record_operation(
+                    self.perf_data,
+                    f"check:{name}",
+                    duration_ms,
+                    at
+                )
 
             atomic_json(
                 PERFORMANCE_FILE,
@@ -3160,14 +3187,19 @@ class SundayModeApp:
     def build_ui(
         self
     ):
-        outer = ttk.Frame(
-            self.root,
-            padding=14
+        scroll_root = ttk.Frame(
+            self.root
         )
 
-        outer.pack(
+        scroll_root.pack(
             fill="both",
             expand=True
+        )
+
+        _dashboard_canvas, outer = add_vertical_scroll(
+            scroll_root,
+            stretch_width=True,
+            inner_padding=14,
         )
 
         title = ttk.Label(
@@ -8535,6 +8567,28 @@ class SundayModeApp:
                     ) * 1000
                 )
 
+                try:
+                    ptz_status_payload = read_json(
+                        PTZ_CAMERA_STATUS,
+                        {}
+                    )
+
+                    call_duration_ms = (
+                        ptz_status_payload.get(
+                            "duration_ms"
+                        )
+                    )
+
+                    if call_duration_ms is not None:
+                        self._perf_record(
+                            "ptz_camera_http_call",
+                            float(
+                                call_duration_ms
+                            )
+                        )
+                except Exception:
+                    pass
+
                 if cp.returncode == 0:
                     self.post_ui(
                         self.append_log,
@@ -9272,9 +9326,31 @@ class SundayModeApp:
         self
     ):
         results = {}
+        check_timings = {}
 
-        sermon = (
-            self.check_sermon_plan()
+        def _timed(
+            name,
+            func
+        ):
+            start = (
+                time.perf_counter()
+            )
+
+            value = func()
+
+            check_timings[
+                name
+            ] = (
+                time.perf_counter()
+                -
+                start
+            ) * 1000
+
+            return value
+
+        sermon = _timed(
+            "SERMON",
+            self.check_sermon_plan
         )
 
         results[
@@ -9285,8 +9361,9 @@ class SundayModeApp:
             not sermon[0],
         )
 
-        sermon_chapters = (
-            self.check_sermon_chapter_sequence()
+        sermon_chapters = _timed(
+            "SERMON_CHAPTERS",
+            self.check_sermon_chapter_sequence
         )
 
         results[
@@ -9297,8 +9374,9 @@ class SundayModeApp:
             sermon_chapters[2],
         )
 
-        planning = (
-            self.check_planning_status()
+        planning = _timed(
+            "PLANNING",
+            self.check_planning_status
         )
 
         results[
@@ -9309,8 +9387,9 @@ class SundayModeApp:
             planning[2],
         )
 
-        youtube = (
-            self.check_youtube_status()
+        youtube = _timed(
+            "YOUTUBE",
+            self.check_youtube_status
         )
 
         results[
@@ -9321,8 +9400,9 @@ class SundayModeApp:
             youtube[2],
         )
 
-        post_service = (
-            self.check_post_service_status()
+        post_service = _timed(
+            "POST",
+            self.check_post_service_status
         )
 
         results[
@@ -9333,8 +9413,9 @@ class SundayModeApp:
             post_service[2],
         )
 
-        ptz = (
-            self.check_ptz_status()
+        ptz = _timed(
+            "PTZ",
+            self.check_ptz_status
         )
 
         results[
@@ -9345,8 +9426,9 @@ class SundayModeApp:
             ptz[2],
         )
 
-        obs_ok = (
-            obs_port_open(
+        obs_ok = _timed(
+            "OBS_PORT",
+            lambda: obs_port_open(
                 self.config
             )
         )
@@ -9377,8 +9459,9 @@ class SundayModeApp:
             ==
             "profile"
         ):
-            presenter_ok, presenter_detail = (
-                profile_adapter_ready()
+            presenter_ok, presenter_detail = _timed(
+                "PRESENTER",
+                profile_adapter_ready
             )
 
             if presenter_ok:
@@ -9392,8 +9475,9 @@ class SundayModeApp:
                 )
 
         else:
-            presenter_ok, presenter_detail = (
-                midi_port_available(
+            presenter_ok, presenter_detail = _timed(
+                "PRESENTER",
+                lambda: midi_port_available(
                     self._presenter_midi_port_name()
                 )
             )
@@ -9411,15 +9495,18 @@ class SundayModeApp:
             not presenter_ok,
         )
 
-        client = (
-            self.connect_obs()
-            if obs_ok
-            else None
+        client = _timed(
+            "OBS_CONNECT",
+            lambda:
+                self.connect_obs()
+                if obs_ok
+                else None
         )
 
         if client:
-            collection = (
-                self.ensure_scene_collection(
+            collection = _timed(
+                "COLLECTION",
+                lambda: self.ensure_scene_collection(
                     client
                 )
             )
@@ -9432,8 +9519,9 @@ class SundayModeApp:
                 False,
             )
 
-            inputs = (
-                self.check_inputs(
+            inputs = _timed(
+                "INPUTS",
+                lambda: self.check_inputs(
                     client
                 )
             )
@@ -9463,8 +9551,9 @@ class SundayModeApp:
                 False,
             )
 
-        audio = (
-            self.check_audio()
+        audio = _timed(
+            "AUDIO",
+            self.check_audio
         )
 
         results[
@@ -9475,8 +9564,9 @@ class SundayModeApp:
             False,
         )
 
-        audio_health = (
-            self.check_audio_sanity_status()
+        audio_health = _timed(
+            "AUDIO_HEALTH",
+            self.check_audio_sanity_status
         )
 
         results[
@@ -9487,8 +9577,9 @@ class SundayModeApp:
             audio_health[2],
         )
 
-        recording_health = (
-            self.check_recording_health()
+        recording_health = _timed(
+            "RECORDING_HEALTH",
+            self.check_recording_health
         )
 
         results[
@@ -9499,16 +9590,18 @@ class SundayModeApp:
             recording_health[2],
         )
 
-        disk = (
-            self.check_disk()
+        disk = _timed(
+            "DISK",
+            self.check_disk
         )
 
         results[
             "DISK"
         ] = disk
 
-        folders = (
-            self.check_folders()
+        folders = _timed(
+            "FOLDERS",
+            self.check_folders
         )
 
         results[
@@ -9519,8 +9612,9 @@ class SundayModeApp:
             False,
         )
 
-        sermon_ai_ok = (
-            process_running_contains(
+        sermon_ai_ok = _timed(
+            "SERMON_AI",
+            lambda: process_running_contains(
                 "sermon_ai.py"
             )
         )
@@ -9538,8 +9632,9 @@ class SundayModeApp:
             False,
         )
 
-        bridge = (
-            self.check_bridge()
+        bridge = _timed(
+            "CHAPTERS",
+            self.check_bridge
         )
 
         results[
@@ -9550,8 +9645,9 @@ class SundayModeApp:
             False,
         )
 
-        internet = (
-            self.check_internet()
+        internet = _timed(
+            "INTERNET",
+            self.check_internet
         )
 
         results[
@@ -9570,8 +9666,9 @@ class SundayModeApp:
             not internet[0],
         )
 
-        tools = (
-            self.check_tools()
+        tools = _timed(
+            "TOOLS",
+            self.check_tools
         )
 
         results[
@@ -9580,6 +9677,10 @@ class SundayModeApp:
             tools[0],
             tools[1],
             False,
+        )
+
+        self._perf_record_breakdown(
+            check_timings
         )
 
         return (
@@ -11171,9 +11272,86 @@ class SundayModeApp:
                 False
             )
 
-        results, client = (
-            self.check_all()
+        if self.start_recording_running:
+            return
+
+        self.start_recording_running = True
+
+        try:
+            self.record_start_button.configure(
+                state="disabled",
+                text="CHECKING SYSTEM STATUS…",
+            )
+        except Exception:
+            pass
+
+        self.append_log(
+            "Checking system status before starting recording…"
         )
+
+        def worker():
+            try:
+                check_start = (
+                    time.perf_counter()
+                )
+
+                results, client = (
+                    self.check_all()
+                )
+
+                self._perf_record(
+                    "start_recording_check",
+                    (
+                        time.perf_counter()
+                        -
+                        check_start
+                    ) * 1000
+                )
+
+                self.post_ui(
+                    self._finish_start_recording,
+                    results,
+                    client,
+                    None,
+                )
+
+            except Exception as exc:
+                self.post_ui(
+                    self._finish_start_recording,
+                    None,
+                    None,
+                    str(
+                        exc
+                    ),
+                )
+
+        threading.Thread(
+            target=worker,
+            daemon=True,
+        ).start()
+
+    def _finish_start_recording(
+        self,
+        results,
+        client,
+        error
+    ):
+        self.start_recording_running = False
+
+        try:
+            self.record_start_button.configure(
+                state="normal",
+                text="START RECORDING",
+            )
+        except Exception:
+            pass
+
+        if error is not None:
+            messagebox.showerror(
+                "Sunday Mode",
+                f"Could not check system status:\n{error}"
+            )
+            return
 
         if client is None:
             messagebox.showerror(

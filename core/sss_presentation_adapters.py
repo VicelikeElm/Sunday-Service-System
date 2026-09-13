@@ -66,14 +66,6 @@ def active_presentation_settings():
     )
 
 
-def presentation_control_mode():
-    settings = active_presentation_settings()
-    return (
-        settings.get("settings_source", "legacy"),
-        settings.get("provider", "WorshipTools Presenter"),
-    )
-
-
 def profile_adapter_ready():
     settings = active_presentation_settings()
 

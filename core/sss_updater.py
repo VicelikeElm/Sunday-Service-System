@@ -1,6 +1,4 @@
 import argparse
-import os
-import sys
 import threading
 import tkinter as tk
 from pathlib import Path
@@ -365,14 +363,14 @@ class UpdaterWindow:
             )
 
         except Exception as exc:
+            error_text = str(exc)
+
             self.root.after(
                 0,
                 lambda:
                     self._finish(
                         None,
-                        str(
-                            exc
-                        ),
+                        error_text,
                     ),
             )
 

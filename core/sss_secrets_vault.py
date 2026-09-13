@@ -607,19 +607,6 @@ def legacy_obs_loose_locations():
     return locations
 
 
-def legacy_obs_password_present(
-    config=None
-):
-    try:
-        return bool(
-            _legacy_obs_password_from_config(
-                config
-            )
-        )
-    except Exception:
-        return False
-
-
 def copy_legacy_obs_password_to_vault(
     config=None
 ):
@@ -663,7 +650,7 @@ def connect_obs_with_vault(
         obs_connection,
     )
 
-    host, port, legacy_password = get_obs_endpoint(
+    host, port, _ = get_obs_endpoint(
         config
     )
 

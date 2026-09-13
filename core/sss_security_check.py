@@ -1,5 +1,4 @@
 from sss_secrets_vault import (
-    obs_vault_status,
     security_overview,
     test_obs_vault_connection,
 )

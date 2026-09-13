@@ -1194,33 +1194,6 @@ def check_release_feed(
     }
 
 
-def _sha256_file(
-    path
-):
-    digest = hashlib.sha256()
-
-    with Path(
-        path
-    ).open(
-        "rb"
-    ) as handle:
-        while True:
-            block = handle.read(
-                1024
-                *
-                1024
-            )
-
-            if not block:
-                break
-
-            digest.update(
-                block
-            )
-
-    return digest.hexdigest()
-
-
 def _safe_download_name(
     release
 ):

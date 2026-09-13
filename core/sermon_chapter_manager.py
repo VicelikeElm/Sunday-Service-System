@@ -388,30 +388,6 @@ def reset_rotation():
     )
 
 
-def next_item():
-    plan, sequence, state = load_rotation()
-
-    index = int(
-        state.get(
-            "next_index",
-            0
-        )
-    )
-
-    if (
-        index < 0
-        or
-        index >= len(
-            sequence
-        )
-    ):
-        return None
-
-    return sequence[
-        index
-    ]
-
-
 def next_button_text(
     max_length=54
 ):

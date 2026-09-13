@@ -5,7 +5,6 @@ sequencing only - the actual config file is built by
 sss_config_bootstrap.py and the wizard UI lives in sss_setup_wizard.py.
 """
 
-import tkinter as tk
 from tkinter import simpledialog, messagebox
 
 

@@ -97,27 +97,6 @@ def settings_executable_candidates():
     ]
 
 
-def main_executable_candidates():
-    current = executable_dir()
-    install_root = application_install_root()
-
-    return [
-        current
-        /
-        MAIN_EXE_NAME,
-
-        install_root
-        /
-        "SundayServiceSystem"
-        /
-        MAIN_EXE_NAME,
-
-        install_root
-        /
-        MAIN_EXE_NAME,
-    ]
-
-
 def updater_executable_candidates():
     current = executable_dir()
     install_root = application_install_root()

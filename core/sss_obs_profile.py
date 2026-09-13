@@ -6,11 +6,6 @@ from sunday_common import (
     load_config,
 )
 
-from sss_profile import (
-    get_profile_obs_settings,
-    load_active_profile,
-)
-
 from sss_secrets_vault import (
     connect_obs_with_vault,
 )
@@ -315,9 +310,3 @@ def test_profile_preview_scene(
     )
 
     return True
-
-
-def active_obs_profile_settings():
-    return get_profile_obs_settings(
-        load_active_profile()
-    )

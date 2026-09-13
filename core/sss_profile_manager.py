@@ -49,7 +49,6 @@ from sss_propresenter_api import (
 from sss_audio_adapters import (
     adapter_info as audio_adapter_info,
     discover_obs_audio_inputs,
-    profile_audio_ready,
     validate_obs_audio_inputs,
 )
 

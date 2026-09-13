@@ -82,12 +82,6 @@ VERIFIED_SIMILARITY = 82
 VERIFIED_CONFIDENCE = 0.70
 
 
-# Anything below these values needs manual review.
-
-MINIMUM_SIMILARITY = 65
-MINIMUM_CONFIDENCE = 0.55
-
-
 # ---------------------------------------------------------
 # TRIMMING
 # ---------------------------------------------------------

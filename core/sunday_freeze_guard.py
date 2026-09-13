@@ -1,17 +1,10 @@
-from pathlib import Path
-
 from sunday_common import load_config, obs_connection, obs_port_open, get_obs_status
-from sss_reliability import FREEZE_FILE, read_json, set_freeze
+from sss_reliability import FREEZE_FILE, set_freeze
 
 
 def main():
     if not FREEZE_FILE.exists():
         return 0
-
-    payload = read_json(
-        FREEZE_FILE,
-        {}
-    )
 
     config = load_config()
 

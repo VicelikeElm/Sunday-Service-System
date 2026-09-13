@@ -4,9 +4,7 @@ import hashlib
 import html
 import json
 import re
-import sys
 from datetime import datetime, timedelta
-from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 from sunday_common import load_config
@@ -755,7 +753,7 @@ def import_latest(interactive=False, authorize_only=False):
             continue
 
         (
-            candidate_received_at,
+            _,
             candidate_service_date,
         ) = service_date_from_message_timestamp(
             message[

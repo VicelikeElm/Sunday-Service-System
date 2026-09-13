@@ -388,18 +388,16 @@ def reset_rotation():
     )
 
 
-def next_button_text(
+def _button_text_for(
+    sequence,
+    index,
     max_length=54
 ):
-    plan, sequence, state = load_rotation()
-
-    index = int(
-        state.get(
-            "next_index",
-            0
-        )
-    )
-
+    """Pure formatting logic, taking an already-loaded sequence/index
+    instead of reloading from disk - callers that already hold this data
+    (fire_next(), sunday_mode.py's refresh_chapter_rotation_button()) can
+    call this directly instead of going through next_button_text() and
+    paying for a second full load_rotation()."""
     if not sequence:
         return "NO SERMON CHAPTERS"
 
@@ -441,6 +439,26 @@ def next_button_text(
         )
 
     return text
+
+
+def next_button_text(
+    max_length=54
+):
+    plan, sequence, state = load_rotation()
+
+    index = int(
+        state.get(
+            "next_index",
+            0
+        )
+    )
+
+    return _button_text_for(
+        sequence,
+        index,
+        max_length
+    )
+
 
 def trigger_hotkey(
     client,
@@ -880,7 +898,10 @@ def fire_next():
         "item": item,
         "result": result,
         "next_button_text":
-            next_button_text(),
+            _button_text_for(
+                sequence,
+                index + 1
+            ),
     }
 
 

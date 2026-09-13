@@ -16,6 +16,7 @@ FREEZE_FILE = STATE_DIR / "Sunday_Freeze.json"
 POST_STATUS_FILE = STATE_DIR / "post_service_status.json"
 AUDIO_STATUS_FILE = STATE_DIR / "audio_sanity_status.json"
 TEST_STATUS_FILE = STATE_DIR / "sss_test_status.json"
+PERFORMANCE_FILE = STATE_DIR / "sss_performance.json"
 
 KNOWN_LOGS = [
     "sermon_ai.log",

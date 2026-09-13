@@ -109,6 +109,11 @@ from sss_diagnostics import (
     LEVEL_ORDER,
 )
 
+from sss_reliability import (
+    PERFORMANCE_FILE,
+    read_json,
+)
+
 from sss_recovery import (
     create_recovery_snapshot,
     last_known_good_snapshot,
@@ -666,6 +671,10 @@ class SSSSettings(ProfileManager):
             (
                 "diagnostics",
                 "Diagnostics",
+            ),
+            (
+                "performance",
+                "Performance",
             ),
             (
                 "recovery",
@@ -2312,6 +2321,75 @@ class SSSSettings(ProfileManager):
             ),
         )
 
+        # Performance ----------------------------------------------
+        page = self._new_page(
+            "performance"
+        )
+
+        perf_header = ttk.Frame(
+            page
+        )
+
+        perf_header.pack(
+            fill="x",
+            pady=(
+                0,
+                10
+            ),
+        )
+
+        ttk.Button(
+            perf_header,
+            text="Refresh",
+            command=self.refresh_performance_page,
+        ).pack(
+            side="right",
+        )
+
+        self.performance_empty_var = tk.StringVar(
+            value=(
+                "No performance data recorded yet — this is captured "
+                "while Sunday Mode is running."
+            ),
+        )
+
+        ttk.Label(
+            page,
+            textvariable=self.performance_empty_var,
+            wraplength=710,
+            justify="left",
+        ).pack(
+            anchor="w",
+            pady=(
+                0,
+                10
+            ),
+        )
+
+        self.performance_startup_frame = ttk.LabelFrame(
+            page,
+            text="Startup",
+            padding=10,
+        )
+
+        self.performance_startup_frame.pack(
+            fill="x",
+            pady=(
+                0,
+                12
+            ),
+        )
+
+        self.performance_operations_frame = ttk.LabelFrame(
+            page,
+            text="Operations",
+            padding=10,
+        )
+
+        self.performance_operations_frame.pack(
+            fill="x",
+        )
+
         # Recovery -----------------------------------------------
         page = self._new_page(
             "recovery"
@@ -3161,6 +3239,10 @@ class SSSSettings(ProfileManager):
                 "Diagnostics",
                 "One read-only readiness test across SSS integrations, storage, and support tools.",
             ),
+            "performance": (
+                "Performance",
+                "Startup and operation timings captured while Sunday Mode is running.",
+            ),
             "recovery": (
                 "Recovery",
                 "Recovery snapshots, Last Known Good, and guarded rollback.",
@@ -3207,6 +3289,12 @@ class SSSSettings(ProfileManager):
                     pass
 
             self.run_full_system_test_async()
+
+        elif key == "performance":
+            try:
+                self.refresh_performance_page()
+            except Exception:
+                pass
 
         elif key == "recovery":
             try:
@@ -5678,6 +5766,138 @@ class SSSSettings(ProfileManager):
                 ),
                 parent=self.root,
             )
+
+    def refresh_performance_page(
+        self
+    ):
+        payload = read_json(
+            PERFORMANCE_FILE,
+            {}
+        )
+
+        if not isinstance(
+            payload,
+            dict
+        ):
+            payload = {}
+
+        startup = payload.get(
+            "startup",
+            {}
+        )
+
+        operations = payload.get(
+            "operations",
+            {}
+        )
+
+        if not startup and not operations:
+            self.performance_empty_var.set(
+                "No performance data recorded yet — this is captured "
+                "while Sunday Mode is running."
+            )
+        else:
+            self.performance_empty_var.set(
+                "Startup timings are elapsed time since Sunday Mode "
+                "launched. Operation timings show the most recent sample "
+                "of that action."
+            )
+
+        for frame in (
+            self.performance_startup_frame,
+            self.performance_operations_frame,
+        ):
+            for child in frame.winfo_children():
+                child.destroy()
+
+        startup_order = (
+            "config_loaded",
+            "profile_loaded",
+            "ui_built",
+            "window_visible",
+            "first_preflight_done",
+        )
+
+        startup_labels = {
+            "config_loaded": "Config loaded",
+            "profile_loaded": "Profile loaded",
+            "ui_built": "UI built",
+            "window_visible": "Window visible",
+            "first_preflight_done": "First preflight done",
+        }
+
+        if not startup:
+            ttk.Label(
+                self.performance_startup_frame,
+                text="No startup timings recorded yet.",
+            ).pack(
+                anchor="w",
+            )
+        else:
+            shown = set()
+
+            for key in startup_order:
+                if key not in startup:
+                    continue
+
+                shown.add(key)
+
+                ttk.Label(
+                    self.performance_startup_frame,
+                    text=(
+                        f"{startup_labels.get(key, key)}: "
+                        f"{startup[key]:.1f} ms"
+                    ),
+                ).pack(
+                    anchor="w",
+                )
+
+            for key, value in startup.items():
+                if key in shown:
+                    continue
+
+                ttk.Label(
+                    self.performance_startup_frame,
+                    text=f"{key}: {value:.1f} ms",
+                ).pack(
+                    anchor="w",
+                )
+
+        operation_labels = {
+            "preflight": "Preflight",
+            "next_chapter": "Next chapter",
+            "ptz_recall": "PTZ recall",
+            "mute_toggle": "Mute toggle",
+        }
+
+        if not operations:
+            ttk.Label(
+                self.performance_operations_frame,
+                text="No operations recorded yet.",
+            ).pack(
+                anchor="w",
+            )
+        else:
+            for key, entry in operations.items():
+                duration = entry.get(
+                    "duration_ms",
+                    0
+                )
+
+                at = entry.get(
+                    "at",
+                    ""
+                )
+
+                ttk.Label(
+                    self.performance_operations_frame,
+                    text=(
+                        f"{operation_labels.get(key, key)}: "
+                        f"{duration:.1f} ms (at {at})"
+                    ),
+                ).pack(
+                    anchor="w",
+                )
 
     def refresh_recovery_snapshots(
         self

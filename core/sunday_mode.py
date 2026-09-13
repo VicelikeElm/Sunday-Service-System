@@ -113,18 +113,27 @@ from sss_event_history import (
 from sss_reliability import (
     POST_STATUS_FILE,
     AUDIO_STATUS_FILE,
+    PERFORMANCE_FILE,
     LOG_ROOT,
     read_json,
+    atomic_json,
     set_freeze,
     is_frozen,
     append_system_log,
     weekly_snapshot,
     find_full_sermon_recording,
     now_local,
+    now_iso,
+)
+
+from sss_perf import (
+    mark_startup,
+    record_operation,
 )
 
 from sermon_chapter_manager import (
     next_button_text,
+    _button_text_for,
     reset_rotation,
     fire_next,
     fire_item,
@@ -529,9 +538,35 @@ def get_startup_work_area(
 class SundayModeApp:
     def __init__(
         self,
-        root
+        root,
+        perf_t0=None
     ):
         self.root = root
+
+        self._perf_t0 = (
+            perf_t0
+            or
+            time.perf_counter()
+        )
+        self.perf_data = {}
+        self._perf_first_preflight_done = False
+
+        def _perf_window_visible(
+            event=None
+        ):
+            self.root.unbind(
+                "<Map>"
+            )
+            self._perf_mark(
+                "window_visible"
+            )
+
+        self.root.bind(
+            "<Map>",
+            _perf_window_visible,
+            add="+"
+        )
+
         self.root.title(
             "Sunday Service System"
         )
@@ -676,6 +711,10 @@ class SundayModeApp:
             load_config()
         )
 
+        self._perf_mark(
+            "config_loaded"
+        )
+
         # Profile Layer v1 is compatibility-only. It creates/loads a portable
         # church profile container but deliberately does NOT override any
         # existing Sunday configuration yet.
@@ -684,6 +723,10 @@ class SundayModeApp:
             self.active_profile_name = profile_display_name()
         except Exception:
             self.active_profile_name = "Legacy Configuration"
+
+        self._perf_mark(
+            "profile_loaded"
+        )
 
         try:
             self.previous_unexpected_session = start_session(
@@ -797,6 +840,10 @@ class SundayModeApp:
         self.audio_meter_display_db = -60.0
 
         self.build_ui()
+
+        self._perf_mark(
+            "ui_built"
+        )
 
         try:
             self.root.protocol(
@@ -950,6 +997,50 @@ class SundayModeApp:
             refresh_ms,
             self.periodic_refresh
         )
+
+    def _perf_mark(
+        self,
+        name
+    ):
+        try:
+            elapsed_ms = (
+                time.perf_counter()
+                -
+                self._perf_t0
+            ) * 1000
+
+            mark_startup(
+                self.perf_data,
+                name,
+                elapsed_ms
+            )
+
+            atomic_json(
+                PERFORMANCE_FILE,
+                self.perf_data
+            )
+        except Exception:
+            pass
+
+    def _perf_record(
+        self,
+        name,
+        duration_ms
+    ):
+        try:
+            record_operation(
+                self.perf_data,
+                name,
+                duration_ms,
+                now_iso()
+            )
+
+            atomic_json(
+                PERFORMANCE_FILE,
+                self.perf_data
+            )
+        except Exception:
+            pass
 
     def _startup_prepare_worker(
         self
@@ -8319,10 +8410,23 @@ class SundayModeApp:
                 False
             ):
                 try:
+                    ptz_start = (
+                        time.perf_counter()
+                    )
+
                     recall_profile_camera_preset(
                         int(
                             preset
                         )
+                    )
+
+                    self._perf_record(
+                        "ptz_recall",
+                        (
+                            time.perf_counter()
+                            -
+                            ptz_start
+                        ) * 1000
                     )
 
                     self.post_ui(
@@ -8391,6 +8495,10 @@ class SundayModeApp:
             )
 
             try:
+                ptz_start = (
+                    time.perf_counter()
+                )
+
                 cp = subprocess.run(
                     [
                         str(
@@ -8416,6 +8524,15 @@ class SundayModeApp:
                         "nt"
                         else 0
                     ),
+                )
+
+                self._perf_record(
+                    "ptz_recall",
+                    (
+                        time.perf_counter()
+                        -
+                        ptz_start
+                    ) * 1000
                 )
 
                 if cp.returncode == 0:
@@ -9496,8 +9613,21 @@ class SundayModeApp:
         self
     ):
         try:
+            preflight_start = (
+                time.perf_counter()
+            )
+
             results, client = (
                 self.check_all()
+            )
+
+            self._perf_record(
+                "preflight",
+                (
+                    time.perf_counter()
+                    -
+                    preflight_start
+                ) * 1000
             )
 
             self.post_ui(
@@ -9523,6 +9653,12 @@ class SundayModeApp:
             )
 
             self.refresh_sunday_phase_card()
+
+            if not self._perf_first_preflight_done:
+                self._perf_first_preflight_done = True
+                self._perf_mark(
+                    "first_preflight_done"
+                )
         finally:
             self.preflight_running = False
 
@@ -11491,7 +11627,20 @@ class SundayModeApp:
                     return
 
                 try:
+                    mute_start = (
+                        time.perf_counter()
+                    )
+
                     result = toggle_profile_mute()
+
+                    self._perf_record(
+                        "mute_toggle",
+                        (
+                            time.perf_counter()
+                            -
+                            mute_start
+                        ) * 1000
+                    )
 
                     self.mute_state = bool(
                         result.get(
@@ -13206,7 +13355,9 @@ class SundayModeApp:
                         use_scripture_control = True
 
                     else:
-                        label = next_button_text(
+                        label = _button_text_for(
+                            sequence,
+                            index,
                             max_length=54
                         )
 
@@ -13538,7 +13689,20 @@ class SundayModeApp:
         else:
             def worker():
                 try:
+                    chapter_start = (
+                        time.perf_counter()
+                    )
+
                     result = fire_next()
+
+                    self._perf_record(
+                        "next_chapter",
+                        (
+                            time.perf_counter()
+                            -
+                            chapter_start
+                        ) * 1000
+                    )
 
                     self.post_ui(
                         self._finish_next_sermon_chapter,
@@ -14063,6 +14227,8 @@ def run_update_health_check():
 
 
 def main():
+    perf_t0 = time.perf_counter()
+
     if _update_health_check_requested():
         raise SystemExit(
             run_update_health_check()
@@ -14095,7 +14261,8 @@ def main():
             return
 
     SundayModeApp(
-        root
+        root,
+        perf_t0=perf_t0
     )
 
     # Applying the theme before any widgets exist sets sv_ttk's own

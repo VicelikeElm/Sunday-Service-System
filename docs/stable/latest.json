@@ -2,18 +2,18 @@
   "feed_format": 1,
   "app_id": "SundayServiceSystem.Desktop",
   "channel": "stable",
-  "generated_at": "2026-09-12T16:27:24.913424-04:00",
+  "generated_at": "2026-09-12T20:18:31.239495-04:00",
   "signer_thumbprint": "AEB65434AD1728A3EF8859102DAD8E4505D0E610",
   "releases": [
     {
-      "version": "3.1.3",
+      "version": "3.1.4",
       "channel": "stable",
-      "published_at": "2026-09-12T16:27:24.856529-04:00",
-      "package_url": "https://vicelikeelm.github.io/Sunday-Service-System/stable/SundayServiceSystem-Update-v3.1.3.sssupdate",
-      "package_sha256": "c004f13e229558d3ab743e1b212e29b4beb662698bf19eb921b767ee1909ef41",
-      "package_size": 50948212,
-      "summary": "Dark mode now switches everywhere at once (title bar, status boxes, log, tooltips), faster startup and dashboard refresh, and a real church-photo app icon.",
-      "release_notes_url": "https://github.com/VicelikeElm/Sunday-Service-System/releases/tag/v3.1.3",
+      "published_at": "2026-09-12T20:18:31.186864-04:00",
+      "package_url": "https://vicelikeelm.github.io/Sunday-Service-System/stable/SundayServiceSystem-Update-v3.1.4.sssupdate",
+      "package_sha256": "ebf3312374a95775a546d60ea4319e328466694e17eaaa72d83833f5c6d7d17a",
+      "package_size": 51000823,
+      "summary": "Settings now opens on a new Overview dashboard with system health at a glance, and Sunday Mode shows a live status card that states the current phase of the service and what to do next. Also a large internal cleanup removing unused code and two latent bug fixes.",
+      "release_notes_url": "",
       "minimum_update_client_version": "3.1.0",
       "withdrawn": false
     }

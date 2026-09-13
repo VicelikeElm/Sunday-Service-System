@@ -111,11 +111,9 @@ from sss_event_history import (
 )
 
 from sss_reliability import (
-    FREEZE_FILE,
     POST_STATUS_FILE,
     AUDIO_STATUS_FILE,
     LOG_ROOT,
-    atomic_json,
     read_json,
     set_freeze,
     is_frozen,
@@ -133,8 +131,12 @@ from sermon_chapter_manager import (
     load_rotation,
 )
 
+from sunday_state_engine import (
+    CRITICAL_PREFLIGHT_KEYS,
+    compute_phase,
+)
+
 from ptz_settings import (
-    PTZ_CONFIG_FILE,
     load_ptz_settings,
     save_ptz_settings,
 )
@@ -235,12 +237,6 @@ BRIDGE_SCRIPT = (
     "chapter_bridge.py"
 )
 
-ACTION_SCRIPT = (
-    BASE
-    /
-    "sunday_action.py"
-)
-
 OBS_CLEANUP_SCRIPT = (
     BASE
     /
@@ -322,28 +318,12 @@ AUDIO_SANITY_SCRIPT = (
     "audio_sanity_monitor.py"
 )
 
-WEEKLY_SNAPSHOT_SCRIPT = (
-    BASE
-    /
-    "core"
-    /
-    "weekly_snapshot.py"
-)
-
 TEST_MODE_SCRIPT = (
     BASE
     /
     "core"
     /
     "sss_test_mode.py"
-)
-
-OPERATIONAL_CLEANUP_SCRIPT = (
-    BASE
-    /
-    "core"
-    /
-    "operational_cleanup.py"
 )
 
 YOUTUBE_STUDIO_LOGIN = (
@@ -546,121 +526,6 @@ def get_startup_work_area(
     )
 
 
-class HoverTooltip:
-    """Small volunteer-friendly hover tooltip for Tk/ttk widgets."""
-
-    def __init__(
-        self,
-        widget,
-        text,
-        *,
-        delay=450,
-        wraplength=360,
-        on_show=None
-    ):
-        self.widget = widget
-        self.text = str(text or "")
-        self.delay = int(delay)
-        self.wraplength = int(wraplength)
-        self.on_show = on_show
-        self.after_id = None
-        self.tip_window = None
-
-        widget.bind("<Enter>", self._schedule, add="+")
-        widget.bind("<Leave>", self._hide, add="+")
-        widget.bind("<ButtonPress>", self._hide, add="+")
-
-    def _schedule(self, event=None):
-        self._cancel()
-
-        if callable(self.on_show):
-            try:
-                self.on_show(self.text)
-            except Exception:
-                pass
-
-        try:
-            self.after_id = self.widget.after(
-                self.delay,
-                self._show,
-            )
-        except Exception:
-            self.after_id = None
-
-    def _cancel(self):
-        if self.after_id is not None:
-            try:
-                self.widget.after_cancel(self.after_id)
-            except Exception:
-                pass
-
-            self.after_id = None
-
-    def _show(self):
-        self.after_id = None
-
-        if not self.text or self.tip_window is not None:
-            return
-
-        try:
-            # Keep the popup fixed relative to the control rather than
-            # following the mouse pointer.
-            x = self.widget.winfo_rootx() + 8
-            y = (
-                self.widget.winfo_rooty()
-                +
-                self.widget.winfo_height()
-                +
-                4
-            )
-
-            tip = tk.Toplevel(self.widget)
-            self.tip_window = tip
-            tip.wm_overrideredirect(True)
-
-            try:
-                tip.attributes("-topmost", True)
-            except Exception:
-                pass
-
-            tip.geometry(f"+{x}+{y}")
-
-            frame = tk.Frame(
-                tip,
-                background="#FFF7D6",
-                borderwidth=1,
-                relief="solid",
-            )
-            frame.pack()
-
-            tk.Label(
-                frame,
-                text=self.text,
-                justify="left",
-                anchor="w",
-                wraplength=self.wraplength,
-                padx=8,
-                pady=6,
-                background="#FFF7D6",
-                foreground="#202020",
-                font=("Segoe UI", 9),
-            ).pack()
-
-        except Exception:
-            self.tip_window = None
-
-    def _hide(self, event=None):
-        self._cancel()
-
-        if self.tip_window is not None:
-            try:
-                self.tip_window.destroy()
-            except Exception:
-                pass
-
-            self.tip_window = None
-
-
 class SundayModeApp:
     def __init__(
         self,
@@ -815,10 +680,9 @@ class SundayModeApp:
         # church profile container but deliberately does NOT override any
         # existing Sunday configuration yet.
         try:
-            self.active_profile = ensure_active_profile()
+            ensure_active_profile()
             self.active_profile_name = profile_display_name()
         except Exception:
-            self.active_profile = {}
             self.active_profile_name = "Legacy Configuration"
 
         try:
@@ -905,6 +769,10 @@ class SundayModeApp:
         # preflight check happens to finish.
         self.status_color_state = {}
         self.audio_meter_issue_level = "normal"
+
+        # Last full check_all() results, kept only so the Sunday phase
+        # card can classify PREPARING vs READY without re-running checks.
+        self.last_check_results = {}
 
         self.tooltip_help_frame = None
         self.tooltip_prefix_label = None
@@ -1801,7 +1669,7 @@ class SundayModeApp:
         event=None
     ):
         try:
-            self.active_profile = ensure_active_profile()
+            ensure_active_profile()
             self.active_profile_name = profile_display_name()
 
             if self.profile_display_var is not None:
@@ -3300,6 +3168,75 @@ class SundayModeApp:
             ),
         )
 
+        phase_frame = ttk.LabelFrame(
+            outer,
+            text="CURRENT STATUS",
+        )
+
+        phase_frame.pack(
+            fill="x",
+            pady=(
+                0,
+                14
+            )
+        )
+
+        self.phase_headline_var = tk.StringVar(
+            value="CHECKING STATUS"
+        )
+
+        phase_headline_label = ttk.Label(
+            phase_frame,
+            textvariable=self.phase_headline_var,
+            font=(
+                "Segoe UI",
+                16,
+                "bold"
+            ),
+        )
+
+        phase_headline_label.pack(
+            anchor="w",
+            padx=12,
+            pady=(
+                8,
+                2
+            )
+        )
+
+        self.phase_action_var = tk.StringVar(
+            value=""
+        )
+
+        phase_action_label = ttk.Label(
+            phase_frame,
+            textvariable=self.phase_action_var,
+            font=(
+                "Segoe UI",
+                11
+            ),
+            wraplength=900,
+            justify="left",
+        )
+
+        phase_action_label.pack(
+            anchor="w",
+            padx=12,
+            pady=(
+                0,
+                10
+            )
+        )
+
+        self.bind_tooltip(
+            phase_frame,
+            (
+                "Shows where the service is in its cycle — preparing, "
+                "ready, recording, sermon, post-service, or complete — and "
+                "the one thing to do next."
+            ),
+        )
+
         profile_row = ttk.Frame(
             outer
         )
@@ -4637,7 +4574,6 @@ class SundayModeApp:
             )
         )
 
-        height = 32
         bar_top = 2
         bar_bottom = 16
         segment_count = 30
@@ -8597,19 +8533,6 @@ class SundayModeApp:
                 "sermon_scene": "",
             }
 
-    def obs_profile_mode_enabled(
-        self
-    ):
-        settings = self.active_profile_obs_settings()
-
-        return (
-            settings.get(
-                "settings_source"
-            )
-            ==
-            "profile"
-        )
-
     def load_obs_view_to_preview(
         self,
         role,
@@ -9598,6 +9521,8 @@ class SundayModeApp:
             self.apply_results(
                 results
             )
+
+            self.refresh_sunday_phase_card()
         finally:
             self.preflight_running = False
 
@@ -9629,6 +9554,8 @@ class SundayModeApp:
         self,
         results
     ):
+        self.last_check_results = results
+
         for key, (
             ok,
             text,
@@ -11121,16 +11048,7 @@ class SundayModeApp:
 
         critical_failures = [
             key
-            for key in [
-                "OBS",
-                "COLLECTION",
-                "AUDIO",
-                "INPUTS",
-                "DISK",
-                "FOLDERS",
-                "SERMON_AI",
-                "TOOLS",
-            ]
+            for key in CRITICAL_PREFLIGHT_KEYS
             if (
                 key in results
                 and
@@ -11205,6 +11123,8 @@ class SundayModeApp:
                 "Recording START requested. Sunday Freeze enabled."
             )
 
+            self.refresh_sunday_phase_card()
+
             self.root.after(
                 2500,
                 self.run_preflight_async
@@ -11237,6 +11157,8 @@ class SundayModeApp:
             return
 
         self.service_ending = True
+
+        self.refresh_sunday_phase_card()
 
         try:
             status = (
@@ -13116,6 +13038,46 @@ class SundayModeApp:
             ),
         )
 
+    def refresh_sunday_phase_card(
+        self
+    ):
+        try:
+            plan, sequence, state = (
+                load_rotation()
+            )
+
+            result = compute_phase(
+                last_recording_state=self.last_recording_state,
+                service_ending=self.service_ending,
+                check_results=self.last_check_results,
+                rotation_sequence=sequence,
+                rotation_state=state,
+            )
+
+            self.phase_headline_var.set(
+                result["headline"]
+            )
+
+            action_text = result["action"]
+
+            if result["blocking"]:
+                action_text = (
+                    action_text
+                    +
+                    "\n\nStill needs attention: "
+                    +
+                    ", ".join(
+                        result["blocking"]
+                    )
+                )
+
+            self.phase_action_var.set(
+                action_text
+            )
+
+        except Exception:
+            pass
+
     def refresh_chapter_rotation_button(
         self,
         reset_if_plan_changed=False
@@ -13826,7 +13788,7 @@ class SundayModeApp:
                 >=
                 grace
             ):
-                meter_ok, meter_detail, meter_warning = (
+                meter_ok, meter_detail, _ = (
                     self.check_audio_sanity_status()
                 )
 
@@ -13899,6 +13861,7 @@ class SundayModeApp:
         self.refresh_chapter_rotation_button(
             reset_if_plan_changed=True
         )
+        self.refresh_sunday_phase_card()
 
         # Keep MUTE / UNMUTE wording synchronized with OBS even if someone
         # changed the mute state directly in OBS or from another controller.
@@ -14134,6 +14097,23 @@ def main():
     SundayModeApp(
         root
     )
+
+    # Applying the theme before any widgets exist sets sv_ttk's own
+    # state correctly, but Tk does not consistently repaint a
+    # brand-new widget tree to match - the same set_theme() call
+    # reliably repaints everything when it runs AFTER the tree already
+    # exists (exactly what the live light/dark toggle does). Re-apply
+    # it now so startup ends up looking the same as a live toggle.
+    if sv_ttk is not None:
+        try:
+            sv_ttk.set_theme(
+                load_config().get(
+                    "ui_theme",
+                    "light"
+                )
+            )
+        except Exception:
+            pass
 
     root.mainloop()
 

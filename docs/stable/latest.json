@@ -2,18 +2,18 @@
   "feed_format": 1,
   "app_id": "SundayServiceSystem.Desktop",
   "channel": "stable",
-  "generated_at": "2026-09-13T10:55:28.734206-04:00",
+  "generated_at": "2026-09-13T11:43:46.729795-04:00",
   "signer_thumbprint": "AEB65434AD1728A3EF8859102DAD8E4505D0E610",
   "releases": [
     {
-      "version": "3.1.5",
+      "version": "3.1.6",
       "channel": "stable",
-      "published_at": "2026-09-13T10:55:28.680408-04:00",
-      "package_url": "https://vicelikeelm.github.io/Sunday-Service-System/stable/SundayServiceSystem-Update-v3.1.5.sssupdate",
-      "package_sha256": "56b0c38649967247acb77a0905632fce5185bc2f914bc9b6ed9acb9889a98721",
-      "package_size": 51540379,
-      "summary": "Both Settings and Sunday Mode now scroll instead of clipping content on smaller windows. Fixed a real freeze risk where clicking START RECORDING could lock up the app for several seconds. Two system checks (audio device detection, sermon-AI status) that were each taking 1.5-2.5 seconds via PowerShell now run natively in milliseconds. The new Performance page shows exactly where startup and check time goes.",
-      "release_notes_url": "https://github.com/VicelikeElm/Sunday-Service-System/releases/tag/v3.1.5",
+      "published_at": "2026-09-13T11:43:46.677045-04:00",
+      "package_url": "https://vicelikeelm.github.io/Sunday-Service-System/stable/SundayServiceSystem-Update-v3.1.6.sssupdate",
+      "package_sha256": "3b1e9e6e2550a7d97d17491ac632ea9a1b596cefd9ccdb2e6cbacfec171f86b4",
+      "package_size": 51442064,
+      "summary": "Fixes a crash (STATUS_ACCESS_VIOLATION) introduced in 3.1.5's audio-device check - reverted to the previous, proven-safe implementation. If you installed 3.1.5, update to this version.",
+      "release_notes_url": "https://github.com/VicelikeElm/Sunday-Service-System/releases/tag/v3.1.6",
       "minimum_update_client_version": "3.1.0",
       "withdrawn": false
     }

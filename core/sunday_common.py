@@ -5,6 +5,7 @@ import subprocess
 import logging
 from pathlib import Path
 
+import psutil
 import obsws_python as obs
 from dotenv import load_dotenv
 
@@ -177,46 +178,47 @@ def get_obs_status(client):
 def process_running_contains(
     needle
 ):
-    # PowerShell's own command line contains the search text, so the
-    # querying PowerShell process MUST be excluded or it can match itself.
-    escaped = needle.replace(
-        "'",
-        "''"
-    )
+    # Was a spawned-PowerShell + Get-CimInstance query - measured at
+    # ~1.7s per call on the church PC (see the Performance page's
+    # "Check: Sermon Ai" number). psutil reads process command lines
+    # directly, in-process, with no interpreter-startup or WMI cost.
+    needle_lower = str(
+        needle
+    ).lower()
 
-    ps = (
-        "$selfPid = $PID; "
-        "Get-CimInstance Win32_Process | "
-        "Where-Object { "
-        "$_.ProcessId -ne $selfPid -and "
-        "$_.CommandLine -and "
-        f"$_.CommandLine -like '*{escaped}*' "
-        "} | "
-        "Select-Object -First 1 "
-        "-ExpandProperty ProcessId"
-    )
+    current_pid = os.getpid()
 
     try:
-        cp = subprocess.run(
+        for proc in psutil.process_iter(
             [
-                "powershell",
-                "-NoProfile",
-                "-Command",
-                ps,
-            ],
-            capture_output=True,
-            text=True,
-            timeout=6,
-            creationflags=(
-                subprocess.CREATE_NO_WINDOW
-                if os.name == "nt"
-                else 0
-            ),
-        )
+                "pid",
+                "cmdline",
+            ]
+        ):
+            try:
+                if proc.info[
+                    "pid"
+                ] == current_pid:
+                    continue
 
-        return bool(
-            cp.stdout.strip()
-        )
+                command_line = " ".join(
+                    proc.info.get(
+                        "cmdline"
+                    )
+                    or
+                    []
+                )
+
+                if needle_lower in command_line.lower():
+                    return True
+
+            except (
+                psutil.NoSuchProcess,
+                psutil.AccessDenied,
+            ):
+                continue
+
+        return False
 
     except Exception:
         return False

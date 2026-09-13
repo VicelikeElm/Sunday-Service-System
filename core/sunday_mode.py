@@ -8970,76 +8970,82 @@ class SundayModeApp:
                 f"{label} endpoint not configured"
             )
 
-        ps = (
-            "$ErrorActionPreference='SilentlyContinue'; "
-            "$names = @(); "
-            "try { "
-            "  $names += Get-PnpDevice -Class AudioEndpoint | "
-            "    Where-Object { $_.Status -eq 'OK' } | "
-            "    ForEach-Object { $_.FriendlyName }; "
-            "} catch {} ; "
-            "try { "
-            "  $names += Get-CimInstance Win32_SoundDevice | "
-            "    Where-Object { $_.Status -eq 'OK' } | "
-            "    ForEach-Object { $_.Name }; "
-            "} catch {} ; "
-            "$names | Sort-Object -Unique"
-        )
-
+        # Was a spawned-PowerShell + Get-PnpDevice/Get-CimInstance query -
+        # measured at ~2.6s per call on the church PC (see the
+        # Performance page's "Check: Audio" number). PyAudioWPatch is
+        # already a bundled dependency (used elsewhere for the actual
+        # audio capture, e.g. sermon_ai.py) and enumerates devices
+        # in-process, matching the existing pattern in
+        # sunday_inventory.py's scan_audio().
         try:
-            cp = subprocess.run(
-                [
-                    "powershell.exe",
-                    "-NoProfile",
-                    "-NonInteractive",
-                    "-Command",
-                    ps,
-                ],
-                capture_output=True,
-                text=True,
-                timeout=8,
-                creationflags=(
-                    subprocess.CREATE_NO_WINDOW
-                    if os.name == "nt"
-                    else 0
-                ),
-            )
+            import pyaudiowpatch as pyaudio
 
-            names = [
-                line.strip()
-                for line in (
-                    cp.stdout
-                    or
-                    ""
-                ).splitlines()
-                if line.strip()
+            audio = pyaudio.PyAudio()
+
+            try:
+                names = []
+
+                for index in range(
+                    audio.get_device_count()
+                ):
+                    try:
+                        info = (
+                            audio.get_device_info_by_index(
+                                index
+                            )
+                        )
+                    except Exception:
+                        continue
+
+                    name = str(
+                        info.get(
+                            "name",
+                            ""
+                        )
+                    ).strip()
+
+                    if name:
+                        names.append(
+                            name
+                        )
+            finally:
+                audio.terminate()
+
+            names_lower = [
+                name.lower()
+                for name in names
             ]
 
-            endpoint_lower = endpoint_name.lower()
+            # Try the raw configured name first - this is
+            # PyAudioWPatch's own naming convention ("[Loopback]" suffix
+            # and all), which is almost certainly what produced this
+            # config value in the first place - then fall back to the
+            # pre-stripped endpoint_name for safety, so nothing that
+            # matched before can stop matching.
+            for candidate in (
+                target.lower(),
+                endpoint_name.lower(),
+            ):
+                if not candidate:
+                    continue
 
-            found = any(
-                name.lower()
-                ==
-                endpoint_lower
-                for name in names
-            )
-
-            if not found:
                 found = any(
-                    endpoint_lower
-                    in
-                    name.lower()
-                    or
-                    name.lower()
-                    in
-                    endpoint_lower
-                    for name in names
+                    name_lower == candidate
+                    for name_lower in names_lower
                 )
 
-            if found:
-                return True, (
-                    f"{label} ready"
-                )
+                if not found:
+                    found = any(
+                        candidate in name_lower
+                        or
+                        name_lower in candidate
+                        for name_lower in names_lower
+                    )
+
+                if found:
+                    return True, (
+                        f"{label} ready"
+                    )
 
             return False, (
                 f"{label} missing"

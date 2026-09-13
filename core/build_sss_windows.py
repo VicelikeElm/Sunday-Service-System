@@ -23,7 +23,7 @@ BUILD_ROOT = SOURCE_ROOT / "build"
 PAYLOAD_ROOT = SOURCE_ROOT / "installer-payload"
 RUNTIME_PAYLOAD = PAYLOAD_ROOT / "RuntimeSupport"
 
-VERSION = "3.1.3"
+VERSION = "3.1.4"
 
 SIGNING_CONFIG = None
 SIGNING_STATUS = None
@@ -219,7 +219,7 @@ def _check_runtime_environment():
                     missing
                 )
                 +
-                ". Run Build-SSS-Windows-Installer.bat v3.1.3 so the build "
+                ". Run Build-SSS-Windows-Installer.bat v3.1.4 so the build "
                 "uses C:\\Church\\SermonAI\\venv\\Scripts\\python.exe."
             )
         )

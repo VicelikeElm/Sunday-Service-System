@@ -1,5 +1,5 @@
 #define MyAppName "Sunday Service System"
-#define MyAppVersion "3.1.3"
+#define MyAppVersion "3.1.4"
 #define MyAppPublisher "Sunday Service System"
 #define MyAppExeName "SundayServiceSystem.exe"
 #define MySettingsExeName "SundayServiceSystemSettings.exe"
@@ -24,7 +24,7 @@ WizardStyle=modern
 CloseApplications=no
 RestartApplications=no
 UninstallDisplayIcon={app}\SundayServiceSystem\{#MyAppExeName}
-VersionInfoVersion=3.1.3.0
+VersionInfoVersion=3.1.4.0
 VersionInfoProductName={#MyAppName}
 VersionInfoProductVersion={#MyAppVersion}
 VersionInfoDescription=Sunday Service System Installer

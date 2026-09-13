@@ -233,52 +233,59 @@ def stop_processes_containing(needle):
 
     Returns the number of processes asked to stop. Best-effort: a process
     that exits on its own between the query and the stop is not an error.
-    """
-    escaped = needle.replace(
-        "'",
-        "''"
-    )
 
-    ps = (
-        "$selfPid = $PID; "
-        "$targets = Get-CimInstance Win32_Process | "
-        "Where-Object { "
-        "$_.ProcessId -ne $selfPid -and "
-        "$_.CommandLine -and "
-        f"$_.CommandLine -like '*{escaped}*' "
-        "}; "
-        "foreach ($p in $targets) { "
-        "try { Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue } catch {} "
-        "}; "
-        "($targets | Measure-Object).Count"
-    )
+    Was a spawned-PowerShell + Get-CimInstance + Stop-Process query -
+    on_app_close() calls this four times in a row (once per helper
+    script), which measured at several seconds of blocking PowerShell
+    overhead per call - long enough for Windows to show the main window
+    as "not responding" during every close. psutil does the same
+    command-line match and kill in-process, with no interpreter-startup
+    or WMI cost. See sunday_common.py's process_running_contains() for
+    the identical rewrite on the read-only side.
+    """
+    needle_lower = str(
+        needle
+    ).lower()
+
+    current_pid = os.getpid()
+
+    stopped = 0
 
     try:
-        cp = subprocess.run(
+        for proc in psutil.process_iter(
             [
-                "powershell",
-                "-NoProfile",
-                "-Command",
-                ps,
-            ],
-            capture_output=True,
-            text=True,
-            timeout=8,
-            creationflags=(
-                subprocess.CREATE_NO_WINDOW
-                if os.name == "nt"
-                else 0
-            ),
-        )
+                "pid",
+                "cmdline",
+            ]
+        ):
+            try:
+                if proc.info[
+                    "pid"
+                ] == current_pid:
+                    continue
 
-        return int(
-            cp.stdout.strip()
-            or
-            0
-        )
+                command_line = " ".join(
+                    proc.info.get(
+                        "cmdline"
+                    )
+                    or
+                    []
+                )
+
+                if needle_lower in command_line.lower():
+                    proc.kill()
+                    stopped += 1
+
+            except (
+                psutil.NoSuchProcess,
+                psutil.AccessDenied,
+            ):
+                continue
+
+        return stopped
 
     except Exception:
-        return 0
+        return stopped
 
 
 def process_name_running(name):

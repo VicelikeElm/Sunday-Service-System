@@ -8977,82 +8977,90 @@ class SundayModeApp:
                 f"{label} endpoint not configured"
             )
 
-        # Was a spawned-PowerShell + Get-PnpDevice/Get-CimInstance query -
-        # measured at ~2.6s per call on the church PC (see the
-        # Performance page's "Check: Audio" number). PyAudioWPatch is
-        # already a bundled dependency (used elsewhere for the actual
-        # audio capture, e.g. sermon_ai.py) and enumerates devices
-        # in-process, matching the existing pattern in
-        # sunday_inventory.py's scan_audio().
+        # REVERTED 2026-09-13: a PyAudioWPatch-based rewrite of this check
+        # (creating a fresh pyaudio.PyAudio() on a brand-new background
+        # thread every ~5s, since check_all() spawns a new thread every
+        # cycle) is the confirmed cause of two live STATUS_ACCESS_VIOLATION
+        # crashes (0xc0000005, SundayServiceSystem.exe 3.1.5.0) minutes
+        # after being deployed. PortAudio's WASAPI backend requires COM to
+        # be explicitly initialized on whichever thread calls it - a
+        # documented PortAudio crash source when that thread differs from
+        # the one that first initialized PortAudio (see
+        # github.com/PortAudio/portaudio/issues/250) - which is exactly
+        # what happens here. Back to the slower but proven-safe
+        # PowerShell/CIM query until a properly COM-initialized dedicated
+        # audio-check thread can be built and tested. Do not swap this
+        # back to a fresh-thread PyAudio() call without addressing that.
+        ps = (
+            "$ErrorActionPreference='SilentlyContinue'; "
+            "$names = @(); "
+            "try { "
+            "  $names += Get-PnpDevice -Class AudioEndpoint | "
+            "    Where-Object { $_.Status -eq 'OK' } | "
+            "    ForEach-Object { $_.FriendlyName }; "
+            "} catch {} ; "
+            "try { "
+            "  $names += Get-CimInstance Win32_SoundDevice | "
+            "    Where-Object { $_.Status -eq 'OK' } | "
+            "    ForEach-Object { $_.Name }; "
+            "} catch {} ; "
+            "$names | Sort-Object -Unique"
+        )
+
         try:
-            import pyaudiowpatch as pyaudio
+            cp = subprocess.run(
+                [
+                    "powershell.exe",
+                    "-NoProfile",
+                    "-NonInteractive",
+                    "-Command",
+                    ps,
+                ],
+                capture_output=True,
+                text=True,
+                timeout=8,
+                creationflags=(
+                    subprocess.CREATE_NO_WINDOW
+                    if os.name == "nt"
+                    else 0
+                ),
+            )
 
-            audio = pyaudio.PyAudio()
-
-            try:
-                names = []
-
-                for index in range(
-                    audio.get_device_count()
-                ):
-                    try:
-                        info = (
-                            audio.get_device_info_by_index(
-                                index
-                            )
-                        )
-                    except Exception:
-                        continue
-
-                    name = str(
-                        info.get(
-                            "name",
-                            ""
-                        )
-                    ).strip()
-
-                    if name:
-                        names.append(
-                            name
-                        )
-            finally:
-                audio.terminate()
-
-            names_lower = [
-                name.lower()
-                for name in names
+            names = [
+                line.strip()
+                for line in (
+                    cp.stdout
+                    or
+                    ""
+                ).splitlines()
+                if line.strip()
             ]
 
-            # Try the raw configured name first - this is
-            # PyAudioWPatch's own naming convention ("[Loopback]" suffix
-            # and all), which is almost certainly what produced this
-            # config value in the first place - then fall back to the
-            # pre-stripped endpoint_name for safety, so nothing that
-            # matched before can stop matching.
-            for candidate in (
-                target.lower(),
-                endpoint_name.lower(),
-            ):
-                if not candidate:
-                    continue
+            endpoint_lower = endpoint_name.lower()
 
+            found = any(
+                name.lower()
+                ==
+                endpoint_lower
+                for name in names
+            )
+
+            if not found:
                 found = any(
-                    name_lower == candidate
-                    for name_lower in names_lower
+                    endpoint_lower
+                    in
+                    name.lower()
+                    or
+                    name.lower()
+                    in
+                    endpoint_lower
+                    for name in names
                 )
 
-                if not found:
-                    found = any(
-                        candidate in name_lower
-                        or
-                        name_lower in candidate
-                        for name_lower in names_lower
-                    )
-
-                if found:
-                    return True, (
-                        f"{label} ready"
-                    )
+            if found:
+                return True, (
+                    f"{label} ready"
+                )
 
             return False, (
                 f"{label} missing"

@@ -13,7 +13,6 @@ from sss_event_history import record_event
 
 
 from sss_audio_adapters import (
-    discover_obs_audio_inputs,
     profile_audio_ready,
 )
 from sss_camera_adapters import (
@@ -82,6 +81,9 @@ CHAPTER_SYNC_STATUS = BASE / "chapter_hotkey_sync_status.json"
 CHAPTER_ROTATION_STATE = BASE / "chapter_rotation_state.json"
 PTZ_LEGACY_CONFIG = BASE / "ptz_camera_config.json"
 SERMON_PLAN_FILE = BASE / "sermon_plan.json"
+PLANNING_STATUS_FILE = BASE / "planning_update_status.json"
+YOUTUBE_STATUS_FILE = BASE / "youtube_upload_status.json"
+YOUTUBE_HISTORY_FILE = BASE / "youtube_upload_history.json"
 
 LEVEL_ORDER = {
     "READY": 0,
@@ -1690,6 +1692,261 @@ def check_chapters():
         )
 
 
+def check_planning():
+    if not PLANNING_STATUS_FILE.exists():
+        return _result(
+            "Planning",
+            "CHECK",
+            "not checked yet",
+            "PLANNING",
+        )
+
+    try:
+        payload = _safe_json(
+            PLANNING_STATUS_FILE,
+            {},
+        )
+
+        status = str(
+            payload.get(
+                "status",
+                ""
+            )
+        ).strip()
+
+        message = str(
+            payload.get(
+                "message",
+                ""
+            )
+        ).strip() or status or "unknown"
+
+        ok = bool(
+            payload.get(
+                "ok",
+                False
+            )
+        )
+
+        warning = bool(
+            payload.get(
+                "warning",
+                not ok
+            )
+        )
+
+        level = (
+            "CHECK"
+            if warning
+            else (
+                "FIX"
+                if not ok
+                else "READY"
+            )
+        )
+
+        return _result(
+            "Planning",
+            level,
+            message,
+            "PLANNING",
+        )
+
+    except Exception as exc:
+        return _result(
+            "Planning",
+            "CHECK",
+            f"status error: {exc}",
+            "PLANNING",
+        )
+
+
+def check_youtube():
+    try:
+        config = load_config()
+
+        if not config.get(
+            "auto_upload_youtube",
+            True
+        ):
+            return _result(
+                "YouTube",
+                "CHECK",
+                "automatic upload disabled",
+                "YOUTUBE",
+            )
+
+        if str(
+            config.get(
+                "youtube_upload_mode",
+                "studio"
+            )
+        ).lower() != "studio":
+            return _result(
+                "YouTube",
+                "CHECK",
+                "YouTube mode is not Studio",
+                "YOUTUBE",
+            )
+
+        profile = Path(
+            config.get(
+                "youtube_studio_profile_folder",
+                str(
+                    BASE
+                    /
+                    "YouTube_Studio_Profile"
+                )
+            )
+        )
+
+        if not profile.exists():
+            return _result(
+                "YouTube",
+                "CHECK",
+                "Studio login/profile required",
+                "YOUTUBE",
+            )
+
+        plan = _safe_json(
+            SERMON_PLAN_FILE,
+            {},
+        )
+
+        history = _safe_json(
+            YOUTUBE_HISTORY_FILE,
+            {
+                "uploads": []
+            },
+        )
+
+        for entry in history.get(
+            "uploads",
+            []
+        ):
+            if (
+                entry.get("plan_id")
+                and
+                entry.get("plan_id") == plan.get("plan_id")
+            ):
+                detail = "uploaded"
+
+                if entry.get("video_url"):
+                    detail += f" — {entry.get('video_url')}"
+
+                return _result(
+                    "YouTube",
+                    "READY",
+                    detail,
+                    "YOUTUBE",
+                )
+
+        if not YOUTUBE_STATUS_FILE.exists():
+            return _result(
+                "YouTube",
+                "READY",
+                "Studio ready — waiting for sermon",
+                "YOUTUBE",
+            )
+
+        payload = _safe_json(
+            YOUTUBE_STATUS_FILE,
+            {},
+        )
+
+        # Ignore stale API-mode status from v20.
+        if payload.get("mode") not in (None, "studio"):
+            return _result(
+                "YouTube",
+                "READY",
+                "Studio ready — waiting for sermon",
+                "YOUTUBE",
+            )
+
+        state = str(
+            payload.get(
+                "state",
+                ""
+            )
+        ).strip()
+
+        # A stale completion state from a previous week's plan - the
+        # history-entry lookup above already established there is no
+        # match for the CURRENT plan_id, so this must be checked before
+        # the general ok/warning-state classification below.
+        if state in {
+            "UPLOADED",
+            "ALREADY_UPLOADED",
+        }:
+            return _result(
+                "YouTube",
+                "READY",
+                "Studio ready — waiting for this sermon",
+                "YOUTUBE",
+            )
+
+        message = str(
+            payload.get(
+                "message",
+                ""
+            )
+        ).strip()
+
+        progress = payload.get("progress")
+
+        if state == "UPLOADING" and progress is not None:
+            message = f"uploading — {progress}%"
+
+        if not message:
+            message = state or "Studio ready"
+
+        ok_states = {
+            "CHANNEL_VERIFIED",
+            "UPLOADED",
+            "ALREADY_UPLOADED",
+            "WAITING_FOR_RECORDING",
+            "UPLOADING",
+            "PUBLISHING",
+            "PREVIEW_READY",
+        }
+
+        warning_states = {
+            "SKIPPED_DATE",
+            "NO_RECORDING",
+            "ERROR",
+            "PREVIEW_NONE",
+            "DRY_RUN",
+        }
+
+        warning = state in warning_states
+        ok = state in ok_states
+
+        level = (
+            "CHECK"
+            if warning
+            else (
+                "FIX"
+                if not ok
+                else "READY"
+            )
+        )
+
+        return _result(
+            "YouTube",
+            level,
+            message,
+            "YOUTUBE",
+        )
+
+    except Exception as exc:
+        return _result(
+            "YouTube",
+            "CHECK",
+            f"status error: {exc}",
+            "YOUTUBE",
+        )
+
+
 def check_security():
     try:
         overview = security_overview()
@@ -2176,6 +2433,8 @@ def run_full_system_test():
         check_audio,
         check_sermon,
         check_chapters,
+        check_planning,
+        check_youtube,
         check_security,
         check_storage,
         check_folders,

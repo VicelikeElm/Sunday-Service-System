@@ -85,7 +85,6 @@ from sss_config_bootstrap import (
 )
 
 from sss_profile import (
-    active_profile_path,
     get_profile_audio_settings,
     get_profile_camera_settings,
     get_profile_capabilities,
@@ -107,6 +106,7 @@ from sss_profile_manager import ProfileManager
 from sss_diagnostics import (
     export_diagnostic_bundle,
     run_full_system_test,
+    LEVEL_ORDER,
 )
 
 from sss_recovery import (
@@ -119,6 +119,7 @@ from sss_recovery import (
 
 from sss_event_history import (
     EVENT_ROOT,
+    current_session_state,
     export_event_history_text,
     format_event_time,
     get_last_unexpected_shutdown,
@@ -126,15 +127,12 @@ from sss_event_history import (
 )
 
 from sss_secrets_vault import (
-    OBS_SECRET_NAME,
     copy_legacy_obs_password_to_vault,
     delete_obs_vault_password,
-    obs_vault_status,
     remove_legacy_obs_password,
     security_overview,
     set_obs_vault_password,
     test_obs_vault_connection,
-    vault_available,
 )
 
 from sss_runtime import (
@@ -147,7 +145,6 @@ from sss_runtime import (
 from sss_updater_core import (
     UPDATE_ROOT,
     installed_app_processes,
-    read_update_manifest,
     update_status,
     verify_update_package,
     version_is_newer,
@@ -162,15 +159,58 @@ from sss_signing import (
 )
 
 from sss_update_feed import (
-    DOWNLOAD_ROOT,
     check_release_feed,
     download_release_package,
-    load_feed_config,
     online_update_status,
     save_feed_config,
 )
 
 
+# Overview page: (card_key, card_label, check_names, jump_page_key).
+# check_names lists which run_full_system_test() result name(s) feed this
+# card - "Updates" aggregates three checks (worst level wins) since the
+# Updates settings page already bundles all three concerns itself.
+OVERVIEW_CARD_SPECS = (
+    ("obs", "OBS", ("OBS",), "obs"),
+    ("camera", "Camera", ("Camera",), "camera"),
+    ("presenter", "Presenter", ("Presentation",), "presentation"),
+    ("sermon_source", "Sermon Source", ("Sermon Source",), "sermon"),
+    ("planning", "Planning", ("Planning",), "automation"),
+    ("youtube", "YouTube", ("YouTube",), "automation"),
+    ("storage", "Storage", ("Recording Storage",), "diagnostics"),
+    (
+        "updates",
+        "Updates",
+        (
+            "Application Updater",
+            "Release Signatures",
+            "Online Update Feed",
+        ),
+        "updates",
+    ),
+)
+
+# Best-effort map from every run_full_system_test() result name to the
+# settings page that owns it, for the Overview "needs attention" banner's
+# jump links. Anything not listed here falls back to "diagnostics".
+OVERVIEW_JUMP_TARGETS = {
+    "Application Runtime": "advanced",
+    "Application Updater": "updates",
+    "Release Signatures": "updates",
+    "Online Update Feed": "updates",
+    "Church Profile": "church",
+    "OBS": "obs",
+    "OBS Outputs": "obs",
+    "Presentation": "presentation",
+    "Camera": "camera",
+    "Audio": "audio",
+    "Sermon Source": "sermon",
+    "Sermon Chapters": "sermon",
+    "Lower Thirds": "sermon",
+    "Secrets Vault": "security",
+    "Planning": "automation",
+    "YouTube": "automation",
+}
 
 
 
@@ -245,7 +285,6 @@ class SSSSettings(ProfileManager):
 
         self.pages = {}
         self.nav_buttons = {}
-        self.active_page = "church"
 
         self.diagnostic_report = None
         self.diagnostic_running = False
@@ -313,7 +352,6 @@ class SSSSettings(ProfileManager):
                 ".sssupdate package, verify it, and hand it to the protected updater."
             )
         )
-        self.selected_update_manifest = None
 
         self.update_feed_url_var = tk.StringVar()
         self.update_channel_var = tk.StringVar(
@@ -344,7 +382,7 @@ class SSSSettings(ProfileManager):
         self._build_settings_ui()
         self.refresh()
         self.show_page(
-            "church"
+            "overview"
         )
 
     def _build_settings_ui(
@@ -582,6 +620,10 @@ class SSSSettings(ProfileManager):
 
         sections = (
             (
+                "overview",
+                "Overview",
+            ),
+            (
                 "church",
                 "Church",
             ),
@@ -781,6 +823,213 @@ class SSSSettings(ProfileManager):
     def _build_pages(
         self
     ):
+        # Overview --------------------------------------------------
+        page = self._new_page(
+            "overview"
+        )
+
+        self.overview_health_var = tk.StringVar(
+            value="SYSTEM HEALTH: Checking…"
+        )
+
+        ttk.Label(
+            page,
+            textvariable=self.overview_health_var,
+            font=(
+                "Segoe UI",
+                16,
+                "bold"
+            ),
+        ).pack(
+            anchor="w",
+            pady=(
+                0,
+                2
+            ),
+        )
+
+        self.overview_meta_var = tk.StringVar(
+            value=""
+        )
+
+        ttk.Label(
+            page,
+            textvariable=self.overview_meta_var,
+            font=(
+                "Segoe UI",
+                9
+            ),
+        ).pack(
+            anchor="w",
+            pady=(
+                0,
+                12
+            ),
+        )
+
+        self.overview_banner_outer = ttk.LabelFrame(
+            page,
+            text="Needs Attention",
+            padding=10,
+        )
+
+        self.overview_banner_outer.pack(
+            fill="x",
+            pady=(
+                0,
+                12
+            ),
+        )
+
+        self.overview_banner_body = ttk.Frame(
+            self.overview_banner_outer
+        )
+
+        self.overview_banner_body.pack(
+            fill="x"
+        )
+
+        ttk.Label(
+            self.overview_banner_body,
+            text="Checking…",
+        ).pack(
+            anchor="w"
+        )
+
+        card_grid = ttk.Frame(
+            page
+        )
+
+        card_grid.pack(
+            fill="x",
+            pady=(
+                0,
+                12
+            ),
+        )
+
+        for column in range(4):
+            card_grid.columnconfigure(
+                column,
+                weight=1,
+            )
+
+        self.overview_cards = {}
+
+        for index, (
+            card_key,
+            card_label,
+            _check_names,
+            jump_key,
+        ) in enumerate(
+            OVERVIEW_CARD_SPECS
+        ):
+            card = ttk.LabelFrame(
+                card_grid,
+                text=card_label,
+                padding=10,
+            )
+
+            card.grid(
+                row=index // 4,
+                column=index % 4,
+                sticky="nsew",
+                padx=4,
+                pady=4,
+            )
+
+            badge = ttk.Label(
+                card,
+                text="Checking…",
+                font=(
+                    "Segoe UI",
+                    10,
+                    "bold"
+                ),
+            )
+
+            badge.pack(
+                anchor="w"
+            )
+
+            detail_var = tk.StringVar(
+                value=""
+            )
+
+            ttk.Label(
+                card,
+                textvariable=detail_var,
+                wraplength=180,
+                justify="left",
+            ).pack(
+                anchor="w",
+                pady=(
+                    4,
+                    6
+                ),
+            )
+
+            ttk.Button(
+                card,
+                text="Open →",
+                command=lambda k=jump_key:
+                    self.show_page(
+                        k
+                    ),
+            ).pack(
+                anchor="w"
+            )
+
+            self.overview_cards[
+                card_key
+            ] = {
+                "badge": badge,
+                "detail_var": detail_var,
+            }
+
+        actions = ttk.LabelFrame(
+            page,
+            text="Quick Actions",
+            padding=10,
+        )
+
+        actions.pack(
+            fill="x"
+        )
+
+        for column in range(3):
+            actions.columnconfigure(
+                column,
+                weight=1,
+            )
+
+        for column, (text, command) in enumerate(
+            (
+                (
+                    "RUN DIAGNOSTICS",
+                    self.open_and_run_diagnostics,
+                ),
+                (
+                    "BACKUP NOW",
+                    self.create_manual_recovery_snapshot,
+                ),
+                (
+                    "CHECK FOR UPDATE",
+                    self.check_online_updates,
+                ),
+            )
+        ):
+            ttk.Button(
+                actions,
+                text=text,
+                command=command,
+            ).grid(
+                row=0,
+                column=column,
+                sticky="ew",
+                padx=4,
+            )
+
         # Church --------------------------------------------------
         page = self._new_page(
             "church"
@@ -2861,11 +3110,13 @@ class SSSSettings(ProfileManager):
         key
     ):
         if key not in self.pages:
-            key = "church"
-
-        self.active_page = key
+            key = "overview"
 
         titles = {
+            "overview": (
+                "Overview",
+                "At-a-glance system health, quick actions, and where to fix what needs attention.",
+            ),
             "church": (
                 "Church",
                 "Profile identity, first-run setup, import/export, and profile management.",
@@ -2940,7 +3191,24 @@ class SSSSettings(ProfileManager):
             key
         ].tkraise()
 
-        if key == "recovery":
+        if key == "overview":
+            try:
+                self._refresh_overview_meta_line()
+            except Exception:
+                pass
+
+            if self.diagnostic_report is not None:
+                try:
+                    self._refresh_overview_from_report(
+                        self.diagnostic_report,
+                        None,
+                    )
+                except Exception:
+                    pass
+
+            self.run_full_system_test_async()
+
+        elif key == "recovery":
             try:
                 self.refresh_recovery_snapshots()
             except Exception:
@@ -3452,12 +3720,6 @@ class SSSSettings(ProfileManager):
                 )
             )
 
-            manifest = downloaded.get(
-                "manifest"
-            )
-
-            self.selected_update_manifest = manifest
-
             def finished():
                 self.update_package_var.set(
                     path
@@ -3966,8 +4228,6 @@ class SSSSettings(ProfileManager):
             path
         )
 
-        self.selected_update_manifest = None
-
         self.update_detail_var.set(
             (
                 "Selected update package. Click VERIFY PACKAGE before installing."
@@ -3995,8 +4255,6 @@ class SSSSettings(ProfileManager):
             manifest = verify_update_package(
                 path
             )
-
-            self.selected_update_manifest = manifest
 
             info = runtime_info()
 
@@ -4075,8 +4333,6 @@ class SSSSettings(ProfileManager):
             )
 
         except Exception as exc:
-            self.selected_update_manifest = None
-
             messagebox.showwarning(
                 "Update Package Verification",
                 str(
@@ -4190,8 +4446,6 @@ class SSSSettings(ProfileManager):
             manifest = verify_update_package(
                 path
             )
-
-            self.selected_update_manifest = manifest
 
             info, install_root = self._update_install_preflight()
 
@@ -5614,6 +5868,11 @@ class SSSSettings(ProfileManager):
 
             self.refresh_recovery_snapshots()
 
+            try:
+                self._refresh_overview_meta_line()
+            except Exception:
+                pass
+
             messagebox.showinfo(
                 "Recovery Snapshot Created",
                 (
@@ -5910,14 +6169,14 @@ class SSSSettings(ProfileManager):
                 )
 
             except Exception as exc:
+                error_text = str(exc)
+
                 self.root.after(
                     0,
                     lambda:
                         self._finish_full_system_test(
                             None,
-                            str(
-                                exc
-                            ),
+                            error_text,
                         ),
                 )
 
@@ -5941,6 +6200,14 @@ class SSSSettings(ProfileManager):
                 )
             except Exception:
                 pass
+
+        try:
+            self._refresh_overview_from_report(
+                report,
+                error,
+            )
+        except Exception:
+            pass
 
         if error:
             self.diagnostic_overall_var.set(
@@ -6050,6 +6317,546 @@ class SSSSettings(ProfileManager):
                     )
                 except Exception:
                     pass
+
+    def _set_overview_badge(
+        self,
+        label_widget,
+        level,
+        text
+    ):
+        try:
+            label_widget.configure(
+                text=text
+            )
+        except Exception:
+            return
+
+        # Styles are (re)registered on every refresh rather than once at
+        # build time - main() re-applies sv_ttk.set_theme() after the
+        # window is built (see apply_titlebar_theme's caller), and a style
+        # registered in between the two set_theme() calls could otherwise
+        # be clobbered.
+        style_name = "TLabel"
+
+        try:
+            style = ttk.Style()
+
+            if level == "FIX":
+                style_name = "SSSOverviewFix.TLabel"
+
+                style.configure(
+                    style_name,
+                    background="#FFC7CE",
+                    foreground="#9C0006",
+                )
+
+            elif level == "CHECK":
+                style_name = "SSSOverviewCheck.TLabel"
+
+                style.configure(
+                    style_name,
+                    background="#FFEB9C",
+                    foreground="#7F6000",
+                )
+
+            label_widget.configure(
+                style=style_name
+            )
+
+        except Exception:
+            pass
+
+    def _worst_result_for_names(
+        self,
+        results_by_name,
+        names
+    ):
+        worst = None
+
+        for name in names:
+            result = results_by_name.get(
+                name
+            )
+
+            if result is None:
+                continue
+
+            if worst is None:
+                worst = result
+                continue
+
+            worst_rank = LEVEL_ORDER.get(
+                str(
+                    worst.get(
+                        "level",
+                        "CHECK"
+                    )
+                ).upper(),
+                1,
+            )
+
+            candidate_rank = LEVEL_ORDER.get(
+                str(
+                    result.get(
+                        "level",
+                        "CHECK"
+                    )
+                ).upper(),
+                1,
+            )
+
+            if candidate_rank > worst_rank:
+                worst = result
+
+        return worst
+
+    def _render_overview_banner(
+        self,
+        attention_results
+    ):
+        body = getattr(
+            self,
+            "overview_banner_body",
+            None
+        )
+
+        if body is None:
+            return
+
+        for child in body.winfo_children():
+            child.destroy()
+
+        outer = getattr(
+            self,
+            "overview_banner_outer",
+            None
+        )
+
+        if not attention_results:
+            if outer is not None:
+                try:
+                    outer.configure(
+                        text="Needs Attention"
+                    )
+                except Exception:
+                    pass
+
+            ttk.Label(
+                body,
+                text="No items need attention.",
+            ).pack(
+                anchor="w"
+            )
+
+            return
+
+        if outer is not None:
+            try:
+                outer.configure(
+                    text=(
+                        str(
+                            len(
+                                attention_results
+                            )
+                        )
+                        +
+                        " item(s) need attention"
+                    )
+                )
+            except Exception:
+                pass
+
+        shown = attention_results[
+            :5
+        ]
+
+        for result in shown:
+            row = ttk.Frame(
+                body
+            )
+
+            row.pack(
+                fill="x",
+                pady=2,
+            )
+
+            name = str(
+                result.get(
+                    "name",
+                    "Check"
+                )
+            )
+
+            detail = str(
+                result.get(
+                    "detail",
+                    ""
+                )
+            )
+
+            page_key = OVERVIEW_JUMP_TARGETS.get(
+                name,
+                "diagnostics",
+            )
+
+            ttk.Label(
+                row,
+                text=(
+                    name
+                    +
+                    ": "
+                    +
+                    detail
+                ),
+                wraplength=520,
+                justify="left",
+            ).pack(
+                side="left",
+                fill="x",
+                expand=True,
+            )
+
+            ttk.Button(
+                row,
+                text="Fix →",
+                command=lambda k=page_key:
+                    self.show_page(
+                        k
+                    ),
+            ).pack(
+                side="right"
+            )
+
+        remaining = (
+            len(
+                attention_results
+            )
+            -
+            len(
+                shown
+            )
+        )
+
+        if remaining > 0:
+            ttk.Label(
+                body,
+                text=(
+                    "+"
+                    +
+                    str(
+                        remaining
+                    )
+                    +
+                    " more — see Diagnostics"
+                ),
+            ).pack(
+                anchor="w",
+                pady=(
+                    4,
+                    0
+                ),
+            )
+
+    def _refresh_overview_from_report(
+        self,
+        report,
+        error
+    ):
+        if getattr(
+            self,
+            "overview_cards",
+            None
+        ) is None:
+            return
+
+        if report is None:
+            self.overview_health_var.set(
+                "SYSTEM HEALTH: check failed"
+            )
+
+            for card in self.overview_cards.values():
+                self._set_overview_badge(
+                    card[
+                        "badge"
+                    ],
+                    "CHECK",
+                    "⚠ CHECK",
+                )
+
+                card[
+                    "detail_var"
+                ].set(
+                    str(
+                        error
+                        or
+                        "Diagnostic engine did not respond."
+                    )
+                )
+
+            self._render_overview_banner(
+                []
+            )
+
+            return
+
+        results = report.get(
+            "results",
+            []
+        ) or []
+
+        results_by_name = {}
+
+        for result in results:
+            results_by_name[
+                result.get(
+                    "name",
+                    ""
+                )
+            ] = result
+
+        icons = {
+            "READY": "✓",
+            "INFO": "✓",
+            "CHECK": "⚠",
+            "FIX": "✗",
+        }
+
+        for (
+            card_key,
+            _card_label,
+            check_names,
+            _jump_key,
+        ) in OVERVIEW_CARD_SPECS:
+            card = self.overview_cards.get(
+                card_key
+            )
+
+            if card is None:
+                continue
+
+            worst = self._worst_result_for_names(
+                results_by_name,
+                check_names,
+            )
+
+            if worst is None:
+                self._set_overview_badge(
+                    card[
+                        "badge"
+                    ],
+                    "CHECK",
+                    "⚠ Checking…",
+                )
+
+                card[
+                    "detail_var"
+                ].set(
+                    "No data yet."
+                )
+
+                continue
+
+            level = str(
+                worst.get(
+                    "level",
+                    "CHECK"
+                )
+            ).upper()
+
+            self._set_overview_badge(
+                card[
+                    "badge"
+                ],
+                level,
+                (
+                    icons.get(
+                        level,
+                        "?"
+                    )
+                    +
+                    " "
+                    +
+                    level
+                ),
+            )
+
+            card[
+                "detail_var"
+            ].set(
+                str(
+                    worst.get(
+                        "detail",
+                        ""
+                    )
+                )
+            )
+
+        counts = report.get(
+            "counts",
+            {}
+        )
+
+        total = len(
+            results
+        )
+
+        healthy = (
+            int(
+                counts.get(
+                    "READY",
+                    0
+                )
+            )
+            +
+            int(
+                counts.get(
+                    "INFO",
+                    0
+                )
+            )
+        )
+
+        suffix = (
+            " ✓"
+            if (
+                total
+                and
+                healthy == total
+            )
+            else ""
+        )
+
+        self.overview_health_var.set(
+            "SYSTEM HEALTH: "
+            +
+            str(
+                healthy
+            )
+            +
+            "/"
+            +
+            str(
+                total
+            )
+            +
+            suffix
+        )
+
+        attention = [
+            result
+            for result in results
+            if LEVEL_ORDER.get(
+                str(
+                    result.get(
+                        "level",
+                        "CHECK"
+                    )
+                ).upper(),
+                1,
+            ) >= 1
+        ]
+
+        attention.sort(
+            key=lambda result:
+                LEVEL_ORDER.get(
+                    str(
+                        result.get(
+                            "level",
+                            "CHECK"
+                        )
+                    ).upper(),
+                    1,
+                ),
+            reverse=True,
+        )
+
+        self._render_overview_banner(
+            attention
+        )
+
+    def _refresh_overview_meta_line(
+        self
+    ):
+        parts = []
+
+        try:
+            info = runtime_info()
+
+            version = str(
+                info.get(
+                    "version",
+                    ""
+                )
+            ).strip()
+
+            if version:
+                parts.append(
+                    "Version "
+                    +
+                    version
+                )
+
+        except Exception:
+            pass
+
+        try:
+            snapshots = list_recovery_snapshots()
+
+            if snapshots:
+                parts.append(
+                    "Last backup: "
+                    +
+                    format_event_time(
+                        snapshots[
+                            0
+                        ].get(
+                            "created_at",
+                            ""
+                        )
+                    )
+                )
+            else:
+                parts.append(
+                    "Last backup: none yet"
+                )
+
+        except Exception:
+            pass
+
+        try:
+            session = current_session_state()
+
+            state = str(
+                session.get(
+                    "state",
+                    ""
+                )
+            ).upper()
+
+            if (
+                state == "CLOSED"
+                and
+                session.get(
+                    "clean_shutdown_at"
+                )
+            ):
+                parts.append(
+                    "Last Sunday Mode session: closed normally"
+                )
+
+            elif state == "RUNNING":
+                parts.append(
+                    "Last Sunday Mode session: still running or did not shut down cleanly"
+                )
+
+        except Exception:
+            pass
+
+        self.overview_meta_var.set(
+            "   ·   ".join(
+                parts
+            )
+        )
 
     def export_last_diagnostics(
         self
@@ -6949,6 +7756,22 @@ def main():
         app.show_page(
             "updates"
         )
+
+    # Applying the theme before any widgets exist sets sv_ttk's own
+    # state correctly, but Tk does not consistently repaint a
+    # brand-new widget tree to match - the same set_theme() call
+    # reliably repaints everything when it runs AFTER the tree already
+    # exists. Re-apply it now the window is actually built.
+    if sv_ttk is not None:
+        try:
+            sv_ttk.set_theme(
+                load_config().get(
+                    "ui_theme",
+                    "light"
+                )
+            )
+        except Exception:
+            pass
 
     root.mainloop()
 
